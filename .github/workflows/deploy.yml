@@ -36,8 +36,13 @@ jobs:
         env:
           GITHUB_PAGES: 'true'
 
-      - name: Add SPA fallback
-        run: cp dist/index.html dist/404.html
+      - name: Add route entry files
+        run: |
+          cp dist/index.html dist/404.html
+          for route in about workshop registration program previous-gaia contact; do
+            mkdir -p "dist/$route"
+            cp dist/index.html "dist/$route/index.html"
+          done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
