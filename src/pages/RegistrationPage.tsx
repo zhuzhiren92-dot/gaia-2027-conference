@@ -8,7 +8,6 @@ export function RegistrationPage() {
 
   return (
     <PageFrame
-      pageIndex="03"
       pageName="REGISTRATION"
       pageStatement="Everything you will need to join GAIA 2027, in one clear place."
     >
@@ -17,6 +16,7 @@ export function RegistrationPage() {
         className="registration-status page-width"
         backgroundColor="rgba(239, 245, 255, 0.88)"
         animated
+        data-reveal
       >
         <div className="status-mark" aria-hidden="true">
           <span />

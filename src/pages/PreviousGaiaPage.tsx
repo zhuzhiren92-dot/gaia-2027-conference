@@ -6,11 +6,10 @@ import { conference } from '../content/conference'
 export function PreviousGaiaPage() {
   return (
     <PageFrame
-      pageIndex="03"
       pageName="PREVIOUS GAIA"
       pageStatement="A young alliance already gathering momentum across Asia."
     >
-      <section className="archive-intro page-width">
+      <section className="archive-intro page-width" data-reveal>
         <p className="section-kicker">THE ARCHIVE</p>
         <p className="large-body">
           Each host adds a new chapter: a different place, a renewed
@@ -60,7 +59,7 @@ export function PreviousGaiaPage() {
         ))}
       </DockSurface>
 
-      <section className="archive-footnote page-width">
+      <section className="archive-footnote page-width" data-reveal>
         <p>01</p>
         <p>
           GAIA’s first workshop was held in Atami, Japan, in 2025. The second

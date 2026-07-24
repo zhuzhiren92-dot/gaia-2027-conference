@@ -59,7 +59,7 @@ export function Navigation() {
           lift={5}
           aria-label="Main navigation"
         >
-          {conference.navigation.map((item, index) => (
+          {conference.navigation.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
@@ -70,9 +70,6 @@ export function Navigation() {
               }
               data-dock-item
             >
-              <span className="nav-index">
-                {String(index + 1).padStart(2, '0')}
-              </span>
               <span className="nav-label">{item.label}</span>
             </NavLink>
           ))}

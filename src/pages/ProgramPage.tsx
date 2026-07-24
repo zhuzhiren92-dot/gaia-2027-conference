@@ -6,11 +6,10 @@ import { conference } from '../content/conference'
 export function ProgramPage() {
   return (
     <PageFrame
-      pageIndex="03"
       pageName="PROGRAM"
       pageStatement="A measured rhythm for presenting, questioning and connecting."
     >
-      <section className="program-note page-width">
+      <section className="program-note page-width" data-reveal>
         <p className="section-kicker">TENTATIVE FRAMEWORK</p>
         <p>
           The programme below describes the intended workshop rhythm. Dates,
@@ -57,6 +56,7 @@ export function ProgramPage() {
         as="section"
         className="program-download page-width"
         backgroundColor="rgba(243, 247, 249, 0.88)"
+        data-reveal
       >
         <div>
           <p className="section-kicker">DETAILED PROGRAMME</p>

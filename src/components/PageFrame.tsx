@@ -6,14 +6,12 @@ import { Navigation } from './Navigation'
 import { SchoolCarousel } from './SchoolCarousel'
 
 type PageFrameProps = {
-  pageIndex: string
   pageName: string
   pageStatement: string
   children: ReactNode
 }
 
 export function PageFrame({
-  pageIndex,
   pageName,
   pageStatement,
   children,
@@ -26,11 +24,9 @@ export function PageFrame({
       <main id="main-content">
         <SchoolCarousel />
 
-        <section className="conference-identity page-width">
+        <section className="conference-identity page-width" data-reveal>
           <div className="identity-meta">
-            <p className="micro-label">
-              <span>02</span> THE 2027 WORKSHOP
-            </p>
+            <p className="micro-label">THE 2027 WORKSHOP</p>
             <p>
               {identity.edition} edition · {identity.location}
             </p>
@@ -57,10 +53,8 @@ export function PageFrame({
           </div>
         </section>
 
-        <section className="page-intro page-width">
-          <p className="micro-label">
-            <span>{pageIndex}</span> {pageName}
-          </p>
+        <section className="page-intro page-width" data-reveal>
+          <p className="micro-label">{pageName}</p>
           <BlurText
             as="h2"
             className="page-statement"

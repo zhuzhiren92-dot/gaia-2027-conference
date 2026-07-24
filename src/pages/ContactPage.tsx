@@ -6,7 +6,6 @@ import { conference } from '../content/conference'
 export function ContactPage() {
   return (
     <PageFrame
-      pageIndex="03"
       pageName="CONTACT"
       pageStatement="Questions are welcome. Official contacts will appear here."
     >
@@ -59,7 +58,7 @@ export function ContactPage() {
         </DockSurface>
       </section>
 
-      <section className="contact-note page-width">
+      <section className="contact-note page-width" data-reveal>
         <p className="section-kicker">PLEASE NOTE</p>
         <p>
           GAIA 2027 contacts, affiliations and email addresses are still being

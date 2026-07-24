@@ -24,11 +24,10 @@ const principles = [
 export function AboutPage() {
   return (
     <PageFrame
-      pageIndex="03"
       pageName="ABOUT"
       pageStatement="An alliance shaped by curiosity, generosity and durable research ties."
     >
-      <section className="manifesto page-width">
+      <section className="manifesto page-width" data-reveal>
         <p className="section-kicker">THE ALLIANCE</p>
         <div className="manifesto-copy">
           <p className="manifesto-primary">
@@ -68,7 +67,7 @@ export function AboutPage() {
         </DockSurface>
       </section>
 
-      <section className="network-section page-width">
+      <section className="network-section page-width" data-reveal>
         <div className="network-copy">
           <p className="section-kicker">A REGIONAL NETWORK</p>
           <h2>Asia is the context. Collaboration is the method.</h2>

@@ -8,11 +8,10 @@ import { conference } from '../content/conference'
 export function HomePage() {
   return (
     <PageFrame
-      pageIndex="03"
       pageName="HOME"
       pageStatement="A workshop built for the next generation of geomechanics."
     >
-      <section className="editorial-grid page-width">
+      <section className="editorial-grid page-width" data-reveal>
         <div className="editorial-lead">
           <p className="section-kicker">WHY GAIA</p>
           <p className="large-body">
@@ -94,6 +93,7 @@ export function HomePage() {
         className="closing-cta page-width"
         backgroundColor="rgba(248, 251, 253, 0.88)"
         animated
+        data-reveal
       >
         <p className="section-kicker">GAIA 2027</p>
         <h2>Research moves forward through conversation.</h2>

@@ -7,7 +7,6 @@ import { conference } from '../content/conference'
 export function WorkshopPage() {
   return (
     <PageFrame
-      pageIndex="03"
       pageName="WORKSHOP"
       pageStatement="Focused talks, serious questions and time to think together."
     >

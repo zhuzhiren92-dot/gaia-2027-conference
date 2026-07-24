@@ -7,6 +7,7 @@ import { PreviousGaiaPage } from './pages/PreviousGaiaPage'
 import { ProgramPage } from './pages/ProgramPage'
 import { RegistrationPage } from './pages/RegistrationPage'
 import { WorkshopPage } from './pages/WorkshopPage'
+import { ViewportReveal } from './components/ViewportReveal'
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
           zoom={0.8}
         />
       </div>
+      <ViewportReveal />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
