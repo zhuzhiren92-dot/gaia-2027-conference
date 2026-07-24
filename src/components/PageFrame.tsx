@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import { conference } from '../content/conference'
 import { BlurText } from './BlurText'
 import { DockSurface } from './DockSurface'
@@ -90,9 +91,9 @@ function Footer() {
           lift={5}
         >
           {conference.navigation.map((item) => (
-            <a key={item.path} href={item.path} data-dock-item>
+            <Link key={item.path} to={item.path} data-dock-item>
               <span>{item.label}</span>
-            </a>
+            </Link>
           ))}
         </DockSurface>
       </div>
