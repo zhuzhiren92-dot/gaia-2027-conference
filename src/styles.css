@@ -17,9 +17,9 @@
   --cyan: #77dcff;
   --page: min(1480px, calc(100vw - 64px));
   --mono: 'DM Mono', 'SFMono-Regular', Consolas, monospace;
-  --text-micro: 11px;
-  --text-small: 13.5px;
-  --text-body-small: 14.5px;
+  --text-micro: 13px;
+  --text-small: 15.5px;
+  --text-body-small: 16.5px;
 }
 
 * {
@@ -142,7 +142,7 @@ p {
   color: #fff;
   background: var(--blue);
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 14px;
   transform: translateY(-160%);
 }
 
@@ -178,7 +178,7 @@ p {
 .quiet-copy {
   max-width: 430px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.65;
 }
 
@@ -344,7 +344,7 @@ p {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
@@ -398,7 +398,7 @@ p {
   color: #4b5861;
   border-radius: 18px 18px 0 0;
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 12.5px;
   letter-spacing: 0.065em;
   box-shadow:
     0 calc(8px + var(--dock-energy) * 10px)
@@ -522,7 +522,7 @@ p {
 .slide-number {
   color: var(--blue);
   font-family: var(--mono);
-  font-size: 11.5px;
+  font-size: 13.5px;
 }
 
 .slide-eyebrow {
@@ -546,7 +546,7 @@ p {
   max-width: 480px;
   margin-top: 30px;
   color: var(--ink-soft);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.8;
 }
 
@@ -935,7 +935,7 @@ p {
 .editorial-copy > p {
   margin-bottom: 42px;
   color: var(--ink-soft);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.85;
 }
 
@@ -1139,7 +1139,7 @@ p {
   display: grid;
   gap: 24px;
   color: var(--ink-soft);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.8;
 }
 
@@ -1197,7 +1197,7 @@ p {
 .network-copy > p:last-child {
   max-width: 480px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.8;
 }
 
@@ -2070,7 +2070,7 @@ p {
   justify-self: end;
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 11.5px;
+  font-size: 13.5px;
 }
 
 .organization-grid {
@@ -2178,7 +2178,7 @@ p {
   border-bottom: 1px solid #303b42;
   border-radius: 12px;
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 12.5px;
   letter-spacing: 0.08em;
   box-shadow:
     0 calc(8px + var(--dock-energy) * 12px)
@@ -2221,7 +2221,7 @@ p {
   color: #7d8a92;
   border-top: 1px solid #303b42;
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.08em;
 }
 
@@ -2285,7 +2285,7 @@ p {
     padding: 0;
     justify-content: space-between;
     border-bottom: 1px solid var(--line);
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .nav-link::after {
@@ -2359,7 +2359,7 @@ p {
 
   .slide-description {
     margin-top: 22px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .slide-note {
@@ -2604,7 +2604,7 @@ p {
 
   .fee-row p {
     padding: 16px 10px;
-    font-size: 12.5px;
+    font-size: 14.5px;
   }
 
   .policy-section {
