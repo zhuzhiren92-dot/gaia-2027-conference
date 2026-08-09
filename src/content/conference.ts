@@ -6,7 +6,7 @@ export const conference: ConferenceContent = {
     year: '2027',
     edition: '3rd',
     fullName: 'International Workshop of Geomechanics Alliance In Asia',
-    theme: 'Advancing micro–macro geomechanics',
+    theme: 'Advances in Micro–Macro Geomechanics',
     location: 'Hong Kong, China',
     dates: 'May 2027',
   },
