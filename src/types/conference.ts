@@ -57,6 +57,26 @@ export type ContactItem = {
   email: string
 }
 
+export type CommitteeMember = {
+  role: string
+  name: string
+  profileUrl: string
+  photo: string
+  biography?: string
+}
+
+export type ContactChannel = {
+  label: string
+  email: string
+  kind: 'person' | 'committee'
+}
+
+export type OrganizationLogo = {
+  label: string
+  name: string
+  logo: string
+}
+
 export type ConferenceContent = {
   identity: {
     shortName: string
@@ -87,5 +107,9 @@ export type ConferenceContent = {
   program: ProgramDay[]
   previousEvents: PreviousEvent[]
   contacts: ContactItem[]
+  committee: CommitteeMember[]
+  contactChannels: ContactChannel[]
+  organizedBy: OrganizationLogo[]
+  supportedBy: OrganizationLogo[]
   organizations: Array<{ role: string; name: string }>
 }

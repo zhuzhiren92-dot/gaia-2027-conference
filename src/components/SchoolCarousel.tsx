@@ -23,6 +23,7 @@ function ArrowIcon({ reverse = false }: { reverse?: boolean }) {
 
 export function SchoolCarousel() {
   const slides = conference.schoolSlides
+  const { identity } = conference
   const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
   const dragStart = useRef<number | null>(null)
@@ -88,11 +89,13 @@ export function SchoolCarousel() {
         if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false)
       }}
     >
-      <div className="carousel-heading page-width">
-        <p id="school-showcase-title" className="micro-label">
-          <span>01</span> MEET THE HOST
-        </p>
-        <p className="carousel-instruction">DRAG / USE ARROW KEYS</p>
+      <div className="carousel-heading carousel-theme-strip page-width">
+        <div id="school-showcase-title" className="carousel-theme-copy">
+          <p>{identity.theme}</p>
+          <span>
+            {identity.location}, {identity.dates}
+          </span>
+        </div>
       </div>
 
       <BorderGlow
@@ -129,7 +132,6 @@ export function SchoolCarousel() {
                 aria-label={`${slideIndex + 1} of ${slides.length}`}
               >
                 <div className="slide-copy">
-                  <div className="slide-number">{slide.index}</div>
                   <div>
                     <p className="slide-eyebrow">{slide.eyebrow}</p>
                     <h2>{slide.title}</h2>
@@ -148,8 +150,6 @@ export function SchoolCarousel() {
                   <div className="art-ring ring-one" />
                   <div className="art-ring ring-two" />
                   <div className="art-mesh" />
-                  <span className="art-coordinate coordinate-a">35.68° N</span>
-                  <span className="art-coordinate coordinate-b">GAIA / 03</span>
                 </div>
               </article>
             ))}

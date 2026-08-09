@@ -10,12 +10,14 @@ type PageFrameProps = {
   pageName: string
   pageStatement: string
   children: ReactNode
+  showIntroSections?: boolean
 }
 
 export function PageFrame({
   pageName,
   pageStatement,
   children,
+  showIntroSections = true,
 }: PageFrameProps) {
   const { identity } = conference
 
@@ -25,43 +27,47 @@ export function PageFrame({
       <main id="main-content">
         <SchoolCarousel />
 
-        <section className="conference-identity page-width" data-reveal>
-          <div className="identity-meta">
-            <p className="micro-label">THE 2027 WORKSHOP</p>
-            <p>
-              {identity.edition} edition · {identity.location}
-            </p>
-          </div>
-          <BlurText
-            as="h1"
-            className="conference-title"
-            text={`${identity.shortName} ${identity.year}`}
-          />
-          <p className="conference-full-name">
-            {identity.edition} {identity.fullName}
-          </p>
-          <div className="theme-line">
-            <p>CONFERENCE THEME</p>
-            <BlurText
-              as="p"
-              className="theme-value"
-              text={identity.theme}
-              delay={0.06}
-            />
-            <p className="theme-dates">
-              {identity.location} <span>↗</span> {identity.dates}
-            </p>
-          </div>
-        </section>
+        {showIntroSections ? (
+          <>
+            <section className="conference-identity page-width" data-reveal>
+              <div className="identity-meta">
+                <p className="micro-label">THE 2027 WORKSHOP</p>
+                <p>
+                  {identity.edition} edition · {identity.location}
+                </p>
+              </div>
+              <BlurText
+                as="h1"
+                className="conference-title"
+                text={`${identity.shortName} ${identity.year}`}
+              />
+              <p className="conference-full-name">
+                {identity.edition} {identity.fullName}
+              </p>
+              <div className="theme-line">
+                <p>CONFERENCE THEME</p>
+                <BlurText
+                  as="p"
+                  className="theme-value"
+                  text={identity.theme}
+                  delay={0.06}
+                />
+                <p className="theme-dates">
+                  {identity.location} <span>→</span> {identity.dates}
+                </p>
+              </div>
+            </section>
 
-        <section className="page-intro page-width" data-reveal>
-          <p className="micro-label">{pageName}</p>
-          <BlurText
-            as="h2"
-            className="page-statement"
-            text={pageStatement}
-          />
-        </section>
+            <section className="page-intro page-width" data-reveal>
+              <p className="micro-label">{pageName}</p>
+              <BlurText
+                as="h2"
+                className="page-statement"
+                text={pageStatement}
+              />
+            </section>
+          </>
+        ) : null}
 
         {children}
       </main>
@@ -78,10 +84,20 @@ function Footer() {
           <p className="footer-wordmark">GAIA</p>
           <p className="footer-edition">03 / 2027</p>
         </div>
-        <p className="footer-description">
-          Geomechanics Alliance In Asia connects emerging researchers through
-          open exchange, careful listening and long-term collaboration.
-        </p>
+        <div className="footer-contact-card" aria-label="Contact us">
+          <p className="section-kicker">Contact us</p>
+          {conference.contactChannels.map((item) => (
+            <a
+              key={item.email}
+              href={`mailto:${item.email}`}
+              className="footer-contact-line"
+            >
+              <ContactIcon kind={item.kind} />
+              <span>{item.label}</span>
+              <strong>{item.email}</strong>
+            </a>
+          ))}
+        </div>
         <DockSurface
           as="nav"
           className="footer-links"
@@ -102,5 +118,21 @@ function Footer() {
         <p>INFORMATION SUBJECT TO CONFIRMATION</p>
       </div>
     </footer>
+  )
+}
+
+function ContactIcon({ kind }: { kind: 'person' | 'committee' }) {
+  if (kind === 'committee') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM4.5 19v-1.4c0-2.2 1.9-4 4.2-4h.6c2.3 0 4.2 1.8 4.2 4V19m-1.8-4.2a4.9 4.9 0 0 1 3-1.2h.6c2.3 0 4.2 1.8 4.2 4V19" />
+      </svg>
+    )
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8v-1.4c0-3.1 3.1-5.6 7-5.6s7 2.5 7 5.6V20" />
+    </svg>
   )
 }

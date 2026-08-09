@@ -6,9 +6,9 @@ export const conference: ConferenceContent = {
     year: '2027',
     edition: '3rd',
     fullName: 'International Workshop of Geomechanics Alliance In Asia',
-    theme: 'To be announced',
-    location: 'To be announced',
-    dates: 'To be announced',
+    theme: 'Advancing micro–macro geomechanics',
+    location: 'Hong Kong, China',
+    dates: 'May 2027',
   },
   navigation: [
     { label: 'HOME', path: '/' },
@@ -262,19 +262,85 @@ export const conference: ConferenceContent = {
   ],
   contacts: [
     {
-      role: 'Organizing committee',
-      name: 'Contact to be announced',
-      email: 'To be announced',
+      role: 'Chairman',
+      name: 'Jianfeng Wang',
+      email: 'jefwang@cityu.edu.hk',
     },
     {
-      role: 'Conference secretariat',
-      name: 'Contact to be announced',
-      email: 'To be announced',
+      role: 'Organizing committee',
+      name: 'GAIA 2027',
+      email: 'gaia_2027@outlook.com',
+    },
+  ],
+  committee: [
+    {
+      role: 'Chairman',
+      name: 'Prof. Jeff Wang',
+      profileUrl: 'https://scholars.cityu.edu.hk/en/persons/jefwang/',
+      photo: 'assets/contact/wang-jianfeng.webp',
+      biography:
+        'An internationally recognized scholar in micro–macro mechanics of granular materials, X-ray CT characterization, DEM simulation and data-driven analysis of geomaterials.',
+    },
+    {
+      role: 'Vice-chairman',
+      name: 'Dr. Kostas Senetakis',
+      profileUrl: 'https://scholars.cityu.edu.hk/en/persons/ksenetak/',
+      photo: 'assets/contact/senetakis-kostas.webp',
+      biography:
+        'His research spans experimental soil mechanics and dynamics, micromechanics, tribology, geosynthetics and recycled aggregates in geotechnical engineering.',
+    },
+    {
+      role: 'Vice-chairman',
+      name: 'Dr. Fiona Kwok',
+      profileUrl: 'https://scholars.cityu.edu.hk/en/persons/fionkwok/',
+      photo: 'assets/contact/kwok-fiona.webp',
+    },
+    {
+      role: 'Secretary',
+      name: 'Dr. Zhiren Zhu',
+      profileUrl: 'https://scholars.cityu.edu.hk/en/persons/zhirenzhu2/',
+      photo: 'assets/contact/zhu-zhiren.png',
+    },
+  ],
+  contactChannels: [
+    {
+      kind: 'person',
+      label: 'Jianfeng Wang',
+      email: 'jefwang@cityu.edu.hk',
+    },
+    {
+      kind: 'committee',
+      label: 'Organizing Committee',
+      email: 'gaia_2027@outlook.com',
+    },
+  ],
+  organizedBy: [
+    {
+      label: 'Organized by',
+      name: 'City University of Hong Kong',
+      logo: 'assets/contact/cityu-logo.webp',
+    },
+  ],
+  supportedBy: [
+    {
+      label: 'Supported by',
+      name: 'SIMSG',
+      logo: 'assets/contact/simsg.png',
+    },
+    {
+      label: 'Supported by',
+      name: 'TC105 Geo-Mechanics from Micro to Macro',
+      logo: 'assets/contact/tc105.png',
+    },
+    {
+      label: 'Supported by',
+      name: 'CISMGE-CCES',
+      logo: 'assets/contact/cismge.png',
     },
   ],
   organizations: [
-    { role: 'Organized by', name: 'To be announced' },
-    { role: 'Hosted by', name: 'To be announced' },
-    { role: 'Supported by', name: 'To be announced' },
+    { role: 'Organized by', name: 'City University of Hong Kong' },
+    { role: 'Supported by', name: 'SIMSG' },
+    { role: 'Supported by', name: 'CISMGE-CCES' },
   ],
 }

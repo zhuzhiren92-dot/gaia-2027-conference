@@ -6,6 +6,7 @@ import { conference } from '../content/conference'
 export function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
+  const brandIcon = `${import.meta.env.BASE_URL}assets/brand/logo2.png`
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' })
@@ -26,10 +27,8 @@ export function Navigation() {
       </a>
       <div className="nav-shell">
         <NavLink className="brand-mark" to="/" aria-label="GAIA 2027 home">
-          <span className="brand-symbol" aria-hidden="true">
-            <i />
-            <i />
-            <i />
+          <span className="brand-symbol brand-symbol-image" aria-hidden="true">
+            <img src={brandIcon} alt="" />
           </span>
           <span>
             GAIA <b>2027</b>

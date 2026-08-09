@@ -17,9 +17,9 @@
   --cyan: #77dcff;
   --page: min(1480px, calc(100vw - 64px));
   --mono: 'DM Mono', 'SFMono-Regular', Consolas, monospace;
-  --text-micro: 13px;
-  --text-small: 15.5px;
-  --text-body-small: 16.5px;
+  --text-micro: 14px;
+  --text-small: 16px;
+  --text-body-small: 17px;
 }
 
 * {
@@ -325,7 +325,7 @@ p {
   position: sticky;
   z-index: 50;
   top: 0;
-  height: 74px;
+  height: 82px;
   background: rgba(255, 255, 255, 0.88);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(18px);
@@ -336,30 +336,36 @@ p {
   height: 100%;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: 190px 1fr;
+  grid-template-columns: 280px 1fr;
   align-items: stretch;
 }
 
 .brand-mark {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 18px;
-  font-weight: 600;
+  gap: 14px;
+  font-size: clamp(22px, 1.7vw, 28px);
+  font-weight: 750;
   letter-spacing: -0.02em;
 }
 
 .brand-mark b {
   color: var(--blue);
-  font-weight: 500;
+  font-weight: 750;
 }
 
 .brand-symbol {
   position: relative;
-  width: 25px;
-  height: 25px;
+  width: 58px;
+  height: 38px;
   display: inline-grid;
   place-items: center;
+}
+
+.brand-symbol-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .brand-symbol i {
@@ -394,11 +400,12 @@ p {
   display: flex;
   align-items: center;
   gap: 0;
-  padding-inline: clamp(9px, 1.2vw, 20px);
+  padding-inline: clamp(10px, 1.15vw, 19px);
   color: #4b5861;
   border-radius: 18px 18px 0 0;
   font-family: var(--mono);
-  font-size: 12.5px;
+  font-size: 14px;
+  font-weight: 700;
   letter-spacing: 0.065em;
   box-shadow:
     0 calc(8px + var(--dock-energy) * 10px)
@@ -448,7 +455,7 @@ p {
 /* School carousel */
 
 .school-showcase {
-  padding: 42px 0 58px;
+  padding: 34px 0 58px;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background:
@@ -461,6 +468,32 @@ p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 18px;
+}
+
+.carousel-theme-strip {
+  min-height: 74px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-theme-copy p {
+  color: var(--ink);
+  font-size: clamp(24px, 2.5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.carousel-theme-copy span {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--blue);
+  font-family: var(--mono);
+  font-size: var(--text-micro);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .carousel-instruction {
@@ -513,7 +546,7 @@ p {
   min-width: 0;
   padding: clamp(38px, 5vw, 76px);
   display: grid;
-  grid-template-columns: 55px 1fr;
+  grid-template-columns: 1fr;
   align-content: center;
   gap: 18px;
   border-right: 1px solid var(--line);
@@ -526,7 +559,7 @@ p {
 }
 
 .slide-eyebrow {
-  margin-bottom: 54px;
+  margin-bottom: 46px;
   color: var(--muted);
   font-family: var(--mono);
   font-size: var(--text-micro);
@@ -2013,6 +2046,220 @@ p {
 
 /* Contact */
 
+.committee-section {
+  padding: 110px 0 70px;
+}
+
+.contact-heading-row {
+  margin-bottom: 36px;
+}
+
+.committee-list {
+  display: grid;
+  gap: 22px;
+  overflow: visible;
+}
+
+.committee-card {
+  overflow: visible;
+  box-shadow: var(--dock-card-shadow);
+}
+
+.committee-card-link {
+  min-height: 270px;
+  display: grid;
+  grid-template-columns: minmax(190px, 260px) 1fr auto;
+  align-items: center;
+  gap: clamp(28px, 4vw, 58px);
+  padding: clamp(24px, 3.5vw, 42px);
+}
+
+.committee-photo-stage {
+  position: relative;
+  align-self: stretch;
+  min-height: 230px;
+  overflow: visible;
+  background:
+    radial-gradient(circle at 48% 35%, rgba(119, 220, 255, 0.34), transparent 34%),
+    linear-gradient(145deg, rgba(239, 246, 250, 0.85), rgba(255, 255, 255, 0.72));
+  border: 1px solid rgba(36, 88, 255, 0.14);
+  border-radius: 34px;
+}
+
+.committee-photo-stage::before {
+  position: absolute;
+  inset: 16px;
+  content: '';
+  background:
+    linear-gradient(rgba(90, 120, 145, 0.12) 1px, transparent 1px) 0 0 / 24px
+      24px,
+    linear-gradient(90deg, rgba(90, 120, 145, 0.12) 1px, transparent 1px) 0 0 /
+      24px 24px;
+  border-radius: 26px;
+  mask-image: linear-gradient(145deg, #000, transparent 88%);
+}
+
+.committee-photo-stage::after {
+  position: absolute;
+  right: 18%;
+  bottom: 10px;
+  left: 18%;
+  height: 20px;
+  content: '';
+  background: rgba(36, 88, 255, 0.22);
+  border-radius: 50%;
+  filter: blur(18px);
+}
+
+.committee-photo-stage img {
+  position: absolute;
+  z-index: 1;
+  inset: auto 50% -1px auto;
+  width: min(82%, 210px);
+  height: 108%;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: 30px 30px 24px 24px;
+  filter: drop-shadow(0 28px 36px rgba(16, 23, 28, 0.22));
+  transform: translateX(50%);
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.committee-card:hover .committee-photo-stage img,
+.committee-card:focus-within .committee-photo-stage img {
+  transform: translateX(50%) translateY(-8px) scale(1.035);
+}
+
+.committee-copy {
+  display: flex;
+  min-height: 210px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.committee-copy h2 {
+  margin: 14px 0 16px;
+  font-size: clamp(36px, 4vw, 64px);
+  font-weight: 350;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  transition: color 220ms ease;
+}
+
+.committee-card:hover .committee-copy h2,
+.committee-card:focus-within .committee-copy h2 {
+  color: var(--blue);
+}
+
+.committee-copy > p:not(.card-label) {
+  max-width: 760px;
+  color: var(--ink-soft);
+  font-size: var(--text-body-small);
+  line-height: 1.72;
+}
+
+.committee-copy .text-link {
+  width: fit-content;
+  margin-top: 28px;
+}
+
+.committee-number {
+  align-self: start;
+  color: rgba(36, 88, 255, 0.72);
+  font-family: var(--mono);
+  font-size: var(--text-micro);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.contact-us-panel {
+  margin-top: 30px;
+  padding: clamp(34px, 4vw, 54px);
+}
+
+.contact-us-lines {
+  display: grid;
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.contact-us-lines a,
+.footer-contact-line {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-us-lines svg,
+.footer-contact-line svg {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.contact-us-lines a {
+  color: var(--ink);
+  font-size: clamp(21px, 2vw, 30px);
+  transition: color 180ms ease;
+}
+
+.contact-us-lines a:hover {
+  color: var(--blue);
+}
+
+.contact-us-lines strong {
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.contact-organizations {
+  padding: 70px 0 150px;
+}
+
+.contact-logo-panel {
+  display: grid;
+  grid-template-columns: 0.9fr 1.3fr;
+  gap: clamp(40px, 8vw, 130px);
+  padding: clamp(34px, 5vw, 68px);
+}
+
+.logo-group {
+  display: grid;
+  align-content: start;
+  gap: 24px;
+}
+
+.supported-logo-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 18px;
+}
+
+.contact-logo-frame {
+  min-height: 140px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background:
+    linear-gradient(rgba(110, 130, 142, 0.08) 1px, transparent 1px) 0 0 /
+      28px 28px,
+    linear-gradient(90deg, rgba(110, 130, 142, 0.08) 1px, transparent 1px) 0 0 /
+      28px 28px,
+    rgba(248, 251, 253, 0.72);
+  border: 1px solid rgba(36, 88, 255, 0.14);
+}
+
+.contact-logo-frame img {
+  max-width: 100%;
+  max-height: 110px;
+  object-fit: contain;
+}
+
 .contact-directory {
   padding-bottom: 130px;
 }
@@ -2137,7 +2384,7 @@ p {
 
 .footer-main {
   display: grid;
-  grid-template-columns: 1.1fr 1.1fr 0.8fr;
+  grid-template-columns: 0.95fr 1.35fr 0.8fr;
   gap: 7vw;
   padding: 90px 0 80px;
 }
@@ -2163,6 +2410,41 @@ p {
   color: #aab5bc;
   font-size: 14px;
   line-height: 1.8;
+}
+
+.footer-contact-card {
+  align-self: end;
+  padding: 24px;
+  color: #dce7ed;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(119, 220, 255, 0.08), transparent 34%),
+    rgba(255, 255, 255, 0.018);
+  border: 1px solid #303b42;
+}
+
+.footer-contact-card .section-kicker {
+  color: var(--cyan);
+}
+
+.footer-contact-line {
+  margin-top: 16px;
+  color: #aab5bc;
+  font-size: 15px;
+  line-height: 1.5;
+  transition: color 180ms ease;
+}
+
+.footer-contact-line:hover {
+  color: #fff;
+}
+
+.footer-contact-line svg {
+  color: var(--cyan);
+}
+
+.footer-contact-line strong {
+  color: #e9eef1;
+  font-weight: 500;
 }
 
 .footer-links {
@@ -2233,7 +2515,7 @@ p {
   }
 
   .site-header {
-    height: 68px;
+    height: 74px;
   }
 
   .nav-shell {
@@ -2266,8 +2548,8 @@ p {
 
   .main-nav {
     position: fixed;
-    inset: 68px 0 auto;
-    max-height: calc(100vh - 68px);
+    inset: 74px 0 auto;
+    max-height: calc(100vh - 74px);
     padding: 20px;
     display: none;
     flex-direction: column;
@@ -2299,7 +2581,15 @@ p {
 
   .slide-copy {
     padding: 45px 35px;
-    grid-template-columns: 36px 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .committee-card-link {
+    grid-template-columns: 220px 1fr auto;
+  }
+
+  .contact-logo-panel {
+    grid-template-columns: 1fr;
   }
 
   .conference-title {
@@ -2345,8 +2635,16 @@ p {
 
   .slide-copy {
     padding: 34px 22px 30px;
-    grid-template-columns: 25px 1fr;
+    grid-template-columns: 1fr;
     border-right: 0;
+  }
+
+  .carousel-theme-strip {
+    min-height: 92px;
+  }
+
+  .carousel-theme-copy p {
+    font-size: 28px;
   }
 
   .slide-eyebrow {
@@ -2677,6 +2975,49 @@ p {
     justify-self: start;
   }
 
+  .committee-section {
+    padding: 80px 0 55px;
+  }
+
+  .committee-card-link {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 22px;
+  }
+
+  .committee-photo-stage {
+    min-height: 260px;
+  }
+
+  .committee-copy {
+    min-height: auto;
+  }
+
+  .committee-copy h2 {
+    font-size: 38px;
+  }
+
+  .committee-number {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+  }
+
+  .contact-us-lines a {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 22px;
+  }
+
+  .supported-logo-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-organizations {
+    padding: 55px 0 105px;
+  }
+
   .footer-main {
     grid-template-columns: 1fr;
     gap: 55px;
@@ -2688,6 +3029,16 @@ p {
 
   .footer-links {
     align-content: start;
+  }
+
+  .footer-contact-card {
+    align-self: start;
+  }
+
+  .footer-contact-line {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .footer-bottom {
