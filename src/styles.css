@@ -479,11 +479,11 @@ p {
 
 .carousel-theme-copy p {
   color: var(--ink);
-  font-family: var(--mono);
-  font-size: clamp(22px, 2vw, 34px);
-  font-weight: 700;
-  letter-spacing: 0.045em;
-  line-height: 1.18;
+  font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(26px, 2.4vw, 42px);
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
 }
 
 .carousel-theme-copy span {
@@ -2645,7 +2645,7 @@ p {
   }
 
   .carousel-theme-copy p {
-    font-size: 23px;
+    font-size: 27px;
   }
 
   .slide-eyebrow {
