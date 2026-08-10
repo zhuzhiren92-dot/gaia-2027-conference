@@ -205,7 +205,7 @@ p {
   display: inline-block;
 }
 
-/* React Bits — light BorderGlow adaptation */
+/* React Bits - light BorderGlow adaptation */
 
 .border-glow {
   position: relative;
@@ -256,7 +256,7 @@ p {
   z-index: 1;
 }
 
-/* React Bits — light Dock adaptation for parallel cards */
+/* React Bits - light Dock adaptation for parallel cards */
 
 .dock-surface {
   position: relative;
@@ -455,7 +455,8 @@ p {
 /* School carousel */
 
 .school-showcase {
-  padding: 34px 0 58px;
+  --carousel-page: min(1760px, calc(100vw - 40px));
+  padding: 38px 0 64px;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background:
@@ -471,7 +472,8 @@ p {
 }
 
 .carousel-theme-strip {
-  min-height: 74px;
+  width: var(--carousel-page);
+  min-height: 92px;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -480,18 +482,18 @@ p {
 .carousel-theme-copy p {
   color: var(--ink);
   font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(26px, 2.4vw, 42px);
+  font-size: clamp(34px, 3vw, 58px);
   font-weight: 650;
-  letter-spacing: -0.025em;
-  line-height: 1.08;
+  letter-spacing: 0;
+  line-height: 1.04;
 }
 
 .carousel-theme-copy span {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 14px;
   color: var(--blue);
   font-family: var(--mono);
-  font-size: var(--text-micro);
+  font-size: clamp(14px, 1vw, 18px);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -506,17 +508,17 @@ p {
 
 .carousel-viewport {
   position: relative;
-  width: var(--page);
+  width: var(--carousel-page);
   margin-inline: auto;
   overflow: hidden;
   border: 1px solid var(--line-dark);
-  background: var(--wash);
+  background: #10171c;
   touch-action: pan-y;
   user-select: none;
 }
 
 .carousel-glow-shell {
-  width: var(--page);
+  width: var(--carousel-page);
   margin-inline: auto;
 }
 
@@ -533,12 +535,19 @@ p {
 }
 
 .school-slide {
+  position: relative;
   min-width: 100%;
-  min-height: 520px;
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  height: clamp(380px, 32vw, 560px);
   overflow: hidden;
   background: #f8fbfc;
+}
+
+.school-slide-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .slide-copy {
@@ -726,6 +735,7 @@ p {
 }
 
 .carousel-controls {
+  width: var(--carousel-page);
   display: grid;
   grid-template-columns: 1fr auto auto;
   align-items: center;
@@ -2174,14 +2184,22 @@ p {
 }
 
 .contact-us-panel {
-  margin-top: 30px;
-  padding: clamp(34px, 4vw, 54px);
+  margin-top: clamp(78px, 8vw, 130px);
+  padding: clamp(42px, 5vw, 72px);
+}
+
+.contact-us-panel .section-kicker,
+.contact-logo-panel .section-kicker {
+  color: var(--ink);
+  font-size: clamp(22px, 2vw, 32px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .contact-us-lines {
   display: grid;
-  gap: 18px;
-  margin-top: 26px;
+  gap: 22px;
+  margin-top: 34px;
 }
 
 .contact-us-lines a,
@@ -2205,7 +2223,7 @@ p {
 
 .contact-us-lines a {
   color: var(--ink);
-  font-size: clamp(21px, 2vw, 30px);
+  font-size: clamp(24px, 2.25vw, 34px);
   transition: color 180ms ease;
 }
 
@@ -2216,6 +2234,12 @@ p {
 .contact-us-lines strong {
   color: var(--blue);
   font-weight: 500;
+}
+
+.contact-us-lines svg {
+  width: clamp(40px, 3.2vw, 54px);
+  height: clamp(40px, 3.2vw, 54px);
+  stroke-width: 1.65;
 }
 
 .contact-organizations {
@@ -2385,8 +2409,8 @@ p {
 
 .footer-main {
   display: grid;
-  grid-template-columns: 0.95fr 1.35fr 0.8fr;
-  gap: 7vw;
+  grid-template-columns: minmax(240px, 0.9fr) minmax(360px, 1.15fr) minmax(220px, 0.75fr);
+  gap: clamp(40px, 5vw, 88px);
   padding: 90px 0 80px;
 }
 
@@ -2398,10 +2422,10 @@ p {
 }
 
 .footer-edition {
-  margin-top: 22px;
+  margin-top: 28px;
   color: var(--cyan);
   font-family: var(--mono);
-  font-size: var(--text-micro);
+  font-size: clamp(18px, 1.35vw, 24px);
   letter-spacing: 0.08em;
 }
 
@@ -2414,23 +2438,27 @@ p {
 }
 
 .footer-contact-card {
+  width: min(100%, 520px);
   align-self: end;
-  padding: 24px;
+  justify-self: start;
+  margin-left: clamp(-56px, -3vw, -18px);
+  padding: 0;
   color: #dce7ed;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(119, 220, 255, 0.08), transparent 34%),
-    rgba(255, 255, 255, 0.018);
-  border: 1px solid #303b42;
+  background: transparent;
+  border: 0;
 }
 
 .footer-contact-card .section-kicker {
   color: var(--cyan);
+  font-size: clamp(16px, 1.3vw, 21px);
+  font-weight: 700;
+  letter-spacing: 0.1em;
 }
 
 .footer-contact-line {
-  margin-top: 16px;
+  margin-top: 18px;
   color: #aab5bc;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.5;
   transition: color 180ms ease;
 }
@@ -2577,7 +2605,7 @@ p {
   }
 
   .school-slide {
-    grid-template-columns: 1fr 1fr;
+    height: clamp(360px, 38vw, 500px);
   }
 
   .slide-copy {
@@ -2629,9 +2657,8 @@ p {
   }
 
   .school-slide {
-    min-height: 610px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 250px;
+    height: clamp(250px, 68vw, 360px);
+    min-height: 0;
   }
 
   .slide-copy {
@@ -2645,7 +2672,7 @@ p {
   }
 
   .carousel-theme-copy p {
-    font-size: 27px;
+    font-size: 31px;
   }
 
   .slide-eyebrow {
@@ -3034,6 +3061,7 @@ p {
 
   .footer-contact-card {
     align-self: start;
+    margin-left: 0;
   }
 
   .footer-contact-line {

@@ -3,11 +3,14 @@ import {
   useEffect,
   useRef,
   useState,
+  type KeyboardEvent,
   type PointerEvent,
 } from 'react'
 import { conference } from '../content/conference'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { BorderGlow } from './BorderGlow'
+
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
 function ArrowIcon({ reverse = false }: { reverse?: boolean }) {
   return (
@@ -67,7 +70,7 @@ export function SchoolCarousel() {
     event.currentTarget.releasePointerCapture(event.pointerId)
   }
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'ArrowRight') {
       event.preventDefault()
       goTo(index + 1)
@@ -110,7 +113,7 @@ export function SchoolCarousel() {
           className="carousel-viewport"
           role="region"
           aria-roledescription="carousel"
-          aria-label="Host institution introduction"
+          aria-label="GAIA 2027 image carousel"
           tabIndex={0}
           onKeyDown={handleKeyDown}
           onPointerDown={handlePointerDown}
@@ -129,28 +132,19 @@ export function SchoolCarousel() {
                 className="school-slide"
                 key={slide.id}
                 aria-hidden={slideIndex !== index}
-                aria-label={`${slideIndex + 1} of ${slides.length}`}
+                aria-label={`${slideIndex + 1} of ${slides.length}: ${slide.alt}`}
               >
-                <div className="slide-copy">
-                  <div>
-                    <p className="slide-eyebrow">{slide.eyebrow}</p>
-                    <h2>{slide.title}</h2>
-                    <p className="slide-description">{slide.description}</p>
-                    <p className="slide-note">
-                      <span />
-                      {slide.note}
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className={`school-art art-${slide.art}`}
-                  aria-hidden="true"
-                >
-                  <div className="art-core" />
-                  <div className="art-ring ring-one" />
-                  <div className="art-ring ring-two" />
-                  <div className="art-mesh" />
-                </div>
+                <img
+                  className="school-slide-image"
+                  src={assetUrl(slide.image)}
+                  alt={slide.alt}
+                  loading="eager"
+                  draggable={false}
+                  style={{
+                    objectFit: slide.objectFit ?? 'cover',
+                    objectPosition: slide.objectPosition ?? 'center',
+                  }}
+                />
               </article>
             ))}
           </div>

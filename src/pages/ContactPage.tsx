@@ -1,5 +1,4 @@
 import { BorderGlow } from '../components/BorderGlow'
-import { DockSurface } from '../components/DockSurface'
 import { PageFrame } from '../components/PageFrame'
 import { conference } from '../content/conference'
 
@@ -12,58 +11,6 @@ export function ContactPage() {
       pageStatement="Questions are welcome. Official contacts will appear here."
       showIntroSections={false}
     >
-      <section className="committee-section page-width" data-reveal>
-        <div className="section-heading-row contact-heading-row">
-          <div>
-            <p className="section-kicker">ORGANIZING COMMITTEE</p>
-            <h2>People behind GAIA 2027</h2>
-          </div>
-          <p className="quiet-copy">
-            Select a profile card to open the corresponding CityU Scholars page.
-          </p>
-        </div>
-
-        <DockSurface
-          className="committee-list"
-          distance={420}
-          magnification={1.018}
-          lift={8}
-        >
-          {conference.committee.map((member, index) => (
-            <BorderGlow
-              as="article"
-              className="committee-card"
-              backgroundColor="rgba(255, 255, 255, 0.82)"
-              key={member.profileUrl}
-              data-dock-item
-            >
-              <a
-                className="committee-card-link"
-                href={member.profileUrl}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`${member.name}, ${member.role}`}
-              >
-                <div className="committee-photo-stage" aria-hidden="true">
-                  <img src={assetUrl(member.photo)} alt="" loading="lazy" />
-                </div>
-                <div className="committee-copy">
-                  <p className="card-label">{member.role}</p>
-                  <h2>{member.name}</h2>
-                  {member.biography ? <p>{member.biography}</p> : null}
-                  <span className="text-link">
-                    View CityU profile <i>→</i>
-                  </span>
-                </div>
-                <p className="committee-number">
-                  {String(index + 1).padStart(2, '0')}
-                </p>
-              </a>
-            </BorderGlow>
-          ))}
-        </DockSurface>
-      </section>
-
       <BorderGlow
         as="section"
         className="contact-us-panel page-width"

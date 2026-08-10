@@ -82,10 +82,10 @@ function Footer() {
       <div className="page-width footer-main">
         <div>
           <p className="footer-wordmark">GAIA</p>
-          <p className="footer-edition">03 / 2027</p>
+          <p className="footer-edition">May / 2027</p>
         </div>
         <div className="footer-contact-card" aria-label="Contact us">
-          <p className="section-kicker">Contact us</p>
+          <p className="section-kicker">CONTACT US</p>
           {conference.contactChannels.map((item) => (
             <a
               key={item.email}

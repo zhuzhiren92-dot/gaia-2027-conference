@@ -5,12 +5,10 @@ export type NavItem = {
 
 export type SchoolSlide = {
   id: string
-  index: string
-  eyebrow: string
-  title: string
-  description: string
-  note: string
-  art: 'orbit' | 'strata' | 'grid' | 'wave'
+  image: string
+  alt: string
+  objectPosition?: string
+  objectFit?: 'cover' | 'contain'
 }
 
 export type Highlight = {
