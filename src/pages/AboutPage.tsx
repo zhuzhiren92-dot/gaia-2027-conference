@@ -2,6 +2,7 @@ import { PageFrame } from '../components/PageFrame'
 import { BorderGlow } from '../components/BorderGlow'
 import { DockSurface } from '../components/DockSurface'
 import { SpotlightCard } from '../components/SpotlightCard'
+import { conference } from '../content/conference'
 
 const principles = [
   {
@@ -28,32 +29,49 @@ export function AboutPage() {
       pageStatement="An alliance shaped by curiosity, generosity and durable research ties."
     >
       <section className="manifesto page-width" data-reveal>
-        <p className="section-kicker">THE ALLIANCE</p>
+        <p className="section-kicker">WHAT IS GAIA?</p>
         <div className="manifesto-copy">
           <p className="manifesto-primary">
-            GAIA brings together people working on the mechanics of earth
-            materials and the systems built with, in and around them.
+            GAIA is a rotating pan-Asian platform for exchange, collaboration
+            and long-term research ties in geomechanics.
           </p>
           <div className="manifesto-secondary">
-            <p>
-              It is designed first for students and young researchers: a place
-              to present carefully, question freely and discover adjacent ways
-              of thinking.
-            </p>
-            <p>
-              The alliance is international by nature and personal by design.
-              Its value lies not only in the programme, but in the research
-              relationships that continue afterwards.
-            </p>
+            {conference.about.whatIsGaia.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </div>
+      </section>
+
+      <section className="science-highlights page-width">
+        <div className="section-heading-row">
+          <div>
+            <p className="section-kicker">SCIENTIFIC PROGRAM HIGHLIGHTS</p>
+            <h2>Methods, materials and exchange.</h2>
+          </div>
+        </div>
+        <DockSurface className="science-highlight-grid">
+          {conference.about.scientificHighlights.map((item, index) => (
+            <SpotlightCard key={item.title} data-dock-item>
+              <p className="principle-index">
+                {String(index + 1).padStart(2, '0')}
+              </p>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </SpotlightCard>
+          ))}
+        </DockSurface>
       </section>
 
       <section className="principles page-width">
         <div className="section-heading-row">
           <div>
             <p className="section-kicker">OUR PRINCIPLES</p>
-            <h2>Small enough for dialogue.<br />Wide enough for discovery.</h2>
+            <h2>
+              Small enough for dialogue.
+              <br />
+              Wide enough for discovery.
+            </h2>
           </div>
         </div>
         <DockSurface className="principles-grid">
@@ -89,7 +107,11 @@ export function AboutPage() {
           <span className="network-node node-b" />
           <span className="network-node node-c" />
           <span className="network-node node-d" />
-          <p>GAIA / ASIA<br />RESEARCH NETWORK</p>
+          <p>
+            GAIA / ASIA
+            <br />
+            RESEARCH NETWORK
+          </p>
         </BorderGlow>
       </section>
     </PageFrame>

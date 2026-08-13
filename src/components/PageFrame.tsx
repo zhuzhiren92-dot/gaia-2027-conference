@@ -13,6 +13,8 @@ type PageFrameProps = {
   showIntroSections?: boolean
 }
 
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
+
 export function PageFrame({
   pageName,
   pageStatement,
@@ -80,10 +82,11 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="page-width footer-main">
-        <div>
+        <div className="footer-brand">
           <p className="footer-wordmark">GAIA</p>
           <p className="footer-edition">May / 2027</p>
         </div>
+
         <div className="footer-contact-card" aria-label="Contact us">
           <p className="section-kicker">CONTACT US</p>
           {conference.contactChannels.map((item) => (
@@ -98,6 +101,36 @@ function Footer() {
             </a>
           ))}
         </div>
+
+        <div className="footer-organizations" aria-label="Organized and supported by">
+          <div className="footer-logo-group">
+            <p className="section-kicker">ORGANIZED BY</p>
+            <div className="footer-logo-row">
+              {conference.organizedBy.map((item) => (
+                <img
+                  key={item.name}
+                  src={assetUrl(item.logo)}
+                  alt={item.name}
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          </div>
+          <div className="footer-logo-group">
+            <p className="section-kicker">SUPPORTED BY</p>
+            <div className="footer-logo-row">
+              {conference.supportedBy.map((item) => (
+                <img
+                  key={item.name}
+                  src={assetUrl(item.logo)}
+                  alt={item.name}
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
         <DockSurface
           as="nav"
           className="footer-links"

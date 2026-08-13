@@ -27,15 +27,15 @@ export function RegistrationPage() {
           <p>{registration.message}</p>
         </div>
         <button type="button" disabled>
-          REGISTRATION FORTHCOMING
+          OFFICIAL LINK FORTHCOMING
         </button>
       </BorderGlow>
 
       <section className="registration-steps page-width">
         <div className="section-heading-row">
           <div>
-            <p className="section-kicker">HOW IT WILL WORK</p>
-            <h2>A simple four-step process</h2>
+            <p className="section-kicker">REGISTRATION INPUTS</p>
+            <h2>Information required for registration</h2>
           </div>
         </div>
         <DockSurface as="ol" distance={320}>
@@ -53,6 +53,43 @@ export function RegistrationPage() {
         </DockSurface>
       </section>
 
+      <section className="registration-timeline page-width">
+        <div className="section-heading-row">
+          <div>
+            <p className="section-kicker">IMPORTANT DATES</p>
+            <h2>Registration timeline</h2>
+          </div>
+        </div>
+        <DockSurface
+          className="timeline-list compact-timeline"
+          distance={330}
+          magnification={1.024}
+          lift={10}
+        >
+          {registration.timeline.map((item, index) => (
+            <article
+              className={`timeline-item status-${item.status}`}
+              key={`${item.title}-${index}`}
+              data-dock-item
+              tabIndex={0}
+            >
+              <p className="timeline-index">
+                {String(index + 1).padStart(2, '0')}
+              </p>
+              <p className="timeline-date">{item.date}</p>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+              <span
+                className={`status-dot status-${item.status}`}
+                aria-label={item.status}
+              />
+            </article>
+          ))}
+        </DockSurface>
+      </section>
+
       <section className="fees-section page-width">
         <div className="section-heading-row">
           <div>
@@ -60,8 +97,7 @@ export function RegistrationPage() {
             <h2>Participation categories</h2>
           </div>
           <p className="quiet-copy">
-            Currency, deadlines and inclusions will be confirmed before
-            registration opens.
+            Fees are shown in HKD and remain subject to final confirmation.
           </p>
         </div>
         <BorderGlow
@@ -72,8 +108,8 @@ export function RegistrationPage() {
         >
           <div className="fee-row fee-head" role="row">
             <p role="columnheader">CATEGORY</p>
-            <p role="columnheader">EARLY</p>
-            <p role="columnheader">REGULAR</p>
+            <p role="columnheader">EARLY-BIRD FEES (before 22 March 2027)</p>
+            <p role="columnheader">REGULAR FEES (after 22 March 2027)</p>
           </div>
           <DockSurface
             className="fee-rows"
@@ -95,6 +131,7 @@ export function RegistrationPage() {
               </div>
             ))}
           </DockSurface>
+          <p className="fee-note">{registration.feeNote}</p>
         </BorderGlow>
       </section>
 

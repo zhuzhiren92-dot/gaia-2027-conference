@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { PageFrame } from '../components/PageFrame'
 import { BorderGlow } from '../components/BorderGlow'
 import { DockSurface } from '../components/DockSurface'
@@ -10,44 +11,28 @@ export function WorkshopPage() {
       pageName="WORKSHOP"
       pageStatement="Focused talks, serious questions and time to think together."
     >
-      <section className="workshop-overview page-width">
-        <p className="section-kicker">THE FORMAT</p>
+      <section className="workshop-overview page-width" data-reveal>
+        <p className="section-kicker">GAIA THIRD WORKSHOP (GAIA 2027)</p>
         <p className="large-body">{conference.workshop.overview}</p>
-        <DockSurface
-          as="dl"
-          className="format-list"
-          distance={240}
-          magnification={1.022}
-          lift={6}
-        >
-          <div data-dock-item tabIndex={0}>
-            <dt>Audience</dt>
-            <dd>Young researchers, graduate students and invited scholars</dd>
-          </div>
-          <div data-dock-item tabIndex={0}>
-            <dt>Language</dt>
-            <dd>English</dd>
-          </div>
-          <div data-dock-item tabIndex={0}>
-            <dt>Presentation format</dt>
-            <dd>Keynotes, focused talks, posters and discussion</dd>
-          </div>
-          <div data-dock-item tabIndex={0}>
-            <dt>Capacity</dt>
-            <dd>To be announced</dd>
-          </div>
-        </DockSurface>
+        <p className="workshop-theme-copy">
+          The third workshop, GAIA 2027, will be hosted by City University of
+          Hong Kong and is scheduled to take place from 27 to 30 May 2027 in
+          Hong Kong, China. The main theme is{' '}
+          <strong>
+            Advancing micro-macro geomechanics using intelligent experimental
+            and numerical modelling approaches.
+          </strong>
+        </p>
       </section>
 
       <section className="topics-section page-width">
         <div className="section-heading-row">
           <div>
-            <p className="section-kicker">AREAS OF INTEREST</p>
+            <p className="section-kicker">KEY TOPICS</p>
             <h2>A broad field, considered closely.</h2>
           </div>
           <p className="quiet-copy">
-            The final GAIA 2027 theme and detailed scope remain subject to
-            confirmation.
+            These topics frame the current GAIA 2027 scientific scope.
           </p>
         </div>
         <DockSurface
@@ -61,7 +46,7 @@ export function WorkshopPage() {
             <li key={topic} data-dock-item tabIndex={0}>
               <span>{String(index + 1).padStart(2, '0')}</span>
               <p>{topic}</p>
-              <i aria-hidden="true">↗</i>
+              <i aria-hidden="true">→</i>
             </li>
           ))}
         </DockSurface>
@@ -71,14 +56,17 @@ export function WorkshopPage() {
         <div className="section-heading-row">
           <div>
             <p className="section-kicker">KEYNOTE SPEAKERS</p>
-            <h2>Voices for GAIA 2027</h2>
+            <h2>Keynote Speakers</h2>
           </div>
-          <p className="quiet-copy">Speaker announcements are forthcoming.</p>
+          <p className="quiet-copy">
+            Portraits, lecture titles and biographies will be added after
+            confirmation.
+          </p>
         </div>
-        <DockSurface className="speaker-grid">
+        <DockSurface className="speaker-grid speaker-grid-six">
           {conference.workshop.speakers.map((speaker, index) => (
             <SpotlightCard key={speaker.name} data-dock-item>
-              <div className="speaker-portrait" aria-hidden="true">
+              <div className="speaker-portrait speaker-placeholder" aria-hidden="true">
                 <span>{String(index + 1).padStart(2, '0')}</span>
               </div>
               <p className="card-label">KEYNOTE / TBA</p>
@@ -90,15 +78,39 @@ export function WorkshopPage() {
         </DockSurface>
       </section>
 
+      <section className="workshop-dates page-width">
+        <div className="section-heading-row">
+          <div>
+            <p className="section-kicker">DATES</p>
+            <h2>Four days in Hong Kong.</h2>
+          </div>
+        </div>
+        <DockSurface className="date-card-grid" distance={340} lift={8}>
+          {conference.workshop.dates.map((item) => (
+            <BorderGlow
+              as="article"
+              className="date-card"
+              key={item.date}
+              backgroundColor="rgba(255, 255, 255, 0.82)"
+              data-dock-item
+            >
+              <p className="card-label">{item.date}</p>
+              <h3>{item.title}</h3>
+              {item.detail ? <p>{item.detail}</p> : null}
+            </BorderGlow>
+          ))}
+        </DockSurface>
+      </section>
+
       <section className="venue-section page-width">
         <div className="section-heading-row">
           <div>
-            <p className="section-kicker">VENUE & ACCESS</p>
-            <h2>Plan your arrival</h2>
+            <p className="section-kicker">WORKSHOP FRAMEWORK</p>
+            <h2>Participation framework</h2>
           </div>
         </div>
         <DockSurface className="venue-grid" distance={320}>
-          {conference.workshop.venue.map((item) => (
+          {conference.workshop.framework.map((item) => (
             <BorderGlow
               as="article"
               className="venue-card"
@@ -112,6 +124,39 @@ export function WorkshopPage() {
             </BorderGlow>
           ))}
         </DockSurface>
+      </section>
+
+      <section className="poster-section page-width" data-reveal>
+        <p className="section-kicker">POSTER SESSIONS</p>
+        <div className="poster-copy">
+          <h2>Poster Sessions</h2>
+          <div>
+            {conference.workshop.posterSessions.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <BorderGlow
+        as="section"
+        className="workshop-registration-cta page-width"
+        backgroundColor="rgba(248, 251, 253, 0.9)"
+        animated
+        data-reveal
+      >
+        <p className="section-kicker">{conference.workshop.registrationCta.kicker}</p>
+        <h2>{conference.workshop.registrationCta.title}</h2>
+        <p>{conference.workshop.registrationCta.body}</p>
+        <Link className="button-link" to={conference.workshop.registrationCta.linkTo ?? '/registration'}>
+          {conference.workshop.registrationCta.linkLabel} <span>→</span>
+        </Link>
+      </BorderGlow>
+
+      <section className="tentative-timetable page-width" data-reveal>
+        <p className="section-kicker">TENTATIVE TIMETABLE</p>
+        <h2>Tentative Timetable</h2>
+        <p>{conference.workshop.timetableNote}</p>
       </section>
     </PageFrame>
   )

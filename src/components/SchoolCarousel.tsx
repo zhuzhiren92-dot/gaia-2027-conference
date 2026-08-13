@@ -15,11 +15,12 @@ const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
 function ArrowIcon({ reverse = false }: { reverse?: boolean }) {
   return (
     <svg
-      viewBox="0 0 28 12"
+      viewBox="0 0 32 20"
       aria-hidden="true"
       className={reverse ? 'is-reversed' : ''}
     >
-      <path d="M0 6h26M20 1l6 5-6 5" />
+      <path className="arrow-line" d="M4 10h22" />
+      <path className="arrow-head" d="M20 4l6 6-6 6" />
     </svg>
   )
 }
@@ -141,6 +142,7 @@ export function SchoolCarousel() {
                   loading="eager"
                   draggable={false}
                   style={{
+                    background: slide.background,
                     objectFit: slide.objectFit ?? 'cover',
                     objectPosition: slide.objectPosition ?? 'center',
                   }}
@@ -160,10 +162,6 @@ export function SchoolCarousel() {
             />
           ))}
         </div>
-        <p className="carousel-count" aria-live="polite">
-          {String(index + 1).padStart(2, '0')} /{' '}
-          {String(slides.length).padStart(2, '0')}
-        </p>
         <div className="carousel-buttons">
           <button
             type="button"

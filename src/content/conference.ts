@@ -21,31 +21,38 @@ export const conference: ConferenceContent = {
   ],
   schoolSlides: [
     {
-      id: 'micro-macro-model',
-      image: 'assets/carousel/fig-2.jpg',
-      alt: 'Micro-macro geomechanics model visualization',
+      id: 'hong-kong-harbour',
+      image: 'assets/carousel/hong-kong-harbour.webp',
+      alt: 'Hong Kong harbour skyline',
       objectPosition: 'center center',
     },
     {
       id: 'cityu-campus',
-      image: 'assets/carousel/cityu-2.png',
-      alt: 'City University of Hong Kong campus and venue views',
+      image: 'assets/carousel/cityu-campus-1.webp',
+      alt: 'City University of Hong Kong campus view',
       objectPosition: 'center center',
-      objectFit: 'contain',
     },
     {
       id: 'geomechanics-structure',
-      image: 'assets/carousel/geomechanics-structure.png',
-      alt: 'Geomechanics research image showing particle-scale structure',
+      image: 'assets/carousel/geomechanics-structure-3.webp',
+      alt: 'Geomechanics research visualization',
       objectPosition: 'center center',
       objectFit: 'contain',
+      background: '#f7fbff',
     },
     {
       id: 'numerical-simulation',
-      image: 'assets/carousel/numerical-simulation-geotechnics-2.png',
+      image: 'assets/carousel/numerical-simulation-geotechnics-2.webp',
       alt: 'Numerical simulation in geotechnics',
       objectPosition: 'center center',
       objectFit: 'contain',
+      background: '#f8fbff',
+    },
+    {
+      id: 'ace-department',
+      image: 'assets/carousel/ace-department.webp',
+      alt: 'Department of Architecture and Civil Engineering at CityUHK',
+      objectPosition: 'center 48%',
     },
   ],
   highlights: [
@@ -65,107 +72,240 @@ export const conference: ConferenceContent = {
       detail: 'An international academic programme',
     },
     {
-      label: 'Audience',
-      value: 'Asia +',
-      detail: 'Young researchers and graduate students',
+      label: 'Capacity',
+      value: '150',
+      detail: 'Registration is limited to approximately 150 participants',
     },
   ],
   timeline: [
     {
-      date: '2026 - Q3',
-      title: 'Website launch',
-      description: 'The first GAIA 2027 information hub goes online.',
+      date: '2026/09/20',
+      title: 'GAIA webpage is launched.',
+      description: 'The GAIA 2027 information hub goes online.',
       status: 'confirmed',
     },
     {
-      date: 'TO BE ANNOUNCED',
-      title: 'Registration opens',
-      description: 'Registration details and participation guidance will follow.',
+      date: '2026/12/20',
+      title: 'Online registration opens.',
+      description:
+        'GAIA 2027 online registration and abstract submission are planned to open.',
       status: 'pending',
     },
     {
-      date: 'TO BE ANNOUNCED',
-      title: 'Abstract deadline',
-      description: 'Submission format and review milestones will be published here.',
+      date: '2027/01/31',
+      title: 'Abstract submission closes.',
+      description: 'Abstract submission is expected to close after review.',
       status: 'pending',
     },
     {
-      date: '2027',
-      title: 'GAIA third workshop',
-      description: 'The workshop dates and host city will be announced.',
+      date: '2027/04/30',
+      title: 'Online registration closes.',
+      description: 'Online registration will close before final preparation.',
+      status: 'pending',
+    },
+    {
+      date: '2027/05/27',
+      title: 'On-site registration starts.',
+      description: 'Participants arrive in Hong Kong and collect materials.',
+      status: 'pending',
+    },
+    {
+      date: '2027/05/28',
+      title: 'GAIA 2027 officially starts.',
+      description: 'The third GAIA workshop begins at City University of Hong Kong.',
       status: 'pending',
     },
   ],
-  workshop: {
-    overview:
-      'GAIA is conceived as a durable platform for young researchers and graduate students in geomechanics to exchange knowledge, test ideas and build research relationships across Asia. The annual workshop is its main in-person forum.',
-    topics: [
-      'Fundamental and applied geomechanics',
-      'Multiscale observation and modelling',
-      'Granular and porous materials',
-      'Geo-energy and environmental geotechnics',
-      'Data-driven methods in geomechanics',
-      'Resilient infrastructure and natural hazards',
+  homeFeatures: [
+    {
+      kicker: 'ABOUT THE ALLIANCE',
+      title: 'GAIA: Geomechanics Alliance In Asia',
+      body: 'GAIA, the Geomechanics Alliance in Asia, is proposed as a platform for Asian students and young researchers in geomechanics to exchange knowledge and ideas, fostering the development of a lasting research network.',
+      linkLabel: 'More about GAIA',
+      linkTo: '/about',
+    },
+    {
+      kicker: 'PREVIOUS WORKSHOP',
+      title: 'GAIA 2026',
+      body: 'GAIA Second Workshop (GAIA 2026) was scheduled from 27 to 30 March 2026 in Jinan, Shandong, China.',
+      linkLabel: 'More about workshop',
+      linkTo: '/workshop',
+    },
+  ],
+  about: {
+    whatIsGaia: [
+      'GAIA (Geomechanics Alliance in Asia) is a proposed pan-Asian initiative that aims to build a vibrant, interconnected platform for students, young researchers, and professionals in geomechanics, geotechnical engineering, and related earth-science disciplines. By promoting regular knowledge exchange, collaborative research, and professional networking, GAIA seeks to establish a durable research community that tackles both regional and global challenges in geomechanics and related fields.',
+      "Similar initiatives exist elsewhere - for example, ALERT Geomaterials, founded in 1989, has sustained a close European network in research on geomaterials for decades. ALERT leverages Europe's compact geography to run annual thematic sessions and doctoral schools, which have been instrumental in fostering strong scientific ties and training successive generations of researchers.",
+      "Recognizing Asia's much larger geographic scale and greater cultural and institutional diversity, GAIA will adopt a rotating host-country model to maximize accessibility and ensure broad regional representation. By connecting talent, facilities, and industry needs, GAIA will help form resilient, cross-border networks that accelerate innovation, strengthen capacity, and contribute to the sustainable development and safety of infrastructure throughout the region.",
     ],
-    speakers: [
+    scientificHighlights: [
       {
-        name: 'Keynote speaker 01',
-        affiliation: 'To be announced',
-        topic: 'Lecture title to be announced',
+        title: 'Experimental investigations',
+        text: 'Experimental investigations on soils and granular materials, addressing key aspects such as particle-scale effects, partial saturation, time-dependent behaviour, and coupled physical processes.',
       },
       {
-        name: 'Keynote speaker 02',
-        affiliation: 'To be announced',
-        topic: 'Lecture title to be announced',
+        title: 'Modeling approaches',
+        text: 'Modeling approaches spanning both discrete and continuum perspectives, aiming to better capture material behaviour across multiple scales and under complex conditions.',
       },
       {
-        name: 'Keynote speaker 03',
-        affiliation: 'To be announced',
-        topic: 'Lecture title to be announced',
-      },
-    ],
-    venue: [
-      {
-        label: 'Workshop venue',
-        value: 'TBA',
-        detail: 'Venue and address will be published after confirmation.',
-      },
-      {
-        label: 'Nearest airport',
-        value: 'TBA',
-        detail: 'International arrival guidance will be added here.',
-      },
-      {
-        label: 'Local transport',
-        value: 'TBA',
-        detail: 'Rail, taxi and public transport options will follow.',
+        title: 'Academic exchange',
+        text: 'The event will bring together professors, experts, and students, offering a platform for in-depth discussions and knowledge exchange in this rapidly evolving field.',
       },
     ],
   },
+  workshop: {
+    overview:
+      'Geomechanics Alliance in Asia (GAIA) aims to provide a platform for young researchers and graduate students in geomechanics and geotechnical engineering across Asia to exchange ideas and foster collaboration. The annual GAIA Workshop serves as the main channel for communication and interaction.',
+    topics: [
+      'Advanced characterization of geomaterials using X-ray microtomography (CT), X-ray diffraction (XRD), 3D laser scanning, particle image velocimetry (PIV), and other non-destructive optical and imaging techniques',
+      'Latest development of numerical modelling methods including DEM, FEM, FDM, MPM, CFD, LBM, and SPH for multiphase geomaterials, granular instability, and granular flow problems',
+      'New development and application of machine learning and deep learning methods in geotechnical engineering',
+      'Physics-informed, data-driven constitutive modelling of geomaterials',
+      'Intelligent characterization, modelling, and simulation in geotechnical engineering using data-driven approaches',
+      'Geotechnical infrastructure monitoring using novel remote sensing techniques',
+    ],
+    speakers: Array.from({ length: 6 }, (_, index) => ({
+      name: `Keynote speaker ${String(index + 1).padStart(2, '0')}`,
+      affiliation: 'To be announced',
+      topic: 'Profile, portrait and lecture title will be added after confirmation.',
+    })),
+    venue: [
+      {
+        label: 'Host',
+        value: 'CityUHK',
+        detail: 'City University of Hong Kong will host GAIA 2027.',
+      },
+      {
+        label: 'City',
+        value: 'Hong Kong',
+        detail: 'Travel and local access guidance will be updated later.',
+      },
+      {
+        label: 'Capacity',
+        value: '150',
+        detail: 'Registration is limited to approximately 150 participants.',
+      },
+    ],
+    dates: [
+      {
+        date: 'May 27, 2027',
+        title: 'Workshop on-site registration starts',
+      },
+      {
+        date: 'May 28, 2027',
+        title: 'First official workshop day',
+        detail: 'Gala dinner and poster session are planned.',
+      },
+      {
+        date: 'May 29, 2027',
+        title: 'Second official workshop day',
+        detail: 'Award ceremony and academic sessions are planned.',
+      },
+      {
+        date: 'May 30, 2027',
+        title: 'Construction site visit',
+        detail: 'Optional activity, subject to final arrangements.',
+      },
+    ],
+    framework: [
+      {
+        label: 'Maximum participants',
+        value: '150',
+        detail:
+          'Registration is limited to 150 participants. Once this number is reached, registration will be closed.',
+      },
+      {
+        label: 'Language',
+        value: 'English',
+        detail: 'All workshop sessions will use English.',
+      },
+      {
+        label: 'Presentation',
+        value: 'Young researchers',
+        detail: 'Presentations will mainly be from young researchers and students.',
+      },
+      {
+        label: 'Presentation time',
+        value: '20 min',
+        detail: 'Each oral presentation includes discussion time.',
+      },
+    ],
+    posterSessions: [
+      'Please refer to the workshop schedule for the detailed conference timetable. Participants are required to prepare an electronic file of their academic poster in a 1:2 aspect ratio, clearly presenting the research topic, main content, and key conclusions.',
+      'The organizer will arrange centralized poster printing, and the electronic poster file should be sent to the conference email address by May 20, 2027. Before the poster session begins, on-site staff will contact participants and guide them to the designated location.',
+      "If poster submissions exceed the venue's capacity, the organizing committee may screen submitted materials based on academic innovation and thematic relevance. Participants affected by this process will be informed by email.",
+      'We look forward to your wonderful presentations.',
+    ],
+    registrationCta: {
+      kicker: 'REGISTRATION',
+      title: 'Online registration will officially start on December 20, 2026',
+      body: 'Registration details, participation guidance, and modification instructions will be updated on the Registration page.',
+      linkLabel: 'Go to Registration',
+      linkTo: '/registration',
+    },
+    timetableNote:
+      'This tentative timetable may change depending on follow-up arrangements for the workshop. A detailed programme table will be added later.',
+  },
   registration: {
-    status: 'REGISTRATION NOT YET OPEN',
+    status: 'REGISTRATION IS OPEN NOW',
     message:
-      'GAIA 2027 registration details are being prepared. No personal information is collected on this website at this stage.',
+      'The items you need to input for registration are listed below. The official registration channel will be linked here once it is confirmed.',
     steps: [
-      'Review the participation and presentation requirements.',
-      'Prepare your personal and affiliation information.',
-      'Submit registration through the official channel once announced.',
-      'Receive confirmation from the organizing committee.',
+      'Personal information: name, email, living address, phone number, status, and affiliation.',
+      'Accommodation request: stay dates, room type, roommate names, and dietary restrictions.',
+      'Oral or poster presentation request: relevant research information is required.',
+      'GAIA questionnaire: short questions prepared by the organizing committee.',
     ],
     fees: [
-      { category: 'Regular participant', early: 'TBA', regular: 'TBA' },
-      { category: 'Student participant', early: 'TBA', regular: 'TBA' },
+      {
+        category: 'Regular Participants',
+        early: 'HKD 3,000 per person',
+        regular: 'HKD 3,500 per person',
+      },
+      {
+        category: 'Student Participants',
+        early: 'HKD 1,500 per person',
+        regular: 'HKD 1,800 per person',
+      },
     ],
     policies: [
-      'Registration capacity and eligibility will be announced.',
-      'Payment instructions will only appear after official confirmation.',
-      'Accommodation is expected to be arranged separately unless stated otherwise.',
-      'Cancellation and substitution terms will be published before registration opens.',
+      'If you need to modify submitted registration details, use the View/Edit/Cancel function after entering your personal registration ID.',
+      'The personal registration ID is generated after successful initial registration and should be saved locally by each participant.',
+      'Registration capacity is limited to approximately 150 participants.',
+      'Final payment and cancellation policies will be confirmed by the organizing committee.',
     ],
+    timeline: [
+      {
+        date: '2026/12/20',
+        title: 'Online registration opens.',
+        description: 'Registration and abstract submission are planned to open.',
+        status: 'pending',
+      },
+      {
+        date: '2027/04/30',
+        title: 'Online registration closes.',
+        description: 'The closing date remains subject to official confirmation.',
+        status: 'pending',
+      },
+      {
+        date: '2027/05/27',
+        title: 'Workshop on-site registration starts.',
+        description: 'Participants arrive and collect workshop materials.',
+        status: 'pending',
+      },
+      {
+        date: '2027/05/28',
+        title: 'GAIA 2027 officially starts.',
+        description: 'The first official workshop day begins.',
+        status: 'pending',
+      },
+    ],
+    feeNote:
+      'The registration fee covers conference accessories, relevant facilities and materials for oral presentations and poster sessions, lunches, dinners, the gala dinner during the conference dates, participation certificates and award certificates, and expenses related to the construction site visit.',
   },
   program: [
     {
-      date: 'DAY 01',
+      date: 'May 27, 2027',
       label: 'Arrival & connection',
       items: [
         {
@@ -181,8 +321,8 @@ export const conference: ConferenceContent = {
       ],
     },
     {
-      date: 'DAY 02',
-      label: 'Ideas across scales',
+      date: 'May 28, 2027',
+      label: 'First official workshop day',
       items: [
         {
           time: 'TBA',
@@ -196,14 +336,14 @@ export const conference: ConferenceContent = {
         },
         {
           time: 'TBA',
-          title: 'Poster exchange',
-          detail: 'An open-format research conversation.',
+          title: 'Gala dinner & poster session',
+          detail: 'Academic exchange and evening programme.',
         },
       ],
     },
     {
-      date: 'DAY 03',
-      label: 'Research in dialogue',
+      date: 'May 29, 2027',
+      label: 'Second official workshop day',
       items: [
         {
           time: 'TBA',
@@ -212,18 +352,18 @@ export const conference: ConferenceContent = {
         },
         {
           time: 'TBA',
-          title: 'Closing & awards',
+          title: 'Award ceremony',
           detail: 'Workshop reflections and recognition.',
         },
       ],
     },
     {
-      date: 'DAY 04',
+      date: 'May 30, 2027',
       label: 'Field perspective',
       items: [
         {
           time: 'TBA',
-          title: 'Technical visit',
+          title: 'Construction site visit',
           detail: 'Optional site visit, subject to final arrangements.',
         },
       ],
@@ -233,18 +373,59 @@ export const conference: ConferenceContent = {
     {
       year: '2026',
       edition: 'Second Workshop',
+      title: 'GAIA 2026 Jinan, Shandong, China | Mar. 27-30, 2026',
       location: 'Jinan, Shandong, China',
       dates: '27-30 March 2026',
       theme: 'Advances in Micro-Macro Geomechanics',
       href: 'https://gaia2026.hi97.cn/',
+      images: [
+        {
+          src: 'assets/previous/gaia-2026-group.webp',
+          alt: 'GAIA 2026 workshop participants',
+          variant: 'wide',
+        },
+        {
+          src: 'assets/previous/gaia-2026-shandong.webp',
+          alt: 'Shandong venue and city view for GAIA 2026',
+          variant: 'wide',
+        },
+      ],
     },
     {
       year: '2025',
       edition: 'First Workshop',
+      title: 'GAIA 2025 Atami, Shizuoka, Japan | Feb. 22-24, 2025',
       location: 'Atami, Shizuoka, Japan',
       dates: '22-24 February 2025',
       theme: 'The beginning of the GAIA research network',
       href: 'https://www.kz.tsukuba.ac.jp/~tmatsu/GAIA_homepage/',
+      images: [
+        {
+          src: 'assets/previous/gaia-2025-main.webp',
+          alt: 'GAIA 2025 workshop group photo',
+          variant: 'wide',
+        },
+        {
+          src: 'assets/previous/gaia-2025-1-3.webp',
+          alt: 'GAIA 2025 workshop moment',
+          variant: 'small',
+        },
+        {
+          src: 'assets/previous/gaia-2025-1-4.webp',
+          alt: 'GAIA 2025 academic exchange',
+          variant: 'small',
+        },
+        {
+          src: 'assets/previous/gaia-2025-1-1.webp',
+          alt: 'GAIA 2025 participants',
+          variant: 'small',
+        },
+        {
+          src: 'assets/previous/gaia-2025-1-2.webp',
+          alt: 'GAIA 2025 venue scene',
+          variant: 'small',
+        },
+      ],
     },
   ],
   contacts: [

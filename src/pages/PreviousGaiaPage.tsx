@@ -3,6 +3,8 @@ import { BorderGlow } from '../components/BorderGlow'
 import { DockSurface } from '../components/DockSurface'
 import { conference } from '../content/conference'
 
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
+
 export function PreviousGaiaPage() {
   return (
     <PageFrame
@@ -17,52 +19,52 @@ export function PreviousGaiaPage() {
         </p>
       </section>
 
-      <DockSurface
-        as="section"
-        className="archive-list page-width"
-        distance={560}
-        magnification={1.014}
-        lift={12}
-      >
-        {conference.previousEvents.map((event, index) => (
+      <section className="previous-photo-archive page-width">
+        {conference.previousEvents.map((event) => (
           <BorderGlow
-            className="archive-glow"
+            as="article"
+            className="previous-event-panel"
             key={event.year}
-            backgroundColor="rgba(255, 255, 255, 0.82)"
-            data-dock-item
+            backgroundColor="rgba(255, 255, 255, 0.84)"
+            data-reveal
           >
-            <a
-              className={`archive-card ${index % 2 ? 'is-reverse' : ''}`}
-              href={event.href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className={`archive-art archive-art-${index + 1}`}>
-                <span className="archive-orbit" />
-                <span className="archive-year">{event.year}</span>
-                <span className="archive-coordinate">
-                  GAIA / {String(2 - index).padStart(2, '0')}
-                </span>
+            <div className="previous-event-heading">
+              <div>
+                <p className="section-kicker">{event.edition}</p>
+                <h2>{event.title ?? `GAIA ${event.year}`}</h2>
               </div>
-              <div className="archive-copy">
-                <p className="card-label">{event.edition}</p>
-                <h2>GAIA {event.year}</h2>
-                <p className="archive-location">{event.location}</p>
-                <p>{event.dates}</p>
-                <p className="archive-theme">{event.theme}</p>
-                <span className="text-link">
-                  Visit archive <i>↗</i>
-                </span>
-              </div>
-            </a>
+              <a
+                className="text-link"
+                href={event.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Visit archive <i>→</i>
+              </a>
+            </div>
+
+            <DockSurface className="previous-photo-grid" distance={420} lift={10}>
+              {event.images?.map((image) => (
+                <a
+                  className={`previous-photo-card is-${image.variant ?? 'wide'}`}
+                  href={event.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={image.src}
+                  data-dock-item
+                >
+                  <img src={assetUrl(image.src)} alt={image.alt} loading="lazy" />
+                </a>
+              ))}
+            </DockSurface>
           </BorderGlow>
         ))}
-      </DockSurface>
+      </section>
 
       <section className="archive-footnote page-width" data-reveal>
         <p>01</p>
         <p>
-          GAIA’s first workshop was held in Atami, Japan, in 2025. The second
+          GAIA's first workshop was held in Atami, Japan, in 2025. The second
           gathered the community in Jinan, China, in 2026.
         </p>
       </section>

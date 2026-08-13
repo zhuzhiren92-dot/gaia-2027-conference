@@ -9,6 +9,7 @@ export type SchoolSlide = {
   alt: string
   objectPosition?: string
   objectFit?: 'cover' | 'contain'
+  background?: string
 }
 
 export type Highlight = {
@@ -21,7 +22,7 @@ export type TimelineItem = {
   date: string
   title: string
   description: string
-  status: 'confirmed' | 'pending'
+  status: 'confirmed' | 'pending' | 'closed'
 }
 
 export type Speaker = {
@@ -47,6 +48,26 @@ export type PreviousEvent = {
   dates: string
   theme: string
   href: string
+  title?: string
+  images?: Array<{
+    src: string
+    alt: string
+    variant?: 'wide' | 'small'
+  }>
+}
+
+export type InfoBlock = {
+  kicker?: string
+  title: string
+  body: string | string[]
+  linkLabel?: string
+  linkTo?: string
+}
+
+export type WorkshopDate = {
+  date: string
+  title: string
+  detail?: string
 }
 
 export type ContactItem = {
@@ -89,11 +110,24 @@ export type ConferenceContent = {
   schoolSlides: SchoolSlide[]
   highlights: Highlight[]
   timeline: TimelineItem[]
+  homeFeatures: InfoBlock[]
+  about: {
+    whatIsGaia: string[]
+    scientificHighlights: Array<{
+      title: string
+      text: string
+    }>
+  }
   workshop: {
     overview: string
     topics: string[]
     speakers: Speaker[]
     venue: Highlight[]
+    dates: WorkshopDate[]
+    framework: Highlight[]
+    posterSessions: string[]
+    registrationCta: InfoBlock
+    timetableNote: string
   }
   registration: {
     status: string
@@ -101,6 +135,8 @@ export type ConferenceContent = {
     steps: string[]
     fees: Array<{ category: string; early: string; regular: string }>
     policies: string[]
+    timeline: TimelineItem[]
+    feeNote: string
   }
   program: ProgramDay[]
   previousEvents: PreviousEvent[]

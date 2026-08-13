@@ -737,26 +737,32 @@ p {
 .carousel-controls {
   width: var(--carousel-page);
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  gap: 24px;
-  margin-top: 18px;
+  gap: 18px;
+  margin-top: 20px;
 }
 
 .carousel-progress {
-  height: 1px;
+  height: 5px;
   display: flex;
-  background: var(--line);
+  overflow: hidden;
+  background: rgba(190, 205, 215, 0.46);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(36, 88, 255, 0.08);
 }
 
 .carousel-progress span {
   flex: 1;
   background: transparent;
-  transition: background 300ms ease;
+  transition: background 300ms ease, box-shadow 300ms ease;
 }
 
 .carousel-progress span.is-active {
   background: var(--blue);
+  box-shadow:
+    0 0 14px rgba(36, 88, 255, 0.42),
+    0 0 30px rgba(107, 209, 255, 0.22);
 }
 
 .carousel-count {
@@ -767,34 +773,49 @@ p {
 
 .carousel-buttons {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .carousel-buttons button {
-  width: 48px;
-  height: 38px;
+  position: relative;
+  width: 54px;
+  height: 44px;
   display: grid;
   place-items: center;
   padding: 0;
-  background: #fff;
-  border: 1px solid var(--line-dark);
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 250, 253, 0.88));
+  border: 1px solid rgba(36, 88, 255, 0.26);
+  border-radius: 16px;
+  box-shadow:
+    0 14px 30px rgba(36, 88, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
   transition:
     color 180ms ease,
+    transform 180ms ease,
     border-color 180ms ease,
-    background 180ms ease;
+    background 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .carousel-buttons button:hover {
   color: #fff;
   background: var(--blue);
   border-color: var(--blue);
+  transform: translateY(-2px);
+  box-shadow:
+    0 18px 40px rgba(36, 88, 255, 0.22),
+    0 0 0 6px rgba(36, 88, 255, 0.08);
 }
 
 .carousel-buttons svg {
-  width: 23px;
+  width: 26px;
   fill: none;
   stroke: currentColor;
-  stroke-width: 1;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .carousel-buttons svg.is-reversed {
@@ -983,6 +1004,39 @@ p {
   line-height: 1.85;
 }
 
+.home-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  padding: 18px 0 92px;
+  overflow: visible;
+}
+
+.home-feature-card {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(28px, 3vw, 54px);
+}
+
+.home-feature-card h2 {
+  max-width: 780px;
+  margin-top: 22px;
+  font-size: clamp(38px, 4.8vw, 78px);
+  font-weight: 300;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.home-feature-card > p:not(.section-kicker) {
+  max-width: 760px;
+  margin: 30px 0;
+  color: var(--muted);
+  font-size: clamp(17px, 1.2vw, 21px);
+  line-height: 1.68;
+}
+
 .highlights-section,
 .timeline-section,
 .topics-section,
@@ -1062,6 +1116,16 @@ p {
     background 220ms ease,
     border-color 220ms ease,
     box-shadow 220ms ease;
+}
+
+.timeline-item.status-closed h3 {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(12, 20, 26, 0.55);
+}
+
+.compact-timeline {
+  border-top-color: rgba(36, 88, 255, 0.18);
 }
 
 .timeline-item:focus-visible {
@@ -1185,6 +1249,37 @@ p {
   color: var(--ink-soft);
   font-size: 17px;
   line-height: 1.8;
+}
+
+.science-highlights {
+  padding: 110px 0;
+  border-top: 1px solid var(--line);
+}
+
+.science-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: visible;
+}
+
+.science-highlight-grid .spotlight-card {
+  min-height: 330px;
+  margin-left: -1px;
+  padding: 30px;
+}
+
+.science-highlight-grid h3 {
+  margin: 42px 0 24px;
+  font-size: clamp(27px, 2.6vw, 44px);
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  line-height: 1.06;
+}
+
+.science-highlight-grid p:last-child {
+  color: var(--muted);
+  font-size: var(--text-small);
+  line-height: 1.7;
 }
 
 .principles-grid {
@@ -1332,6 +1427,18 @@ p {
   padding-bottom: 145px;
 }
 
+.workshop-theme-copy {
+  align-self: end;
+  color: var(--muted);
+  font-size: clamp(17px, 1.15vw, 20px);
+  line-height: 1.75;
+}
+
+.workshop-theme-copy strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
 .format-list {
   margin: 0;
   border-top: 1px solid var(--ink);
@@ -1447,6 +1554,11 @@ p {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.speaker-grid-six {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
 .speaker-grid .spotlight-card {
   margin-left: -1px;
   padding: 22px;
@@ -1502,6 +1614,104 @@ p {
   padding-top: 15px;
   border-top: 1px solid var(--line);
   font-size: var(--text-body-small);
+}
+
+.speaker-placeholder {
+  background:
+    radial-gradient(circle at 50% 43%, rgba(36, 88, 255, 0.16) 0 16%, transparent 16.5%),
+    radial-gradient(ellipse at 50% 112%, rgba(36, 88, 255, 0.14) 0 39%, transparent 39.5%),
+    linear-gradient(rgba(36, 88, 255, 0.07) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, rgba(36, 88, 255, 0.07) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(135deg, #f4f8fb, #ffffff);
+}
+
+.workshop-dates,
+.poster-section,
+.tentative-timetable {
+  padding: 115px 0;
+  border-top: 1px solid var(--line);
+}
+
+.date-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  overflow: visible;
+}
+
+.date-card {
+  min-height: 260px;
+  margin-left: -1px;
+  padding: 28px;
+}
+
+.date-card h3 {
+  margin: 62px 0 18px;
+  font-size: clamp(24px, 2.2vw, 38px);
+  font-weight: 300;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.date-card > p:last-child {
+  color: var(--muted);
+  font-size: var(--text-small);
+  line-height: 1.65;
+}
+
+.poster-copy {
+  display: grid;
+  grid-template-columns: 0.9fr 1.15fr;
+  gap: 9vw;
+  margin-top: 30px;
+}
+
+.poster-copy h2,
+.tentative-timetable h2 {
+  font-size: clamp(42px, 5vw, 76px);
+  font-weight: 300;
+  letter-spacing: -0.06em;
+  line-height: 1.02;
+}
+
+.poster-copy div {
+  display: grid;
+  gap: 22px;
+  color: var(--ink-soft);
+  font-size: 17px;
+  line-height: 1.82;
+}
+
+.workshop-registration-cta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  align-items: end;
+  padding: 58px;
+  margin-bottom: 10px;
+}
+
+.workshop-registration-cta h2 {
+  max-width: 980px;
+  grid-column: 1 / -1;
+  font-size: clamp(36px, 4.6vw, 72px);
+  font-weight: 300;
+  letter-spacing: -0.06em;
+  line-height: 1.03;
+}
+
+.workshop-registration-cta > p:not(.section-kicker) {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.tentative-timetable p:last-child {
+  max-width: 760px;
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.75;
 }
 
 .venue-section {
@@ -1598,6 +1808,10 @@ p {
   padding: 125px 0;
 }
 
+.registration-timeline {
+  padding: 0 0 125px;
+}
+
 .registration-steps ol {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1667,6 +1881,34 @@ p {
 
 .fee-row p:last-child {
   border-right: 0;
+}
+
+.fee-head {
+  background:
+    linear-gradient(90deg, rgba(36, 88, 255, 0.96), rgba(65, 179, 255, 0.94));
+}
+
+.fee-head p {
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.fee-row:not(.fee-head) p {
+  font-size: clamp(15px, 1vw, 18px);
+  text-align: center;
+}
+
+.fee-row:not(.fee-head) p:first-child {
+  text-align: left;
+}
+
+.fee-note {
+  padding: 22px 24px 26px;
+  color: var(--ink-soft);
+  font-size: clamp(15px, 1vw, 18px);
+  line-height: 1.72;
 }
 
 .fee-head p {
@@ -1861,6 +2103,89 @@ p {
   grid-template-columns: 1fr 3fr;
   gap: 30px;
   padding-bottom: 120px;
+}
+
+.previous-photo-archive {
+  display: grid;
+  gap: 28px;
+  padding-bottom: 95px;
+}
+
+.previous-event-panel {
+  padding: clamp(26px, 3vw, 48px);
+}
+
+.previous-event-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 30px;
+}
+
+.previous-event-heading h2 {
+  max-width: 980px;
+  margin-top: 14px;
+  font-size: clamp(34px, 4vw, 68px);
+  font-weight: 300;
+  letter-spacing: -0.065em;
+  line-height: 1.02;
+}
+
+.previous-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  overflow: visible;
+}
+
+.previous-photo-card {
+  position: relative;
+  min-height: 310px;
+  overflow: hidden;
+  border: 1px solid rgba(36, 88, 255, 0.18);
+  border-radius: 26px;
+  background: #eef7fb;
+  box-shadow:
+    0 18px 42px rgba(18, 48, 68, 0.08),
+    0 calc(14px + var(--dock-energy) * 18px)
+      calc(35px + var(--dock-energy) * 46px)
+      rgba(36, 88, 255, calc(var(--dock-energy) * 0.12));
+  transform:
+    translate3d(0, calc(var(--dock-energy) * -5px), 0)
+    scale(calc(1 + var(--dock-energy) * 0.018));
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+.previous-photo-card:hover,
+.previous-photo-card:focus-visible {
+  border-color: rgba(36, 88, 255, 0.38);
+}
+
+.previous-photo-card img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.previous-photo-card:hover img,
+.previous-photo-card:focus-visible img {
+  transform: scale(1.045);
+}
+
+.previous-photo-card.is-wide:first-child {
+  grid-column: 1 / -1;
+}
+
+.previous-photo-card.is-small {
+  min-height: 220px;
 }
 
 .archive-list {
@@ -2409,8 +2734,12 @@ p {
 
 .footer-main {
   display: grid;
-  grid-template-columns: minmax(240px, 0.9fr) minmax(360px, 1.15fr) minmax(220px, 0.75fr);
-  gap: clamp(40px, 5vw, 88px);
+  grid-template-columns:
+    minmax(210px, 0.68fr)
+    minmax(360px, 0.9fr)
+    minmax(420px, 1.3fr)
+    minmax(220px, 0.66fr);
+  gap: clamp(28px, 3.4vw, 70px);
   padding: 90px 0 80px;
 }
 
@@ -2441,7 +2770,7 @@ p {
   width: min(100%, 520px);
   align-self: end;
   justify-self: start;
-  margin-left: clamp(-56px, -3vw, -18px);
+  margin-left: clamp(-70px, -4vw, -22px);
   padding: 0;
   color: #dce7ed;
   background: transparent;
@@ -2474,6 +2803,45 @@ p {
 .footer-contact-line strong {
   color: #e9eef1;
   font-weight: 500;
+}
+
+.footer-organizations {
+  align-self: stretch;
+  display: grid;
+  gap: 24px;
+  padding: 26px 30px;
+  border: 1px solid rgba(119, 220, 255, 0.16);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(119, 220, 255, 0.12), transparent 35%),
+    rgba(255, 255, 255, 0.025);
+}
+
+.footer-logo-group {
+  display: grid;
+  gap: 14px;
+}
+
+.footer-logo-group .section-kicker {
+  color: var(--cyan);
+  font-size: 12px;
+}
+
+.footer-logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.footer-logo-row img {
+  max-width: 152px;
+  max-height: 56px;
+  padding: 10px 12px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
 }
 
 .footer-links {
@@ -2534,6 +2902,18 @@ p {
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.08em;
+}
+
+.fees-table .fee-head p {
+  color: #fff;
+  font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(14px, 1vw, 18px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.school-slide-image {
+  background: #f8fbff;
 }
 
 /* Responsive */
@@ -2629,6 +3009,16 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .home-feature-grid,
+  .date-card-grid,
+  .previous-photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .science-highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
   .workshop-overview {
     grid-template-columns: 0.4fr 1.6fr;
   }
@@ -2639,6 +3029,14 @@ p {
 
   .registration-steps ol {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-contact-card {
+    margin-left: 0;
   }
 }
 
@@ -2818,7 +3216,11 @@ p {
   .principles-grid,
   .speaker-grid,
   .venue-grid,
-  .organization-grid {
+  .organization-grid,
+  .home-feature-grid,
+  .science-highlight-grid,
+  .date-card-grid,
+  .previous-photo-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2868,6 +3270,24 @@ p {
 
   .network-section {
     padding: 90px 0 110px;
+  }
+
+  .poster-copy,
+  .workshop-registration-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .workshop-registration-cta {
+    padding: 34px 24px;
+  }
+
+  .workshop-registration-cta h2 {
+    grid-column: auto;
+  }
+
+  .date-card,
+  .previous-photo-card {
+    min-height: 230px;
   }
 
   .network-visual {
@@ -2925,12 +3345,23 @@ p {
   }
 
   .fee-row {
-    grid-template-columns: 1.5fr 0.75fr 0.75fr;
+    grid-template-columns: 1fr;
   }
 
   .fee-row p {
     padding: 16px 10px;
     font-size: 14.5px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+  }
+
+  .fee-head {
+    display: none;
+  }
+
+  .fee-row p:last-child {
+    border-bottom: 0;
   }
 
   .policy-section {
@@ -2988,6 +3419,15 @@ p {
     min-height: 420px;
     border-left: 0;
     border-top: 1px solid var(--line);
+  }
+
+  .previous-event-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .previous-photo-card.is-wide:first-child {
+    grid-column: auto;
   }
 
   .archive-footnote {

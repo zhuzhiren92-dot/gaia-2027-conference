@@ -13,7 +13,7 @@ export function HomePage() {
     >
       <section className="editorial-grid page-width" data-reveal>
         <div className="editorial-lead">
-          <p className="section-kicker">WHY GAIA</p>
+          <p className="section-kicker">GAIA 2027</p>
           <p className="large-body">
             Geomechanics advances when different scales, disciplines and
             generations meet. GAIA creates the room for that exchange.
@@ -27,10 +27,37 @@ export function HomePage() {
             network.
           </p>
           <Link className="text-link" to="/about">
-            Discover the alliance <span>↗</span>
+            Discover the alliance <span>→</span>
           </Link>
         </div>
       </section>
+
+      <DockSurface
+        as="section"
+        className="home-feature-grid page-width"
+        distance={420}
+        magnification={1.018}
+        lift={10}
+      >
+        {conference.homeFeatures.map((item) => (
+          <BorderGlow
+            as="article"
+            className="home-feature-card"
+            key={item.title}
+            backgroundColor="rgba(255, 255, 255, 0.82)"
+            data-dock-item
+          >
+            {item.kicker ? <p className="section-kicker">{item.kicker}</p> : null}
+            <h2>{item.title}</h2>
+            <p>{item.body}</p>
+            {item.linkTo && item.linkLabel ? (
+              <Link className="button-link" to={item.linkTo}>
+                {item.linkLabel} <span>→</span>
+              </Link>
+            ) : null}
+          </BorderGlow>
+        ))}
+      </DockSurface>
 
       <section className="highlights-section page-width">
         <div className="section-heading-row">
@@ -52,7 +79,7 @@ export function HomePage() {
         <div className="section-heading-row">
           <div>
             <p className="section-kicker">UPDATE TIMELINE</p>
-            <h2>What happens next</h2>
+            <h2>Update Timeline</h2>
           </div>
           <p className="quiet-copy">
             Dates marked TBA will be replaced only after official confirmation.
@@ -66,7 +93,7 @@ export function HomePage() {
         >
           {conference.timeline.map((item, index) => (
             <article
-              className="timeline-item"
+              className={`timeline-item status-${item.status}`}
               key={`${item.title}-${index}`}
               data-dock-item
               tabIndex={0}
@@ -98,7 +125,7 @@ export function HomePage() {
         <p className="section-kicker">GAIA 2027</p>
         <h2>Research moves forward through conversation.</h2>
         <Link className="button-link" to="/workshop">
-          Explore the workshop <span>↗</span>
+          Explore the workshop <span>→</span>
         </Link>
       </BorderGlow>
     </PageFrame>
