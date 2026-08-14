@@ -1043,22 +1043,30 @@ p {
   line-height: 1.72;
 }
 
-.home-info-block .text-link {
+.home-info-block .pill-action-link {
   grid-column: 2;
   justify-self: start;
 }
 
-.home-info-link {
+.pill-action-link {
+  display: inline-flex;
+  align-items: center;
   gap: 14px;
-  padding: 14px 22px 14px 15px;
-  border: 1px solid rgba(36, 88, 255, 0.18);
-  border-bottom-color: rgba(36, 88, 255, 0.28);
+  flex: 0 0 auto;
+  padding: 14px 24px 14px 16px;
+  color: var(--ink);
+  border: 1px solid rgba(36, 88, 255, 0.22);
   border-radius: 999px;
   background:
-    radial-gradient(circle at 18% 45%, rgba(119, 220, 255, 0.22), transparent 44%),
-    rgba(255, 255, 255, 0.64);
-  font-size: clamp(14px, 0.92vw, 17px);
-  box-shadow: 0 16px 36px rgba(36, 88, 255, 0.08);
+    radial-gradient(circle at 17% 50%, rgba(119, 220, 255, 0.26), transparent 44%),
+    rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 42px rgba(36, 88, 255, 0.09);
+  font-family: var(--mono);
+  font-size: clamp(15px, 0.95vw, 18px);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -1066,32 +1074,41 @@ p {
     box-shadow 180ms ease;
 }
 
-.home-info-link span {
-  width: 28px;
-  height: 28px;
+.pill-action-link strong {
+  font-weight: 800;
+}
+
+.pill-action-link:hover,
+.pill-action-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(36, 88, 255, 0.38);
+  background:
+    radial-gradient(circle at 17% 50%, rgba(119, 220, 255, 0.34), transparent 44%),
+    rgba(255, 255, 255, 0.88);
+  box-shadow: 0 24px 54px rgba(36, 88, 255, 0.14);
+}
+
+.pill-link-icon {
+  width: 34px;
+  height: 34px;
   display: inline-grid;
   place-items: center;
+  color: var(--blue);
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(119, 220, 255, 0.7), rgba(36, 88, 255, 0.18));
-  box-shadow: inset 0 0 0 1px rgba(36, 88, 255, 0.18);
+  background: linear-gradient(135deg, rgba(119, 220, 255, 0.72), rgba(36, 88, 255, 0.2));
+  box-shadow:
+    inset 0 0 0 1px rgba(36, 88, 255, 0.18),
+    0 0 24px rgba(119, 220, 255, 0.2);
 }
 
-.home-info-link span::before {
-  width: 9px;
-  height: 9px;
-  content: '';
-  border-radius: 50%;
-  background: var(--blue);
-  box-shadow: 0 0 18px rgba(36, 88, 255, 0.52);
-}
-
-.home-info-link:hover {
-  transform: translateY(-2px);
-  border-color: rgba(36, 88, 255, 0.34);
-  background:
-    radial-gradient(circle at 18% 45%, rgba(119, 220, 255, 0.3), transparent 44%),
-    rgba(255, 255, 255, 0.82);
-  box-shadow: 0 22px 48px rgba(36, 88, 255, 0.13);
+.pill-link-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .editorial-lead .large-body {
@@ -2340,64 +2357,6 @@ p {
   line-height: 1.02;
 }
 
-.archive-website-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  flex: 0 0 auto;
-  padding: 13px 19px 13px 14px;
-  color: var(--ink);
-  border: 1px solid rgba(36, 88, 255, 0.22);
-  border-radius: 999px;
-  background:
-    radial-gradient(circle at 17% 50%, rgba(119, 220, 255, 0.26), transparent 44%),
-    rgba(255, 255, 255, 0.7);
-  box-shadow: 0 18px 42px rgba(36, 88, 255, 0.09);
-  font-family: var(--mono);
-  font-size: clamp(14px, 0.95vw, 17px);
-  font-weight: 800;
-  letter-spacing: 0.045em;
-  text-transform: uppercase;
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    background 180ms ease,
-    box-shadow 180ms ease;
-}
-
-.archive-website-link:hover,
-.archive-website-link:focus-visible {
-  transform: translateY(-2px);
-  border-color: rgba(36, 88, 255, 0.38);
-  background:
-    radial-gradient(circle at 17% 50%, rgba(119, 220, 255, 0.34), transparent 44%),
-    rgba(255, 255, 255, 0.86);
-  box-shadow: 0 24px 54px rgba(36, 88, 255, 0.14);
-}
-
-.archive-link-icon {
-  width: 32px;
-  height: 32px;
-  display: inline-grid;
-  place-items: center;
-  color: var(--blue);
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(119, 220, 255, 0.72), rgba(36, 88, 255, 0.18));
-  box-shadow:
-    inset 0 0 0 1px rgba(36, 88, 255, 0.18),
-    0 0 24px rgba(119, 220, 255, 0.18);
-}
-
-.archive-link-icon svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
 .previous-photo-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3471,7 +3430,7 @@ p {
     font-size: 19px;
   }
 
-  .home-info-block .text-link {
+  .home-info-block .pill-action-link {
     grid-column: 1;
     margin-left: 28px;
   }

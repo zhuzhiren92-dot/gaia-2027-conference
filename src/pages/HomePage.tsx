@@ -18,9 +18,13 @@ export function HomePage() {
             </h2>
             <p>{item.body}</p>
             {item.linkTo && item.linkLabel ? (
-              <Link className="text-link home-info-link" to={item.linkTo}>
-                <span aria-hidden="true" />
-                {item.linkLabel}
+              <Link className="home-info-link pill-action-link" to={item.linkTo}>
+                <span className="pill-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M7 17 17 7M9 7h8v8" />
+                  </svg>
+                </span>
+                <strong>{item.linkLabel}</strong>
               </Link>
             ) : null}
           </article>

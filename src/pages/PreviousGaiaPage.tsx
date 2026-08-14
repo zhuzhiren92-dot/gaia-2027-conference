@@ -23,13 +23,13 @@ export function PreviousGaiaPage() {
             <div className="previous-event-heading">
               <h2>{event.title ?? `GAIA ${event.year}`}</h2>
               <a
-                className="archive-website-link"
+                className="archive-website-link pill-action-link"
                 href={event.href}
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Visit GAIA ${event.year} Website`}
               >
-                <span className="archive-link-icon" aria-hidden="true">
+                <span className="pill-link-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path d="M7 17 17 7M9 7h8v8" />
                   </svg>
