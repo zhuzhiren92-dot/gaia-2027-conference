@@ -16,6 +16,7 @@
   --blue: #2458ff;
   --cyan: #77dcff;
   --page: min(1480px, calc(100vw - 64px));
+  --carousel-page: min(2000px, calc(100vw - 24px));
   --mono: 'DM Mono', 'SFMono-Regular', Consolas, monospace;
   --text-micro: 14px;
   --text-small: 16px;
@@ -332,11 +333,11 @@ p {
 }
 
 .nav-shell {
-  width: var(--page);
+  width: var(--carousel-page);
   height: 100%;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: minmax(330px, 0.36fr) 1fr;
   align-items: stretch;
 }
 
@@ -400,11 +401,11 @@ p {
   display: flex;
   align-items: center;
   gap: 0;
-  padding-inline: clamp(10px, 1.15vw, 19px);
+  padding-inline: clamp(12px, 1.25vw, 24px);
   color: #4b5861;
   border-radius: 18px 18px 0 0;
   font-family: var(--mono);
-  font-size: 14px;
+  font-size: clamp(15px, 0.86vw, 18px);
   font-weight: 700;
   letter-spacing: 0.065em;
   box-shadow:
@@ -455,7 +456,6 @@ p {
 /* School carousel */
 
 .school-showcase {
-  --carousel-page: min(2000px, calc(100vw - 24px));
   padding: 38px 0 76px;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
@@ -537,7 +537,7 @@ p {
 .school-slide {
   position: relative;
   min-width: 100%;
-  height: clamp(520px, 44.3vw, 840px);
+  height: clamp(520px, 43.8vw, 886px);
   overflow: hidden;
   background: #f8fbfc;
 }
@@ -3149,6 +3149,7 @@ p {
 @media (max-width: 1180px) {
   :root {
     --page: min(100% - 40px, 1480px);
+    --carousel-page: min(100% - 40px, 2000px);
   }
 
   .site-header {
@@ -3213,7 +3214,7 @@ p {
   }
 
   .school-slide {
-    height: clamp(430px, 44.3vw, 620px);
+    height: clamp(430px, 43.8vw, 620px);
   }
 
   .slide-copy {
@@ -3271,6 +3272,7 @@ p {
 @media (max-width: 760px) {
   :root {
     --page: calc(100% - 28px);
+    --carousel-page: calc(100% - 28px);
   }
 
   .school-showcase {
