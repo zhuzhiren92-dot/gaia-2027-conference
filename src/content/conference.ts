@@ -6,7 +6,7 @@ export const conference: ConferenceContent = {
     year: '2027',
     edition: '3rd',
     fullName: 'International Workshop of Geomechanics Alliance In Asia',
-    theme: 'Advances in Micro-Macro Geomechanics',
+    theme: 'Advances in Micro–Macro Geomechanics',
     location: 'Hong Kong, China',
     dates: 'May 2027',
   },
@@ -28,9 +28,11 @@ export const conference: ConferenceContent = {
     },
     {
       id: 'cityu-campus',
-      image: 'assets/carousel/cityu-campus-1.webp',
+      image: 'assets/carousel/cityu-campus-main.webp',
       alt: 'City University of Hong Kong campus view',
       objectPosition: 'center center',
+      objectFit: 'contain',
+      background: '#f8fbff',
     },
     {
       id: 'geomechanics-structure',
@@ -50,9 +52,11 @@ export const conference: ConferenceContent = {
     },
     {
       id: 'ace-department',
-      image: 'assets/carousel/ace-department.webp',
+      image: 'assets/carousel/ace-department-full.webp',
       alt: 'Department of Architecture and Civil Engineering at CityUHK',
-      objectPosition: 'center 48%',
+      objectPosition: 'center center',
+      objectFit: 'contain',
+      background: '#f8fbff',
     },
   ],
   highlights: [
@@ -87,30 +91,29 @@ export const conference: ConferenceContent = {
     {
       date: '2026/12/20',
       title: 'Online registration opens.',
-      description:
-        'GAIA 2027 online registration and abstract submission are planned to open.',
+      description: 'GAIA 2027 online registration is planned to open.',
       status: 'pending',
     },
     {
-      date: '2027/01/31',
-      title: 'Abstract submission closes.',
-      description: 'Abstract submission is expected to close after review.',
+      date: '2027/03/22',
+      title: 'Early-bird registration closes.',
+      description: 'Early-bird registration is planned to close.',
       status: 'pending',
     },
     {
       date: '2027/04/30',
-      title: 'Online registration closes.',
-      description: 'Online registration will close before final preparation.',
+      title: 'Final registration closes.',
+      description: 'Final online registration will close before workshop preparation.',
       status: 'pending',
     },
     {
-      date: '2027/05/27',
+      date: '2027/05/20',
       title: 'On-site registration starts.',
       description: 'Participants arrive in Hong Kong and collect materials.',
       status: 'pending',
     },
     {
-      date: '2027/05/28',
+      date: '2027/05/21',
       title: 'GAIA 2027 officially starts.',
       description: 'The third GAIA workshop begins at City University of Hong Kong.',
       status: 'pending',
@@ -126,9 +129,9 @@ export const conference: ConferenceContent = {
     },
     {
       kicker: 'PREVIOUS WORKSHOP',
-      title: 'GAIA 2026',
-      body: 'GAIA Second Workshop (GAIA 2026) was scheduled from 27 to 30 March 2026 in Jinan, Shandong, China.',
-      linkLabel: 'More about workshop',
+      title: 'GAIA 2027',
+      body: 'GAIA Third Workshop (GAIA 2027) is scheduled from 20 to 25 May 2027 in Hong Kong, China.',
+      linkLabel: 'More about the workshop',
       linkTo: '/workshop',
     },
   ],
@@ -188,21 +191,21 @@ export const conference: ConferenceContent = {
     ],
     dates: [
       {
-        date: 'May 27, 2027',
+        date: 'May 20, 2027',
         title: 'Workshop on-site registration starts',
       },
       {
-        date: 'May 28, 2027',
+        date: 'May 21, 2027',
         title: 'First official workshop day',
         detail: 'Gala dinner and poster session are planned.',
       },
       {
-        date: 'May 29, 2027',
+        date: 'May 22, 2027',
         title: 'Second official workshop day',
         detail: 'Award ceremony and academic sessions are planned.',
       },
       {
-        date: 'May 30, 2027',
+        date: 'May 25, 2027',
         title: 'Construction site visit',
         detail: 'Optional activity, subject to final arrangements.',
       },
@@ -278,23 +281,29 @@ export const conference: ConferenceContent = {
       {
         date: '2026/12/20',
         title: 'Online registration opens.',
-        description: 'Registration and abstract submission are planned to open.',
+        description: 'Online registration is planned to open.',
+        status: 'pending',
+      },
+      {
+        date: '2027/03/22',
+        title: 'Early-bird registration closes.',
+        description: 'Early-bird registration is planned to close.',
         status: 'pending',
       },
       {
         date: '2027/04/30',
-        title: 'Online registration closes.',
+        title: 'Final registration closes.',
         description: 'The closing date remains subject to official confirmation.',
         status: 'pending',
       },
       {
-        date: '2027/05/27',
+        date: '2027/05/20',
         title: 'Workshop on-site registration starts.',
         description: 'Participants arrive and collect workshop materials.',
         status: 'pending',
       },
       {
-        date: '2027/05/28',
+        date: '2027/05/21',
         title: 'GAIA 2027 officially starts.',
         description: 'The first official workshop day begins.',
         status: 'pending',
@@ -305,7 +314,7 @@ export const conference: ConferenceContent = {
   },
   program: [
     {
-      date: 'May 27, 2027',
+      date: 'May 20, 2027',
       label: 'Arrival & connection',
       items: [
         {
@@ -321,7 +330,7 @@ export const conference: ConferenceContent = {
       ],
     },
     {
-      date: 'May 28, 2027',
+      date: 'May 21, 2027',
       label: 'First official workshop day',
       items: [
         {
@@ -342,7 +351,7 @@ export const conference: ConferenceContent = {
       ],
     },
     {
-      date: 'May 29, 2027',
+      date: 'May 22, 2027',
       label: 'Second official workshop day',
       items: [
         {
@@ -358,7 +367,7 @@ export const conference: ConferenceContent = {
       ],
     },
     {
-      date: 'May 30, 2027',
+      date: 'May 25, 2027',
       label: 'Field perspective',
       items: [
         {
@@ -376,7 +385,7 @@ export const conference: ConferenceContent = {
       title: 'GAIA 2026 Jinan, Shandong, China | Mar. 27-30, 2026',
       location: 'Jinan, Shandong, China',
       dates: '27-30 March 2026',
-      theme: 'Advances in Micro-Macro Geomechanics',
+      theme: 'Advances in Micro–Macro Geomechanics',
       href: 'https://gaia2026.hi97.cn/',
       images: [
         {

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import { PageFrame } from '../components/PageFrame'
 import { BorderGlow } from '../components/BorderGlow'
 import { DockSurface } from '../components/DockSurface'
+import { PageFrame } from '../components/PageFrame'
 import { SpotlightCard } from '../components/SpotlightCard'
 import { conference } from '../content/conference'
 
@@ -16,12 +16,9 @@ export function WorkshopPage() {
         <p className="large-body">{conference.workshop.overview}</p>
         <p className="workshop-theme-copy">
           The third workshop, GAIA 2027, will be hosted by City University of
-          Hong Kong and is scheduled to take place from 27 to 30 May 2027 in
+          Hong Kong and is scheduled to take place from 20 to 25 May 2027 in
           Hong Kong, China. The main theme is{' '}
-          <strong>
-            Advancing micro-macro geomechanics using intelligent experimental
-            and numerical modelling approaches.
-          </strong>
+          <strong>Advances in Micro–Macro Geomechanics.</strong>
         </p>
       </section>
 
@@ -46,7 +43,7 @@ export function WorkshopPage() {
             <li key={topic} data-dock-item tabIndex={0}>
               <span>{String(index + 1).padStart(2, '0')}</span>
               <p>{topic}</p>
-              <i aria-hidden="true">→</i>
+              <i aria-hidden="true">↗</i>
             </li>
           ))}
         </DockSurface>
@@ -82,7 +79,7 @@ export function WorkshopPage() {
         <div className="section-heading-row">
           <div>
             <p className="section-kicker">DATES</p>
-            <h2>Four days in Hong Kong.</h2>
+            <h2>Key dates in Hong Kong.</h2>
           </div>
         </div>
         <DockSurface className="date-card-grid" distance={340} lift={8}>
@@ -148,8 +145,11 @@ export function WorkshopPage() {
         <p className="section-kicker">{conference.workshop.registrationCta.kicker}</p>
         <h2>{conference.workshop.registrationCta.title}</h2>
         <p>{conference.workshop.registrationCta.body}</p>
-        <Link className="button-link" to={conference.workshop.registrationCta.linkTo ?? '/registration'}>
-          {conference.workshop.registrationCta.linkLabel} <span>→</span>
+        <Link
+          className="button-link"
+          to={conference.workshop.registrationCta.linkTo ?? '/registration'}
+        >
+          {conference.workshop.registrationCta.linkLabel} <span>↗</span>
         </Link>
       </BorderGlow>
 

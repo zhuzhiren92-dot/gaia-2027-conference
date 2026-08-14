@@ -5,6 +5,7 @@ import { BlurText } from './BlurText'
 import { DockSurface } from './DockSurface'
 import { Navigation } from './Navigation'
 import { SchoolCarousel } from './SchoolCarousel'
+import { WeatherBadge } from './WeatherBadge'
 
 type PageFrameProps = {
   pageName: string
@@ -16,8 +17,6 @@ type PageFrameProps = {
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
 export function PageFrame({
-  pageName,
-  pageStatement,
   children,
   showIntroSections = true,
 }: PageFrameProps) {
@@ -30,45 +29,31 @@ export function PageFrame({
         <SchoolCarousel />
 
         {showIntroSections ? (
-          <>
-            <section className="conference-identity page-width" data-reveal>
-              <div className="identity-meta">
-                <p className="micro-label">THE 2027 WORKSHOP</p>
-                <p>
-                  {identity.edition} edition · {identity.location}
-                </p>
-              </div>
+          <section className="conference-identity page-width" data-reveal>
+            <div className="identity-meta">
+              <WeatherBadge />
+            </div>
+            <BlurText
+              as="h1"
+              className="conference-title"
+              text={`${identity.shortName} ${identity.year}`}
+            />
+            <p className="conference-full-name">
+              {identity.edition} Geomechanics Alliance In Asia
+            </p>
+            <div className="theme-line">
+              <p>CONFERENCE THEME</p>
               <BlurText
-                as="h1"
-                className="conference-title"
-                text={`${identity.shortName} ${identity.year}`}
+                as="p"
+                className="theme-value"
+                text={identity.theme}
+                delay={0.06}
               />
-              <p className="conference-full-name">
-                {identity.edition} {identity.fullName}
+              <p className="theme-dates">
+                {identity.location} <span>→</span> {identity.dates}
               </p>
-              <div className="theme-line">
-                <p>CONFERENCE THEME</p>
-                <BlurText
-                  as="p"
-                  className="theme-value"
-                  text={identity.theme}
-                  delay={0.06}
-                />
-                <p className="theme-dates">
-                  {identity.location} <span>→</span> {identity.dates}
-                </p>
-              </div>
-            </section>
-
-            <section className="page-intro page-width" data-reveal>
-              <p className="micro-label">{pageName}</p>
-              <BlurText
-                as="h2"
-                className="page-statement"
-                text={pageStatement}
-              />
-            </section>
-          </>
+            </div>
+          </section>
         ) : null}
 
         {children}
