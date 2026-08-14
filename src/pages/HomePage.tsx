@@ -18,8 +18,9 @@ export function HomePage() {
             </h2>
             <p>{item.body}</p>
             {item.linkTo && item.linkLabel ? (
-              <Link className="text-link" to={item.linkTo}>
-                {item.linkLabel} <span>↗</span>
+              <Link className="text-link home-info-link" to={item.linkTo}>
+                <span aria-hidden="true" />
+                {item.linkLabel}
               </Link>
             ) : null}
           </article>
@@ -29,7 +30,6 @@ export function HomePage() {
       <section className="timeline-section home-timeline-section page-width">
         <div className="section-heading-row">
           <div>
-            <p className="section-kicker">UPDATE TIMELINE</p>
             <h2>Update Timeline</h2>
           </div>
         </div>
@@ -52,7 +52,6 @@ export function HomePage() {
               <p className="timeline-date">{item.date}</p>
               <div>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
               </div>
             </article>
           ))}

@@ -41,18 +41,6 @@ export function PageFrame({
             <p className="conference-full-name">
               {identity.edition} Geomechanics Alliance In Asia
             </p>
-            <div className="theme-line">
-              <p>CONFERENCE THEME</p>
-              <BlurText
-                as="p"
-                className="theme-value"
-                text={identity.theme}
-                delay={0.06}
-              />
-              <p className="theme-dates">
-                {identity.location} <span>→</span> {identity.dates}
-              </p>
-            </div>
           </section>
         ) : null}
 
@@ -67,24 +55,26 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="page-width footer-main">
-        <div className="footer-brand">
-          <p className="footer-wordmark">GAIA</p>
-          <p className="footer-edition">May / 2027</p>
-        </div>
+        <div className="footer-left">
+          <div className="footer-brand">
+            <p className="footer-wordmark">GAIA</p>
+            <p className="footer-edition">May / 2027</p>
+          </div>
 
-        <div className="footer-contact-card" aria-label="Contact us">
-          <p className="section-kicker">CONTACT US</p>
-          {conference.contactChannels.map((item) => (
-            <a
-              key={item.email}
-              href={`mailto:${item.email}`}
-              className="footer-contact-line"
-            >
-              <ContactIcon kind={item.kind} />
-              <span>{item.label}</span>
-              <strong>{item.email}</strong>
-            </a>
-          ))}
+          <div className="footer-contact-card" aria-label="Contact us">
+            <p className="section-kicker">CONTACT US</p>
+            {conference.contactChannels.map((item) => (
+              <a
+                key={item.email}
+                href={`mailto:${item.email}`}
+                className="footer-contact-line"
+              >
+                <ContactIcon kind={item.kind} />
+                <span>{item.label}</span>
+                <strong>{item.email}</strong>
+              </a>
+            ))}
+          </div>
         </div>
 
         <div className="footer-organizations" aria-label="Organized and supported by">

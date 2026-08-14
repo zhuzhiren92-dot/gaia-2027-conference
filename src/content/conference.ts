@@ -31,8 +31,6 @@ export const conference: ConferenceContent = {
       image: 'assets/carousel/cityu-campus-main.webp',
       alt: 'City University of Hong Kong campus view',
       objectPosition: 'center center',
-      objectFit: 'contain',
-      background: '#f8fbff',
     },
     {
       id: 'geomechanics-structure',
@@ -55,8 +53,6 @@ export const conference: ConferenceContent = {
       image: 'assets/carousel/ace-department-full.webp',
       alt: 'Department of Architecture and Civil Engineering at CityUHK',
       objectPosition: 'center center',
-      objectFit: 'contain',
-      background: '#f8fbff',
     },
   ],
   highlights: [
