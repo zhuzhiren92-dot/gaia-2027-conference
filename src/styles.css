@@ -455,8 +455,8 @@ p {
 /* School carousel */
 
 .school-showcase {
-  --carousel-page: min(1760px, calc(100vw - 40px));
-  padding: 38px 0 64px;
+  --carousel-page: min(2000px, calc(100vw - 24px));
+  padding: 38px 0 76px;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background:
@@ -537,7 +537,7 @@ p {
 .school-slide {
   position: relative;
   min-width: 100%;
-  height: clamp(380px, 32vw, 560px);
+  height: clamp(520px, 44.3vw, 840px);
   overflow: hidden;
   background: #f8fbfc;
 }
@@ -3213,7 +3213,7 @@ p {
   }
 
   .school-slide {
-    height: clamp(360px, 38vw, 500px);
+    height: clamp(430px, 44.3vw, 620px);
   }
 
   .slide-copy {
@@ -3283,7 +3283,7 @@ p {
   }
 
   .school-slide {
-    height: clamp(250px, 68vw, 360px);
+    height: clamp(230px, 48vw, 360px);
     min-height: 0;
   }
 
