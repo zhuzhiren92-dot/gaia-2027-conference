@@ -83,12 +83,6 @@ export const conference: ConferenceContent = {
   ],
   timeline: [
     {
-      date: '2026/09/20',
-      title: 'GAIA webpage is launched.',
-      description: 'The GAIA 2027 information hub goes online.',
-      status: 'confirmed',
-    },
-    {
       date: '2026/12/20',
       title: 'Online registration opens.',
       description: 'GAIA 2027 online registration is planned to open.',
@@ -108,7 +102,7 @@ export const conference: ConferenceContent = {
     },
     {
       date: '2027/05/20',
-      title: 'On-site registration starts.',
+      title: 'Workshop on-site registration starts.',
       description: 'Participants arrive in Hong Kong and collect materials.',
       status: 'pending',
     },
@@ -157,8 +151,11 @@ export const conference: ConferenceContent = {
     ],
   },
   workshop: {
-    overview:
+    overview: [
       'Geomechanics Alliance in Asia (GAIA) aims to provide a platform for young researchers and graduate students in geomechanics and geotechnical engineering across Asia to exchange ideas and foster collaboration. The annual GAIA Workshop serves as the main channel for communication and interaction.',
+      'The third workshop, GAIA 2027, will be hosted by City University of Hong Kong and is scheduled to take place from 20 to 25 May 2027 in Hong Kong, China. The main theme is Advances in Micro–Macro Geomechanics, covering key topics in geotechnical engineering such as particle-scale effects, micro–macro constitutive relationships, multiphase and multi-physics coupling, multiscale experimental and monitoring techniques, and multiscale numerical modeling methods.',
+      'To ensure high-quality discussions and interactions, the workshop will be limited to approximately 150 participants.',
+    ],
     topics: [
       'Advanced characterization of geomaterials using X-ray microtomography (CT), X-ray diffraction (XRD), 3D laser scanning, particle image velocimetry (PIV), and other non-destructive optical and imaging techniques',
       'Latest development of numerical modelling methods including DEM, FEM, FDM, MPM, CFD, LBM, and SPH for multiphase geomaterials, granular instability, and granular flow problems',
@@ -220,17 +217,17 @@ export const conference: ConferenceContent = {
       {
         label: 'Language',
         value: 'English',
-        detail: 'All workshop sessions will use English.',
+        detail: '',
       },
       {
         label: 'Presentation',
-        value: 'Young researchers',
-        detail: 'Presentations will mainly be from young researchers and students.',
+        value: 'Mainly from young researchers and students',
+        detail: '',
       },
       {
-        label: 'Presentation time',
+        label: 'Presentation Time per Person',
         value: '20 min',
-        detail: 'Each oral presentation includes discussion time.',
+        detail: 'Including discussion.',
       },
     ],
     posterSessions: [

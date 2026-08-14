@@ -119,7 +119,7 @@ export type ConferenceContent = {
     }>
   }
   workshop: {
-    overview: string
+    overview: string[]
     topics: string[]
     speakers: Speaker[]
     venue: Highlight[]
