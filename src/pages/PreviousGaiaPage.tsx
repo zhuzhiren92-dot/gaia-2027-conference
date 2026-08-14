@@ -1,6 +1,6 @@
-import { PageFrame } from '../components/PageFrame'
 import { BorderGlow } from '../components/BorderGlow'
 import { DockSurface } from '../components/DockSurface'
+import { PageFrame } from '../components/PageFrame'
 import { conference } from '../content/conference'
 
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
@@ -11,14 +11,6 @@ export function PreviousGaiaPage() {
       pageName="PREVIOUS GAIA"
       pageStatement="A young alliance already gathering momentum across Asia."
     >
-      <section className="archive-intro page-width" data-reveal>
-        <p className="section-kicker">THE ARCHIVE</p>
-        <p className="large-body">
-          Each host adds a new chapter: a different place, a renewed
-          conversation and a growing community of geomechanics researchers.
-        </p>
-      </section>
-
       <section className="previous-photo-archive page-width">
         {conference.previousEvents.map((event) => (
           <BorderGlow
@@ -29,17 +21,20 @@ export function PreviousGaiaPage() {
             data-reveal
           >
             <div className="previous-event-heading">
-              <div>
-                <p className="section-kicker">{event.edition}</p>
-                <h2>{event.title ?? `GAIA ${event.year}`}</h2>
-              </div>
+              <h2>{event.title ?? `GAIA ${event.year}`}</h2>
               <a
-                className="text-link"
+                className="archive-website-link"
                 href={event.href}
                 target="_blank"
                 rel="noreferrer"
+                aria-label={`Visit GAIA ${event.year} Website`}
               >
-                Visit archive <i>→</i>
+                <span className="archive-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M7 17 17 7M9 7h8v8" />
+                  </svg>
+                </span>
+                <strong>Visit GAIA {event.year} Website</strong>
               </a>
             </div>
 
@@ -59,14 +54,6 @@ export function PreviousGaiaPage() {
             </DockSurface>
           </BorderGlow>
         ))}
-      </section>
-
-      <section className="archive-footnote page-width" data-reveal>
-        <p>01</p>
-        <p>
-          GAIA's first workshop was held in Atami, Japan, in 2025. The second
-          gathered the community in Jinan, China, in 2026.
-        </p>
       </section>
     </PageFrame>
   )

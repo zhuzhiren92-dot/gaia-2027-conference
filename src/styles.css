@@ -2314,17 +2314,10 @@ p {
 
 /* Previous */
 
-.archive-intro {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 30px;
-  padding-bottom: 120px;
-}
-
 .previous-photo-archive {
   display: grid;
   gap: 28px;
-  padding-bottom: 95px;
+  padding: 90px 0 95px;
 }
 
 .previous-event-panel {
@@ -2341,11 +2334,68 @@ p {
 
 .previous-event-heading h2 {
   max-width: 980px;
-  margin-top: 14px;
   font-size: clamp(34px, 4vw, 68px);
   font-weight: 300;
   letter-spacing: -0.065em;
   line-height: 1.02;
+}
+
+.archive-website-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  flex: 0 0 auto;
+  padding: 13px 19px 13px 14px;
+  color: var(--ink);
+  border: 1px solid rgba(36, 88, 255, 0.22);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 17% 50%, rgba(119, 220, 255, 0.26), transparent 44%),
+    rgba(255, 255, 255, 0.7);
+  box-shadow: 0 18px 42px rgba(36, 88, 255, 0.09);
+  font-family: var(--mono);
+  font-size: clamp(14px, 0.95vw, 17px);
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.archive-website-link:hover,
+.archive-website-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(36, 88, 255, 0.38);
+  background:
+    radial-gradient(circle at 17% 50%, rgba(119, 220, 255, 0.34), transparent 44%),
+    rgba(255, 255, 255, 0.86);
+  box-shadow: 0 24px 54px rgba(36, 88, 255, 0.14);
+}
+
+.archive-link-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-grid;
+  place-items: center;
+  color: var(--blue);
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(119, 220, 255, 0.72), rgba(36, 88, 255, 0.18));
+  box-shadow:
+    inset 0 0 0 1px rgba(36, 88, 255, 0.18),
+    0 0 24px rgba(119, 220, 255, 0.18);
+}
+
+.archive-link-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .previous-photo-grid {
@@ -2575,25 +2625,6 @@ p {
 .archive-copy .text-link {
   margin-top: auto;
   align-self: flex-start;
-}
-
-.archive-footnote {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 30px;
-  padding: 45px 0 150px;
-}
-
-.archive-footnote > p:first-child {
-  color: var(--blue);
-  font-family: var(--mono);
-  font-size: var(--text-micro);
-}
-
-.archive-footnote > p:last-child {
-  max-width: 720px;
-  font-size: 18px;
-  line-height: 1.65;
 }
 
 /* Contact */
@@ -3387,8 +3418,7 @@ p {
     white-space: normal;
   }
 
-  .page-intro,
-  .archive-intro {
+  .page-intro {
     grid-template-columns: 1fr;
     padding: 70px 0 90px;
   }
@@ -3686,10 +3716,6 @@ p {
 
   .previous-photo-card.is-wide:first-child {
     grid-column: auto;
-  }
-
-  .archive-footnote {
-    grid-template-columns: 35px 1fr;
   }
 
   .contact-list article {

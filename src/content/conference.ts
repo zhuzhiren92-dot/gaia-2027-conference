@@ -398,6 +398,11 @@ export const conference: ConferenceContent = {
           alt: 'Shandong venue and city view for GAIA 2026',
           variant: 'wide',
         },
+        {
+          src: 'assets/previous/gaia-2026-shandong-extra.webp',
+          alt: 'GAIA 2026 workshop scene in Shandong',
+          variant: 'wide',
+        },
       ],
     },
     {
