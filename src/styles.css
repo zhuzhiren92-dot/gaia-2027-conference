@@ -2997,7 +2997,8 @@ p {
   border: 0;
 }
 
-.footer-contact-card .section-kicker {
+.footer-contact-card .section-kicker,
+.footer-logo-group .section-kicker {
   color: var(--cyan);
   font-size: clamp(16px, 1.3vw, 21px);
   font-weight: 700;
@@ -3040,24 +3041,19 @@ p {
   gap: 18px;
 }
 
-.footer-logo-group .section-kicker {
-  color: var(--cyan);
-  font-size: 13.5px;
-}
-
 .footer-logo-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: clamp(20px, 1.6vw, 28px);
   align-items: center;
 }
 
 .footer-logo-row img {
-  max-width: 215px;
-  max-height: 86px;
-  padding: 15px 17px;
+  max-width: 260px;
+  max-height: 108px;
+  padding: 18px 21px;
   object-fit: contain;
-  border-radius: 16px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
 }
