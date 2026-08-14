@@ -1,5 +1,4 @@
 import { PageFrame } from '../components/PageFrame'
-import { BorderGlow } from '../components/BorderGlow'
 import { DockSurface } from '../components/DockSurface'
 import { conference } from '../content/conference'
 
@@ -9,16 +8,6 @@ export function ProgramPage() {
       pageName="PROGRAM"
       pageStatement="A measured rhythm for presenting, questioning and connecting."
     >
-      <section className="program-note page-width" data-reveal>
-        <p className="section-kicker">TENTATIVE FRAMEWORK</p>
-        <p>
-          The programme below describes the intended workshop rhythm. Dates,
-          times, speakers and session titles will be published after official
-          confirmation.
-        </p>
-        <span>LAST STRUCTURE UPDATE / JUL 2026</span>
-      </section>
-
       <section className="program-days page-width">
         {conference.program.map((day, dayIndex) => (
           <article className="program-day" key={day.date}>
@@ -51,21 +40,6 @@ export function ProgramPage() {
           </article>
         ))}
       </section>
-
-      <BorderGlow
-        as="section"
-        className="program-download page-width"
-        backgroundColor="rgba(243, 247, 249, 0.88)"
-        data-reveal
-      >
-        <div>
-          <p className="section-kicker">DETAILED PROGRAMME</p>
-          <h2>Full schedule forthcoming</h2>
-        </div>
-        <button type="button" disabled>
-          PDF NOT YET AVAILABLE
-        </button>
-      </BorderGlow>
     </PageFrame>
   )
 }

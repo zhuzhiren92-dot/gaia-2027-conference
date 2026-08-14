@@ -3,6 +3,7 @@ import { BorderGlow } from '../components/BorderGlow'
 import { DockSurface } from '../components/DockSurface'
 import { PageFrame } from '../components/PageFrame'
 import { SpotlightCard } from '../components/SpotlightCard'
+import { TimelinePanel } from '../components/TimelinePanel'
 import { conference } from '../content/conference'
 
 export function WorkshopPage() {
@@ -75,29 +76,13 @@ export function WorkshopPage() {
         </DockSurface>
       </section>
 
-      <section className="workshop-dates page-width">
-        <div className="section-heading-row">
-          <div>
-            <p className="section-kicker">DATES</p>
-            <h2>Key dates in Hong Kong.</h2>
-          </div>
-        </div>
-        <DockSurface className="date-card-grid" distance={340} lift={8}>
-          {conference.workshop.dates.map((item) => (
-            <BorderGlow
-              as="article"
-              className="date-card"
-              key={item.date}
-              backgroundColor="rgba(255, 255, 255, 0.82)"
-              data-dock-item
-            >
-              <p className="card-label">{item.date}</p>
-              <h3>{item.title}</h3>
-              {item.detail ? <p>{item.detail}</p> : null}
-            </BorderGlow>
-          ))}
-        </DockSurface>
-      </section>
+      <TimelinePanel
+        kicker="DATES"
+        title="Key dates in Hong Kong."
+        items={conference.workshop.dates}
+        className="workshop-dates"
+        showDescriptions
+      />
 
       <section className="venue-section page-width">
         <div className="section-heading-row">

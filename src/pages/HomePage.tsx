@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { DockSurface } from '../components/DockSurface'
 import { PageFrame } from '../components/PageFrame'
+import { TimelinePanel } from '../components/TimelinePanel'
 import { conference } from '../content/conference'
 
 export function HomePage() {
@@ -31,36 +31,11 @@ export function HomePage() {
         ))}
       </section>
 
-      <section className="timeline-section home-timeline-section page-width">
-        <div className="section-heading-row">
-          <div>
-            <h2>Update Timeline</h2>
-          </div>
-        </div>
-        <DockSurface
-          className="timeline-list home-timeline-list"
-          distance={330}
-          magnification={1.024}
-          lift={10}
-        >
-          {conference.timeline.map((item, index) => (
-            <article
-              className={`timeline-item home-timeline-item status-${item.status} ${
-                index === 0 ? 'is-active' : ''
-              }`}
-              key={`${item.title}-${index}`}
-              data-dock-item
-              tabIndex={0}
-            >
-              <span className="timeline-bullet" aria-hidden="true" />
-              <p className="timeline-date">{item.date}</p>
-              <div>
-                <h3>{item.title}</h3>
-              </div>
-            </article>
-          ))}
-        </DockSurface>
-      </section>
+      <TimelinePanel
+        title="Update Timeline"
+        items={conference.timeline}
+        className="home-timeline-section"
+      />
     </PageFrame>
   )
 }

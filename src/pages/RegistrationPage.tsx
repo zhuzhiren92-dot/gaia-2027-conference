@@ -1,6 +1,7 @@
 import { PageFrame } from '../components/PageFrame'
 import { BorderGlow } from '../components/BorderGlow'
 import { DockSurface } from '../components/DockSurface'
+import { TimelinePanel } from '../components/TimelinePanel'
 import { conference } from '../content/conference'
 
 export function RegistrationPage() {
@@ -53,42 +54,13 @@ export function RegistrationPage() {
         </DockSurface>
       </section>
 
-      <section className="registration-timeline page-width">
-        <div className="section-heading-row">
-          <div>
-            <p className="section-kicker">IMPORTANT DATES</p>
-            <h2>Registration timeline</h2>
-          </div>
-        </div>
-        <DockSurface
-          className="timeline-list compact-timeline"
-          distance={330}
-          magnification={1.024}
-          lift={10}
-        >
-          {registration.timeline.map((item, index) => (
-            <article
-              className={`timeline-item status-${item.status}`}
-              key={`${item.title}-${index}`}
-              data-dock-item
-              tabIndex={0}
-            >
-              <p className="timeline-index">
-                {String(index + 1).padStart(2, '0')}
-              </p>
-              <p className="timeline-date">{item.date}</p>
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
-              <span
-                className={`status-dot status-${item.status}`}
-                aria-label={item.status}
-              />
-            </article>
-          ))}
-        </DockSurface>
-      </section>
+      <TimelinePanel
+        kicker="IMPORTANT DATES"
+        title="Registration timeline"
+        items={registration.timeline}
+        className="registration-timeline"
+        showDescriptions
+      />
 
       <section className="fees-section page-width">
         <div className="section-heading-row">

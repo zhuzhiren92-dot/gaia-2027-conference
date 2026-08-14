@@ -1211,6 +1211,10 @@ p {
   align-items: flex-start;
 }
 
+.event-timeline-section .section-heading-row h2 {
+  font-weight: 650;
+}
+
 .timeline-list {
   border-top: 1px solid var(--ink);
   overflow: visible;
@@ -1343,14 +1347,14 @@ p {
 
 .home-timeline-item .timeline-date {
   color: var(--ink-soft);
-  font-size: clamp(18px, 1.25vw, 23px);
-  font-weight: 500;
+  font-size: clamp(16px, 1.1vw, 21px);
+  font-weight: 700;
   letter-spacing: 0.045em;
 }
 
 .home-timeline-item h3 {
-  font-size: clamp(25px, 2.05vw, 36px);
-  font-weight: 500;
+  font-size: clamp(22px, 1.85vw, 32px);
+  font-weight: 400;
   letter-spacing: -0.035em;
 }
 
@@ -1363,7 +1367,8 @@ p {
 
 .home-timeline-item div p {
   margin-top: 9px;
-  font-size: clamp(16px, 1.05vw, 18px);
+  font-size: clamp(15px, 0.95vw, 17px);
+  font-weight: 400;
   line-height: 1.65;
 }
 
@@ -1386,8 +1391,7 @@ p {
   color: #fff;
 }
 
-.home-timeline-item.is-active .timeline-date,
-.home-timeline-item.is-active h3 {
+.home-timeline-item.is-active .timeline-date {
   font-weight: 700;
 }
 
@@ -2026,8 +2030,7 @@ p {
   line-height: 1.7;
 }
 
-.registration-status button,
-.program-download button {
+.registration-status button {
   padding: 15px 18px;
   color: #87939b;
   background: transparent;
@@ -2200,29 +2203,6 @@ p {
 
 /* Program */
 
-.program-note {
-  display: grid;
-  grid-template-columns: 0.7fr 2fr 0.7fr;
-  gap: 35px;
-  padding: 30px 0;
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--line);
-}
-
-.program-note > p:nth-child(2) {
-  max-width: 700px;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.program-note > span {
-  justify-self: end;
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: var(--text-micro);
-  text-align: right;
-}
-
 .program-days {
   padding: 100px 0 140px;
 }
@@ -2310,23 +2290,6 @@ p {
 .program-item div p {
   color: var(--muted);
   font-size: var(--text-small);
-}
-
-.program-download {
-  margin-bottom: 150px;
-  padding: 45px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--wash);
-  border: 1px solid var(--line);
-}
-
-.program-download h2 {
-  margin-top: 10px;
-  font-size: 32px;
-  font-weight: 300;
-  letter-spacing: -0.04em;
 }
 
 /* Previous */
@@ -3613,15 +3576,6 @@ p {
     padding: 85px 0 110px;
   }
 
-  .program-note {
-    grid-template-columns: 1fr;
-  }
-
-  .program-note > span {
-    justify-self: start;
-    text-align: left;
-  }
-
   .program-days {
     padding: 80px 0 100px;
   }
@@ -3639,14 +3593,6 @@ p {
 
   .program-item {
     grid-template-columns: 65px 1fr;
-  }
-
-  .program-download {
-    margin-bottom: 100px;
-    padding: 28px 22px;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 35px;
   }
 
   .archive-card {
