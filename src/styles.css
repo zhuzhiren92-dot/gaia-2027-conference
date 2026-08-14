@@ -1950,37 +1950,58 @@ p {
   border-top: 1px solid var(--line);
 }
 
-.venue-grid {
+.framework-list {
+  max-width: 1240px;
   display: grid;
-  grid-template-columns: 1.25fr 1fr 1fr;
-  border-top: 1px solid var(--ink);
+  gap: clamp(20px, 2.4vw, 34px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.venue-grid article {
-  min-height: 260px;
-  padding: 26px;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+.framework-list li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  gap: clamp(18px, 2vw, 30px);
+  align-items: start;
+  margin-inline: -18px;
+  padding: 6px 18px;
+  border-radius: 18px;
+  color: var(--ink-soft);
+  font-size: clamp(21px, 1.45vw, 28px);
+  line-height: 1.68;
+  outline: 0;
+  transition:
+    color 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
 }
 
-.venue-grid article:last-child {
-  border-right: 0;
+.framework-list li::before {
+  width: 9px;
+  height: 9px;
+  margin-top: 0.72em;
+  content: '';
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 7px rgba(36, 88, 255, 0.09);
 }
 
-.venue-value {
-  margin: 70px 0 16px;
-  color: var(--blue);
-  font-size: clamp(31px, 2.55vw, 43px);
-  font-weight: 300;
-  letter-spacing: -0.045em;
-  line-height: 1.1;
+.framework-list li:hover,
+.framework-list li:focus-visible {
+  color: var(--ink);
+  background: rgba(255, 255, 255, calc(var(--dock-energy) * 0.36));
+  box-shadow: var(--dock-card-shadow);
 }
 
-.venue-grid article > p:last-child {
-  max-width: 280px;
+.framework-list strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.framework-detail {
   color: var(--muted);
-  font-size: var(--text-small);
-  line-height: 1.65;
 }
 
 /* Registration */
@@ -3406,7 +3427,6 @@ p {
   .highlight-grid,
   .principles-grid,
   .speaker-grid,
-  .venue-grid,
   .organization-grid,
   .home-feature-grid,
   .science-highlight-grid,
@@ -3504,7 +3524,6 @@ p {
   }
 
   .speaker-grid .spotlight-card,
-  .venue-grid article,
   .organization-grid article {
     margin: 0 0 -1px;
   }

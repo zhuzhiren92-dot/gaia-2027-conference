@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { BorderGlow } from '../components/BorderGlow'
 import { DockSurface } from '../components/DockSurface'
 import { PageFrame } from '../components/PageFrame'
 import { SpotlightCard } from '../components/SpotlightCard'
@@ -52,19 +51,20 @@ export function WorkshopPage() {
             <h2>Workshop Framework</h2>
           </div>
         </div>
-        <DockSurface className="venue-grid" distance={320}>
+        <DockSurface as="ul" className="framework-list" distance={300} lift={7}>
           {conference.workshop.framework.map((item) => (
-            <BorderGlow
-              as="article"
-              className="venue-card"
+            <li
               key={item.label}
-              backgroundColor="rgba(255, 255, 255, 0.76)"
               data-dock-item
+              tabIndex={0}
             >
-              <p className="card-label">{item.label}</p>
-              <p className="venue-value">{item.value}</p>
-              {item.detail ? <p>{item.detail}</p> : null}
-            </BorderGlow>
+              <p>
+                <strong>{item.label}:</strong> {item.value}
+                {item.detail ? (
+                  <span className="framework-detail"> ({item.detail})</span>
+                ) : null}
+              </p>
+            </li>
           ))}
         </DockSurface>
       </section>

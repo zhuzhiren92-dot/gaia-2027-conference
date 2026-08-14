@@ -212,7 +212,7 @@ export const conference: ConferenceContent = {
         label: 'Maximum participants',
         value: '150',
         detail:
-          'Registration is limited to 150 participants. Once this number is reached, registration will be closed.',
+          'registration is limited to 150 participants. Once this number is reached, registration will be closed',
       },
       {
         label: 'Language',
@@ -227,7 +227,7 @@ export const conference: ConferenceContent = {
       {
         label: 'Presentation Time per Person',
         value: '20 min',
-        detail: 'Including discussion.',
+        detail: 'including discussion',
       },
     ],
     posterSessions: [
