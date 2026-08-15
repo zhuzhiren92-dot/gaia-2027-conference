@@ -9,7 +9,7 @@ import {
 } from 'react'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 
-type DockSurfaceElement = 'div' | 'ol' | 'ul' | 'section' | 'nav' | 'dl'
+type DockSurfaceElement = 'div' | 'ol' | 'section' | 'nav' | 'dl'
 
 interface DockSurfaceProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode

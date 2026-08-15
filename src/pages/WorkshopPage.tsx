@@ -51,13 +51,9 @@ export function WorkshopPage() {
             <h2>Workshop Framework</h2>
           </div>
         </div>
-        <DockSurface as="ul" className="framework-list" distance={300} lift={7}>
+        <ul className="framework-list">
           {conference.workshop.framework.map((item) => (
-            <li
-              key={item.label}
-              data-dock-item
-              tabIndex={0}
-            >
+            <li key={item.label}>
               <p>
                 <strong>{item.label}:</strong> {item.value}
                 {item.detail ? (
@@ -66,7 +62,7 @@ export function WorkshopPage() {
               </p>
             </li>
           ))}
-        </DockSurface>
+        </ul>
       </section>
 
       <section className="poster-section page-width" data-reveal>

@@ -1951,48 +1951,32 @@ p {
 }
 
 .framework-list {
-  max-width: 1240px;
+  max-width: 1320px;
   display: grid;
-  gap: clamp(20px, 2.4vw, 34px);
+  gap: clamp(18px, 2vw, 30px);
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .framework-list li {
-  position: relative;
   display: grid;
-  grid-template-columns: 16px 1fr;
-  gap: clamp(18px, 2vw, 30px);
+  grid-template-columns: 12px minmax(0, 1fr);
+  gap: clamp(16px, 1.5vw, 24px);
   align-items: start;
-  margin-inline: -18px;
-  padding: 6px 18px;
-  border-radius: 18px;
   color: var(--ink-soft);
   font-size: clamp(21px, 1.45vw, 28px);
   line-height: 1.68;
-  outline: 0;
-  transition:
-    color 220ms ease,
-    background 220ms ease,
-    box-shadow 220ms ease;
 }
 
 .framework-list li::before {
-  width: 9px;
-  height: 9px;
-  margin-top: 0.72em;
+  width: 7px;
+  height: 7px;
+  margin-top: 0.78em;
   content: '';
   border-radius: 50%;
   background: var(--blue);
   box-shadow: 0 0 0 7px rgba(36, 88, 255, 0.09);
-}
-
-.framework-list li:hover,
-.framework-list li:focus-visible {
-  color: var(--ink);
-  background: rgba(255, 255, 255, calc(var(--dock-energy) * 0.36));
-  box-shadow: var(--dock-card-shadow);
 }
 
 .framework-list strong {
