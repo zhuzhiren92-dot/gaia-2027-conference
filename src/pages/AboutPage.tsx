@@ -29,7 +29,12 @@ export function AboutPage() {
         <ul className="about-bullet-list">
           {conference.about.scientificHighlights.map((item) => (
             <li key={item.title}>
-              <strong>{item.title}:</strong> {item.text}
+              <p>
+                {item.title === 'Academic exchange' ? null : (
+                  <strong>{item.title}: </strong>
+                )}
+                {item.text}
+              </p>
             </li>
           ))}
         </ul>
@@ -43,7 +48,9 @@ export function AboutPage() {
         </div>
         <ul className="about-bullet-list">
           {conference.about.internationalScientificCommittee.map((member) => (
-            <li key={member}>{member}</li>
+            <li key={member}>
+              <p>{member}</p>
+            </li>
           ))}
         </ul>
       </section>

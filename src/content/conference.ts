@@ -255,12 +255,24 @@ export const conference: ConferenceContent = {
   registration: {
     status: 'REGISTRATION IS OPEN NOW',
     message:
-      'The items you need to input for registration are listed below. The official registration channel will be linked here once it is confirmed.',
+      'The items you need to input for the registration are listed as follows:',
     steps: [
-      'Personal information: name, email, living address, phone number, status, and affiliation.',
-      'Accommodation request: stay dates, room type, roommate names, and dietary restrictions.',
-      'Oral or poster presentation request: relevant research information is required.',
-      'GAIA questionnaire: short questions prepared by the organizing committee.',
+      'Personal information (Your name, email and living address, phone number, your status and affiliation).',
+      'Accommodation request (from which to which date you will stay, room type, roommate names, dietary restriction).',
+      'Oral/poster presentation request (you are required to provide relevant research information).',
+      'Some questionnaires on GAIA.',
+    ],
+    note:
+      'Note: If you need to modify the input information after submitting your registration details, please click the jump button on the right (View/Edit/Cancel). After entering your personal registration ID, you can perform the relevant modification operations. The personal registration ID is generated upon successful initial registration and will be saved in your local registration records.',
+    actions: [
+      {
+        label: 'Online Registration',
+        href: '#',
+      },
+      {
+        label: 'View/Edit/Cancel',
+        href: '#',
+      },
     ],
     fees: [
       {
@@ -313,7 +325,7 @@ export const conference: ConferenceContent = {
       },
     ],
     feeNote:
-      'The registration fee covers conference accessories, relevant facilities and materials for oral presentations and poster sessions, lunches, dinners, the gala dinner during the conference dates, participation certificates and award certificates, and expenses related to the construction site visit.',
+      'The registration fee covers the following items: conference accessories; relevant facilities and materials for oral presentations and poster sessions; lunches, dinners, and the gala dinner during the conference dates; participation certificates and award certificates; expenses related to the construction site visit.',
   },
   program: [
     {

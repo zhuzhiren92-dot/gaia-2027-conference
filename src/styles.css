@@ -1511,6 +1511,10 @@ p {
   align-items: start;
 }
 
+.about-bullet-list li p {
+  min-width: 0;
+}
+
 .about-bullet-list li::before {
   content: '';
   width: 9px;
@@ -1978,96 +1982,79 @@ p {
 
 /* Registration */
 
-.registration-status {
-  display: grid;
-  grid-template-columns: 90px 1fr auto;
-  align-items: center;
-  gap: 35px;
-  padding: 42px;
-  background: #eff5ff;
-  border: 1px solid #bfd0ff;
+.registration-open {
+  padding: 0 0 125px;
 }
 
-.status-mark {
-  width: 66px;
-  height: 66px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(36, 88, 255, 0.45);
-  border-radius: 50%;
+.registration-open h2,
+.fees-section h2 {
+  max-width: 1180px;
+  font-size: clamp(42px, 5vw, 76px);
+  font-weight: 300;
+  letter-spacing: -0.06em;
+  line-height: 1.02;
 }
 
-.status-mark span {
+.registration-open-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(36px, 6vw, 110px);
+  align-items: start;
+}
+
+.registration-open-copy {
+  display: grid;
+  gap: 26px;
+  max-width: 1320px;
+  color: var(--ink-soft);
+  font-size: clamp(21px, 1.45vw, 28px);
+  line-height: 1.68;
+}
+
+.registration-input-list {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.registration-input-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.registration-input-list li::before {
+  content: '';
   width: 9px;
   height: 9px;
-  background: var(--blue);
+  margin-top: 0.72em;
   border-radius: 50%;
-  box-shadow: 0 0 0 8px rgba(36, 88, 255, 0.1);
+  background: var(--blue);
+  box-shadow: 0 0 0 8px rgba(37, 96, 255, 0.1);
 }
 
-.registration-status h2 {
-  margin: 10px 0 8px;
-  font-size: clamp(26px, 3vw, 46px);
-  font-weight: 300;
-  letter-spacing: -0.045em;
-}
-
-.registration-status > div:nth-child(2) > p:last-child {
-  max-width: 700px;
+.registration-note {
   color: var(--muted);
-  font-size: var(--text-body-small);
-  line-height: 1.7;
 }
 
-.registration-status button {
-  padding: 15px 18px;
-  color: #87939b;
-  background: transparent;
-  border: 1px solid #bac6cf;
-  font-family: var(--mono);
-  font-size: var(--text-micro);
-  letter-spacing: 0.06em;
-}
-
-.registration-steps {
-  padding: 125px 0;
+.registration-actions {
+  display: grid;
+  gap: 18px;
+  justify-items: start;
+  padding-top: 6px;
 }
 
 .registration-timeline {
   padding: 0 0 125px;
 }
 
-.registration-steps ol {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.registration-steps li {
-  min-height: 245px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--line);
-  margin-left: -1px;
-}
-
-.registration-steps li span {
-  color: var(--blue);
-  font-family: var(--mono);
-  font-size: var(--text-micro);
-}
-
-.registration-steps li p {
-  margin-top: auto;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
 .fees-table {
   border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
 }
 
 .fee-row {
@@ -2076,26 +2063,8 @@ p {
   border-bottom: 1px solid var(--line);
 }
 
-.fee-rows {
-  overflow: visible;
-}
-
 .fee-rows .fee-row {
-  margin-inline: -10px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, calc(var(--dock-energy) * 0.48));
-  box-shadow: var(--dock-card-shadow);
-  outline: 0;
-  transition:
-    background 220ms ease,
-    box-shadow 220ms ease,
-    border-color 220ms ease;
-}
-
-.fee-rows .fee-row:focus-visible {
-  box-shadow:
-    var(--dock-card-shadow),
-    0 0 0 3px rgba(36, 88, 255, 0.14);
+  background: rgba(255, 255, 255, 0.58);
 }
 
 .fee-row p {
@@ -2130,9 +2099,10 @@ p {
 }
 
 .fee-note {
-  padding: 22px 24px 26px;
+  max-width: 1320px;
+  padding: 28px 0 0;
   color: var(--ink-soft);
-  font-size: clamp(15px, 1vw, 18px);
+  font-size: clamp(19px, 1.22vw, 24px);
   line-height: 1.72;
 }
 
@@ -2960,9 +2930,13 @@ p {
 .footer-contact-line {
   margin-top: 18px;
   color: #aab5bc;
-  font-size: clamp(19px, 1.25vw, 22px);
+  font-size: clamp(21px, 1.35vw, 25px);
   line-height: 1.5;
   transition: color 180ms ease;
+}
+
+.footer-contact-line span {
+  white-space: nowrap;
 }
 
 .footer-contact-line:hover {

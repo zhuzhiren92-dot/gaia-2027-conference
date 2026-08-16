@@ -134,6 +134,11 @@ export type ConferenceContent = {
     status: string
     message: string
     steps: string[]
+    note: string
+    actions: Array<{
+      label: string
+      href: string
+    }>
     fees: Array<{ category: string; early: string; regular: string }>
     policies: string[]
     timeline: TimelineItem[]
