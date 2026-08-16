@@ -1,4 +1,3 @@
-import { BorderGlow } from '../components/BorderGlow'
 import { PageFrame } from '../components/PageFrame'
 import { conference } from '../content/conference'
 
@@ -11,12 +10,7 @@ export function ContactPage() {
       pageStatement="Questions are welcome. Official contacts will appear here."
       showIntroSections={false}
     >
-      <BorderGlow
-        as="section"
-        className="contact-us-panel page-width"
-        backgroundColor="rgba(248, 251, 253, 0.9)"
-        data-reveal
-      >
+      <section className="contact-us-panel page-width" data-reveal>
         <p className="section-kicker">CONTACT US</p>
         <div className="contact-us-lines">
           {conference.contactChannels.map((item) => (
@@ -27,13 +21,10 @@ export function ContactPage() {
             </a>
           ))}
         </div>
-      </BorderGlow>
+      </section>
 
       <section className="contact-organizations page-width" data-reveal>
-        <BorderGlow
-          className="contact-logo-panel"
-          backgroundColor="rgba(255, 255, 255, 0.82)"
-        >
+        <div className="contact-logo-panel">
           <div className="logo-group logo-group-organized">
             <p className="section-kicker">ORGANIZED BY</p>
             {conference.organizedBy.map((organization) => (
@@ -61,7 +52,7 @@ export function ContactPage() {
               ))}
             </div>
           </div>
-        </BorderGlow>
+        </div>
       </section>
     </PageFrame>
   )
