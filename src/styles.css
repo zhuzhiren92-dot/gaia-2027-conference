@@ -1461,81 +1461,69 @@ p {
 
 /* About */
 
-.manifesto {
-  padding-bottom: 150px;
-}
-
-.manifesto-copy {
-  margin-top: 32px;
-  display: grid;
-  grid-template-columns: 1.65fr 0.85fr;
-  gap: 12vw;
-}
-
-.manifesto-primary {
-  font-size: clamp(34px, 4.8vw, 73px);
-  font-weight: 300;
-  letter-spacing: -0.055em;
-  line-height: 1.08;
-}
-
-.manifesto-secondary {
-  align-self: end;
-  display: grid;
-  gap: 24px;
-  color: var(--ink-soft);
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-.science-highlights {
+.about-text-section {
   padding: 110px 0;
   border-top: 1px solid var(--line);
 }
 
-.science-highlight-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  overflow: visible;
+.about-text-section:first-of-type {
+  border-top: 0;
+  padding-top: 0;
 }
 
-.science-highlight-grid .spotlight-card {
-  min-height: 330px;
-  margin-left: -1px;
-  padding: 30px;
+.about-text-section .section-heading-row {
+  margin-bottom: clamp(32px, 4vw, 62px);
 }
 
-.science-highlight-grid h3 {
-  margin: 42px 0 24px;
-  font-size: clamp(27px, 2.6vw, 44px);
+.about-text-section h2 {
+  max-width: 1180px;
+  font-size: clamp(42px, 5vw, 76px);
   font-weight: 300;
-  letter-spacing: -0.05em;
-  line-height: 1.06;
+  letter-spacing: -0.06em;
+  line-height: 1.02;
 }
 
-.science-highlight-grid p:last-child {
-  color: var(--muted);
-  font-size: var(--text-small);
-  line-height: 1.7;
-}
-
-.principles-grid {
+.about-prose {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1320px;
+  color: var(--ink-soft);
+  font-size: clamp(21px, 1.45vw, 28px);
+  line-height: 1.68;
 }
 
-.principles-grid .spotlight-card {
-  min-height: 390px;
-  margin-left: -1px;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
+.about-bullet-list {
+  display: grid;
+  gap: 22px;
+  max-width: 1320px;
+  margin: 0;
+  padding: 0;
+  color: var(--ink-soft);
+  font-size: clamp(21px, 1.45vw, 28px);
+  line-height: 1.68;
+  list-style: none;
 }
 
-.principle-index {
-  color: var(--blue);
-  font-family: var(--mono);
-  font-size: var(--text-micro);
+.about-bullet-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.about-bullet-list li::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  margin-top: 0.72em;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 8px rgba(37, 96, 255, 0.1);
+}
+
+.about-bullet-list strong {
+  color: var(--ink);
+  font-weight: 560;
 }
 
 .principles-grid h3 {
@@ -1917,7 +1905,7 @@ p {
 
 .poster-copy div {
   display: grid;
-  max-width: 1180px;
+  max-width: 1320px;
   gap: 28px;
   color: var(--ink-soft);
   font-size: clamp(21px, 1.45vw, 28px);
@@ -2972,7 +2960,7 @@ p {
 .footer-contact-line {
   margin-top: 18px;
   color: #aab5bc;
-  font-size: 16px;
+  font-size: clamp(19px, 1.25vw, 22px);
   line-height: 1.5;
   transition: color 180ms ease;
 }

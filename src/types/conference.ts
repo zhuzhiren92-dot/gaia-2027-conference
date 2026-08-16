@@ -117,6 +117,7 @@ export type ConferenceContent = {
       title: string
       text: string
     }>
+    internationalScientificCommittee: string[]
   }
   workshop: {
     overview: string[]

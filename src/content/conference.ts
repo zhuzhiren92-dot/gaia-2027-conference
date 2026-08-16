@@ -132,7 +132,7 @@ export const conference: ConferenceContent = {
   about: {
     whatIsGaia: [
       'GAIA (Geomechanics Alliance in Asia) is a proposed pan-Asian initiative that aims to build a vibrant, interconnected platform for students, young researchers, and professionals in geomechanics, geotechnical engineering, and related earth-science disciplines. By promoting regular knowledge exchange, collaborative research, and professional networking, GAIA seeks to establish a durable research community that tackles both regional and global challenges in geomechanics and related fields.',
-      "Similar initiatives exist elsewhere - for example, ALERT Geomaterials, founded in 1989, has sustained a close European network in research on geomaterials for decades. ALERT leverages Europe's compact geography to run annual thematic sessions and doctoral schools, which have been instrumental in fostering strong scientific ties and training successive generations of researchers.",
+      "Similar initiatives exist elsewhere — for example, ALERT Geomaterials, founded in 1989, has sustained a close European network in research on geomaterials for decades. ALERT leverages Europe's compact geography to run annual thematic sessions and doctoral schools (frequently in France), which have been instrumental in fostering strong scientific ties and training successive generations of researchers.",
       "Recognizing Asia's much larger geographic scale and greater cultural and institutional diversity, GAIA will adopt a rotating host-country model to maximize accessibility and ensure broad regional representation. By connecting talent, facilities, and industry needs, GAIA will help form resilient, cross-border networks that accelerate innovation, strengthen capacity, and contribute to the sustainable development and safety of infrastructure throughout the region.",
     ],
     scientificHighlights: [
@@ -146,8 +146,14 @@ export const conference: ConferenceContent = {
       },
       {
         title: 'Academic exchange',
-        text: 'The event will bring together professors, experts, and students, offering a platform for in-depth discussions and knowledge exchange in this rapidly evolving field.',
+        text: 'This event will bring together professors, experts, and students, offering a unique platform for in-depth discussions and knowledge exchange in this rapidly evolving field.',
       },
+    ],
+    internationalScientificCommittee: [
+      'Cino Viggiani (Université Grenoble Alpes & Shandong University, FRANCE)',
+      'Jidong Zhao (HKUST, Hong Kong, CHINA)',
+      'Takashi Matsushima (University of Tsukuba, JAPAN)',
+      'Jipeng Wang (Shandong University, CHINA)',
     ],
   },
   workshop: {
