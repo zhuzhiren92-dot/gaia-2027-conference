@@ -2915,7 +2915,7 @@ p {
 }
 
 .footer-contact-card {
-  width: min(100%, 560px);
+  width: min(100%, 620px);
   align-self: start;
   justify-self: start;
   margin-left: 0;
@@ -2934,13 +2934,13 @@ p {
 }
 
 .footer-contact-line {
-  display: grid;
-  grid-template-columns: auto max-content max-content;
+  display: inline-grid;
+  grid-template-columns: max-content max-content max-content;
   align-items: center;
-  gap: clamp(14px, 1.05vw, 20px);
+  column-gap: clamp(12px, 0.85vw, 16px);
   margin-top: 18px;
   color: #aab5bc;
-  font-size: clamp(16px, 0.95vw, 18px);
+  font-size: clamp(18px, 1.08vw, 21px);
   line-height: 1.5;
   transition: color 180ms ease;
 }
@@ -2955,8 +2955,8 @@ p {
 
 .footer-contact-line svg {
   color: var(--cyan);
-  width: clamp(29px, 1.8vw, 34px);
-  height: clamp(29px, 1.8vw, 34px);
+  width: clamp(30px, 1.85vw, 35px);
+  height: clamp(30px, 1.85vw, 35px);
 }
 
 .footer-contact-line strong {
