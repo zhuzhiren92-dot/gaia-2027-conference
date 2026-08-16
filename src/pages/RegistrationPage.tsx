@@ -55,9 +55,6 @@ export function RegistrationPage() {
           <div>
             <h2>Registration Fees</h2>
           </div>
-          <p className="quiet-copy">
-            Fees are shown in HKD and remain subject to final confirmation.
-          </p>
         </div>
         <div className="fees-table" role="table" aria-label="Registration fees">
           <div className="fee-row fee-head" role="row">

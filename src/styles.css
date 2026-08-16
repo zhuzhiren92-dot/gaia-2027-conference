@@ -2059,7 +2059,7 @@ p {
 
 .fee-row {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: minmax(230px, 0.72fr) minmax(380px, 1fr) minmax(380px, 1fr);
   border-bottom: 1px solid var(--line);
 }
 
@@ -2068,9 +2068,15 @@ p {
 }
 
 .fee-row p {
-  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 78px;
+  padding: 22px 26px;
   border-right: 1px solid var(--line);
-  font-size: 14px;
+  font-size: clamp(17px, 1.05vw, 21px);
+  text-align: center;
+  white-space: nowrap;
 }
 
 .fee-row p:last-child {
@@ -2090,12 +2096,12 @@ p {
 }
 
 .fee-row:not(.fee-head) p {
-  font-size: clamp(15px, 1vw, 18px);
+  font-size: clamp(18px, 1.12vw, 22px);
   text-align: center;
 }
 
 .fee-row:not(.fee-head) p:first-child {
-  text-align: left;
+  text-align: center;
 }
 
 .fee-note {
@@ -2109,8 +2115,8 @@ p {
 .fee-head p {
   color: var(--muted);
   font-family: var(--mono);
-  font-size: var(--text-micro);
-  letter-spacing: 0.08em;
+  font-size: clamp(14px, 0.84vw, 17px);
+  letter-spacing: 0.04em;
 }
 
 .policy-section {
@@ -2912,7 +2918,7 @@ p {
   width: min(100%, 520px);
   align-self: start;
   justify-self: start;
-  margin-left: 0;
+  margin-left: clamp(18px, 2vw, 42px);
   padding: 0;
   color: #dce7ed;
   background: transparent;
@@ -2930,7 +2936,7 @@ p {
 .footer-contact-line {
   margin-top: 18px;
   color: #aab5bc;
-  font-size: clamp(21px, 1.35vw, 25px);
+  font-size: clamp(19px, 1.22vw, 23px);
   line-height: 1.5;
   transition: color 180ms ease;
 }
@@ -2945,6 +2951,8 @@ p {
 
 .footer-contact-line svg {
   color: var(--cyan);
+  width: clamp(32px, 2vw, 38px);
+  height: clamp(32px, 2vw, 38px);
 }
 
 .footer-contact-line strong {
@@ -3163,10 +3171,6 @@ p {
   .workshop-overview {
     grid-template-columns: 1fr;
     gap: 40px;
-  }
-
-  .registration-steps ol {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-main {
@@ -3501,15 +3505,6 @@ p {
     padding: 90px 0;
   }
 
-  .registration-steps ol {
-    grid-template-columns: 1fr;
-  }
-
-  .registration-steps li {
-    min-height: 180px;
-    margin: 0 0 -1px;
-  }
-
   .fee-row {
     grid-template-columns: 1fr;
   }
@@ -3520,6 +3515,7 @@ p {
     border-right: 0;
     border-bottom: 1px solid var(--line);
     text-align: left;
+    white-space: normal;
   }
 
   .fee-head {
