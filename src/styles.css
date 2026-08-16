@@ -2915,10 +2915,10 @@ p {
 }
 
 .footer-contact-card {
-  width: min(100%, 520px);
+  width: min(100%, 430px);
   align-self: start;
   justify-self: start;
-  margin-left: clamp(18px, 2vw, 42px);
+  margin-left: clamp(10px, 1.25vw, 24px);
   padding: 0;
   color: #dce7ed;
   background: transparent;
@@ -2936,7 +2936,7 @@ p {
 .footer-contact-line {
   margin-top: 18px;
   color: #aab5bc;
-  font-size: clamp(19px, 1.22vw, 23px);
+  font-size: clamp(17px, 1.05vw, 20px);
   line-height: 1.5;
   transition: color 180ms ease;
 }
@@ -2951,13 +2951,14 @@ p {
 
 .footer-contact-line svg {
   color: var(--cyan);
-  width: clamp(32px, 2vw, 38px);
-  height: clamp(32px, 2vw, 38px);
+  width: clamp(29px, 1.8vw, 34px);
+  height: clamp(29px, 1.8vw, 34px);
 }
 
 .footer-contact-line strong {
   color: #e9eef1;
   font-weight: 500;
+  overflow-wrap: anywhere;
 }
 
 .footer-organizations {
