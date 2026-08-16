@@ -2915,10 +2915,10 @@ p {
 }
 
 .footer-contact-card {
-  width: min(100%, 430px);
+  width: min(100%, 560px);
   align-self: start;
   justify-self: start;
-  margin-left: clamp(10px, 1.25vw, 24px);
+  margin-left: 0;
   padding: 0;
   color: #dce7ed;
   background: transparent;
@@ -2934,9 +2934,13 @@ p {
 }
 
 .footer-contact-line {
+  display: grid;
+  grid-template-columns: auto max-content max-content;
+  align-items: center;
+  gap: clamp(14px, 1.05vw, 20px);
   margin-top: 18px;
   color: #aab5bc;
-  font-size: clamp(17px, 1.05vw, 20px);
+  font-size: clamp(16px, 0.95vw, 18px);
   line-height: 1.5;
   transition: color 180ms ease;
 }
@@ -2958,7 +2962,7 @@ p {
 .footer-contact-line strong {
   color: #e9eef1;
   font-weight: 500;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
 }
 
 .footer-organizations {
