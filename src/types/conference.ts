@@ -111,6 +111,7 @@ export type ConferenceContent = {
   highlights: Highlight[]
   timeline: TimelineItem[]
   homeFeatures: InfoBlock[]
+  homeOrganizingCommittee: string[]
   about: {
     whatIsGaia: string[]
     scientificHighlights: Array<{

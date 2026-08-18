@@ -129,6 +129,12 @@ export const conference: ConferenceContent = {
       linkTo: '/workshop',
     },
   ],
+  homeOrganizingCommittee: [
+    'Chairman: Prof. Jeff Wang (ACE, City University of Hong Kong)',
+    'Vice-Chairman: Dr. Kostas Senetakis (ACE, City University of Hong Kong)',
+    'Vice-Chairman: Dr. Fiona Kwok (ACE, City University of Hong Kong)',
+    'Secretary: Dr. Zhiren Zhu (ACE, City University of Hong Kong)',
+  ],
   about: {
     whatIsGaia: [
       'GAIA (Geomechanics Alliance in Asia) is a proposed pan-Asian initiative that aims to build a vibrant, interconnected platform for students, young researchers, and professionals in geomechanics, geotechnical engineering, and related earth-science disciplines. By promoting regular knowledge exchange, collaborative research, and professional networking, GAIA seeks to establish a durable research community that tackles both regional and global challenges in geomechanics and related fields.',

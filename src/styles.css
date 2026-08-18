@@ -1316,6 +1316,10 @@ p {
 }
 
 .home-timeline-section {
+  padding-bottom: 95px;
+}
+
+.home-committee-section {
   padding-bottom: 150px;
 }
 

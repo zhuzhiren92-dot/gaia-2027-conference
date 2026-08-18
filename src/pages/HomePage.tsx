@@ -36,6 +36,21 @@ export function HomePage() {
         items={conference.timeline}
         className="home-timeline-section"
       />
+
+      <section className="about-text-section home-committee-section page-width" data-reveal>
+        <div className="section-heading-row">
+          <div>
+            <h2>Organizing Committee</h2>
+          </div>
+        </div>
+        <ul className="about-bullet-list">
+          {conference.homeOrganizingCommittee.map((member) => (
+            <li key={member}>
+              <p>{member}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
     </PageFrame>
   )
 }
