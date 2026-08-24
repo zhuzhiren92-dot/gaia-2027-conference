@@ -112,13 +112,13 @@ export type ConferenceContent = {
   timeline: TimelineItem[]
   homeFeatures: InfoBlock[]
   homeOrganizingCommittee: string[]
+  homeInternationalScientificCommittee: string[]
   about: {
     whatIsGaia: string[]
     scientificHighlights: Array<{
       title: string
       text: string
     }>
-    internationalScientificCommittee: string[]
   }
   workshop: {
     overview: string[]

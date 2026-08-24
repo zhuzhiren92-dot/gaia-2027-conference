@@ -83,32 +83,32 @@ export const conference: ConferenceContent = {
   ],
   timeline: [
     {
-      date: '2026/12/20',
+      date: '01/12/2026',
       title: 'Online registration opens.',
       description: 'GAIA 2027 online registration is planned to open.',
       status: 'pending',
     },
     {
-      date: '2027/03/22',
+      date: '28/02/2027',
       title: 'Early-bird registration closes.',
       description: 'Early-bird registration is planned to close.',
       status: 'pending',
     },
     {
-      date: '2027/04/30',
+      date: '30/04/2027',
       title: 'Final registration closes.',
       description: 'Final online registration will close before workshop preparation.',
       status: 'pending',
     },
     {
-      date: '2027/05/20',
-      title: 'Workshop on-site registration starts.',
+      date: '14/05/2027',
+      title: 'Workshop on-site registration starts',
       description: 'Participants arrive in Hong Kong and collect materials.',
       status: 'pending',
     },
     {
-      date: '2027/05/21',
-      title: 'GAIA 2027 officially starts.',
+      date: '15/05/2027',
+      title: 'GAIA 2027 officially starts',
       description: 'The third GAIA workshop begins at City University of Hong Kong.',
       status: 'pending',
     },
@@ -135,6 +135,12 @@ export const conference: ConferenceContent = {
     'Vice-Chairman: Dr. Fiona Kwok (ACE, City University of Hong Kong)',
     'Secretary: Dr. Zhiren Zhu (ACE, City University of Hong Kong)',
   ],
+    homeInternationalScientificCommittee: [
+    'Cino Viggiani (Université Grenoble Alpes & Shandong University, FRANCE)',
+    'Jidong Zhao (HKUST, Hong Kong, CHINA)',
+    'Takashi Matsushima (University of Tsukuba, JAPAN)',
+    'Jipeng Wang (Shandong University, CHINA)',
+  ],
   about: {
     whatIsGaia: [
       'GAIA (Geomechanics Alliance in Asia) is a proposed pan-Asian initiative that aims to build a vibrant, interconnected platform for students, young researchers, and professionals in geomechanics, geotechnical engineering, and related earth-science disciplines. By promoting regular knowledge exchange, collaborative research, and professional networking, GAIA seeks to establish a durable research community that tackles both regional and global challenges in geomechanics and related fields.',
@@ -154,12 +160,6 @@ export const conference: ConferenceContent = {
         title: 'Academic exchange',
         text: 'This event will bring together professors, experts, and students, offering a unique platform for in-depth discussions and knowledge exchange in this rapidly evolving field.',
       },
-    ],
-    internationalScientificCommittee: [
-      'Cino Viggiani (Université Grenoble Alpes & Shandong University, FRANCE)',
-      'Jidong Zhao (HKUST, Hong Kong, CHINA)',
-      'Takashi Matsushima (University of Tsukuba, JAPAN)',
-      'Jipeng Wang (Shandong University, CHINA)',
     ],
   },
   workshop: {
@@ -300,32 +300,32 @@ export const conference: ConferenceContent = {
     ],
     timeline: [
       {
-        date: '2026/12/20',
+        date: '01/12/2026',
         title: 'Online registration opens.',
         description: 'Online registration is planned to open.',
         status: 'pending',
       },
       {
-        date: '2027/03/22',
+        date: '28/02/2027',
         title: 'Early-bird registration closes.',
         description: 'Early-bird registration is planned to close.',
         status: 'pending',
       },
       {
-        date: '2027/04/30',
+        date: '30/04/2027',
         title: 'Final registration closes.',
         description: 'The closing date remains subject to official confirmation.',
         status: 'pending',
       },
       {
-        date: '2027/05/20',
-        title: 'Workshop on-site registration starts.',
+        date: '14/05/2027',
+        title: 'Workshop on-site registration starts',
         description: 'Participants arrive and collect workshop materials.',
         status: 'pending',
       },
       {
-        date: '2027/05/21',
-        title: 'GAIA 2027 officially starts.',
+        date: '15/05/2027',
+        title: 'GAIA 2027 officially starts',
         description: 'The first official workshop day begins.',
         status: 'pending',
       },

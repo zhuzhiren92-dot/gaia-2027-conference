@@ -51,6 +51,24 @@ export function HomePage() {
           ))}
         </ul>
       </section>
+    
+      <section
+        className="about-text-section home-international-committee-section page-width"
+        data-reveal
+      >
+        <div className="section-heading-row">
+          <div>
+            <h2>International Scientific Committee</h2>
+          </div>
+        </div>
+        <ul className="about-bullet-list">
+          {conference.homeInternationalScientificCommittee.map((member) => (
+            <li key={member}>
+              <p>{member}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
     </PageFrame>
   )
 }
