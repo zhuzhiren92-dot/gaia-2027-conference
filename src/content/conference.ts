@@ -124,7 +124,7 @@ export const conference: ConferenceContent = {
     {
       kicker: 'PREVIOUS WORKSHOP',
       title: 'GAIA 2027',
-      body: 'GAIA Third Workshop (GAIA 2027) is scheduled from 20 to 25 May 2027 in Hong Kong, China.',
+      body: 'GAIA Third Workshop (GAIA 2027) is scheduled from 15 to 16 May 2027 in Hong Kong, China.',
       linkLabel: 'More about the workshop',
       linkTo: '/workshop',
     },
@@ -165,7 +165,7 @@ export const conference: ConferenceContent = {
   workshop: {
     overview: [
       'Geomechanics Alliance in Asia (GAIA) aims to provide a platform for young researchers and graduate students in geomechanics and geotechnical engineering across Asia to exchange ideas and foster collaboration. The annual GAIA Workshop serves as the main channel for communication and interaction.',
-      'The third workshop, GAIA 2027, will be hosted by City University of Hong Kong and is scheduled to take place from 20 to 25 May 2027 in Hong Kong, China. The main theme is Advances in Micro–Macro Geomechanics, covering key topics in geotechnical engineering such as particle-scale effects, micro–macro constitutive relationships, multiphase and multi-physics coupling, multiscale experimental and monitoring techniques, and multiscale numerical modeling methods.',
+      'The third workshop, GAIA 2027, will be hosted by City University of Hong Kong and is scheduled to take place from 15 to 16 May 2027 in Hong Kong, China. The main theme is Advances in Micro–Macro Geomechanics, covering key topics in geotechnical engineering such as particle-scale effects, micro–macro constitutive relationships, multiphase and multi-physics coupling, multiscale experimental and monitoring techniques, and multiscale numerical modeling methods.',
       'To ensure high-quality discussions and interactions, the workshop will be limited to approximately 150 participants.',
     ],
     topics: [
@@ -233,7 +233,7 @@ export const conference: ConferenceContent = {
       },
       {
         label: 'Presentation',
-        value: 'Mainly from young researchers and students',
+        value: 'Including keynote and invited talks from distinguished senior, mid-career and early-career professors, researchers and students',
         detail: '',
       },
       {
@@ -250,7 +250,7 @@ export const conference: ConferenceContent = {
     ],
     registrationCta: {
       kicker: 'REGISTRATION',
-      title: 'Online registration will officially start on December 20, 2026',
+      title: 'Online registration will officially start on December 1, 2026',
       body: 'Registration details, participation guidance, and modification instructions will be updated on the Registration page.',
       linkLabel: 'Go to Registration',
       linkTo: '/registration',
