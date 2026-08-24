@@ -59,8 +59,8 @@ export function RegistrationPage() {
         <div className="fees-table" role="table" aria-label="Registration fees">
           <div className="fee-row fee-head" role="row">
             <p role="columnheader">CATEGORY</p>
-            <p role="columnheader">EARLY-BIRD FEES (before 22 March 2027)</p>
-            <p role="columnheader">REGULAR FEES (after 22 March 2027)</p>
+            <p role="columnheader">EARLY-BIRD FEES (before 28 February 2027)</p>
+            <p role="columnheader">REGULAR FEES (after 28 February 2027)</p>
           </div>
           <div className="fee-rows">
             {registration.fees.map((fee) => (

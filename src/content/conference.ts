@@ -244,13 +244,13 @@ export const conference: ConferenceContent = {
     ],
     posterSessions: [
       'Please refer to the workshop schedule for the detailed conference timetable. Participants are required to prepare an electronic file of their academic poster in a 1:2 aspect ratio, clearly presenting the research topic, main content, and key conclusions.',
-      'The organizer will arrange centralized poster printing, and the electronic poster file should be sent to the conference email address by May 20, 2027. Before the poster session begins, on-site staff will contact participants and guide them to the designated location.',
+      'The organizer will arrange centralized poster printing, and the electronic poster file should be sent to the conference email address by 15 April 2027. Before the poster session begins, on-site staff will contact participants and guide them to the designated location.',
       "If poster submissions exceed the venue's capacity, the organizing committee may screen submitted materials based on academic innovation and thematic relevance. Participants affected by this process will be informed by email.",
       'We look forward to your wonderful presentations.',
     ],
     registrationCta: {
       kicker: 'REGISTRATION',
-      title: 'Online registration will officially start on December 1, 2026',
+      title: 'Online registration will officially start on 1 December 2026',
       body: 'Registration details, participation guidance, and modification instructions will be updated on the Registration page.',
       linkLabel: 'Go to Registration',
       linkTo: '/registration',
@@ -283,13 +283,13 @@ export const conference: ConferenceContent = {
     fees: [
       {
         category: 'Regular Participants',
-        early: 'HKD 3,000 per person',
-        regular: 'HKD 3,500 per person',
+        early: 'HKD 3,500 per person',
+        regular: 'HKD 4,500 per person',
       },
       {
         category: 'Student Participants',
-        early: 'HKD 1,500 per person',
-        regular: 'HKD 1,800 per person',
+        early: 'HKD 2,500 per person',
+        regular: 'HKD 3,500 per person',
       },
     ],
     policies: [
