@@ -3764,15 +3764,17 @@ p {
   align-items: center;
   gap: 10px;
   color: var(--ink-soft);
-  font-size: clamp(18px, 1.2vw, 22px);
+  font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(18px, 1.08vw, 21px);
+  line-height: 1.4;
 }
 
 .submission-field span {
   color: var(--ink);
   font-family: var(--mono);
-  font-size: clamp(15px, 1vw, 18px);
+  font-size: clamp(16px, 0.98vw, 19px);
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.065em;
   text-transform: uppercase;
 }
 
@@ -3785,8 +3787,10 @@ p {
   background: rgba(255, 255, 255, 0.74);
   border: 1px solid rgba(36, 88, 255, 0.2);
   border-radius: 18px;
-  font: inherit;
-  font-size: clamp(17px, 1.08vw, 21px);
+  font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(18px, 1.08vw, 21px);
+  font-weight: 400;
+  line-height: 1.35;
 }
 
 .submission-field input:focus,
@@ -3799,7 +3803,9 @@ p {
 .submission-error,
 .submission-template p {
   color: var(--muted);
-  font-size: clamp(15px, 0.96vw, 18px);
+  font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(16px, 0.94vw, 18px);
+  line-height: 1.5;
 }
 
 .submission-error {
@@ -3821,7 +3827,7 @@ p {
   display: grid;
   justify-items: start;
   gap: 14px;
-  padding: 0 0 150px;
+  margin-top: 28px;
 }
 
 .home-financial-section {
