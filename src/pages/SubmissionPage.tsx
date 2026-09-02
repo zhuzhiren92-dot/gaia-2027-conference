@@ -238,7 +238,7 @@ export function SubmissionPage() {
               </div>
             </div>
 
-            <label className="submission-field"><span>Conference Topic</span><select name="topic" value={form.topic} onChange={updateField} onBlur={() => setShowTopicError(!form.topic)}><option value="">Select one topic</option>{conference.submissionTopics.map((item) => <option value={item} key={item}>{item}</option>)}</select>{showTopicError ? <small className="submission-error">Please select one topic</small> : null}</label>
+            <label className="submission-field"><span>Conference Topic</span><select name="topic" value={form.topic} onChange={updateField} onBlur={() => setShowTopicError(!form.topic)}><option value="">Select one topic</option>{conference.submissionTopics.map((item, index) => <option value={item} key={item}>{String(index + 1).padStart(2, '0')} — {item}</option>)}</select>{showTopicError ? <small className="submission-error">Please select one topic</small> : null}</label>
             <label className="submission-field"><span>Paper Title</span><input type="text" name="paperTitle" value={form.paperTitle} onChange={updateField} placeholder="Enter the poster or presentation title" /></label>
             <label className="submission-field"><span>Authors Name</span><input type="text" name="authorsName" value={form.authorsName} onChange={updateField} placeholder="Enter author names" /></label>
             <label className="submission-field"><span>Institution Name</span><input type="text" name="institutionName" value={form.institutionName} onChange={updateField} placeholder="Enter institution information" /></label>

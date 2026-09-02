@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { PageFrame } from '../components/PageFrame'
+import { conference } from '../content/conference'
 import { supabase } from '../lib/supabase'
 import type { Profile, Submission } from '../types/backend'
 
@@ -45,12 +46,32 @@ export function AdminPage() {
 
   const downloadFile = async (submission: AdminSubmission) => {
     if (!supabase || !submission.file_path) return
-    const { data, error } = await supabase.storage.from('submission-files').createSignedUrl(submission.file_path, 60)
+    const { data, error } = await supabase.storage.from('submission-files').download(submission.file_path)
     if (error) {
       setMessage(error.message)
       return
     }
-    window.location.assign(data.signedUrl)
+
+    const topicIndex = conference.submissionTopics.indexOf(submission.topic)
+    const topicNumber = String(topicIndex + 1).padStart(2, '0')
+    const presentationType = submission.presentation_type === 'oral'
+      ? 'Oral'
+      : submission.presentation_type === 'poster' ? 'Poster' : 'Unspecified'
+    const contactEmail = submission.contact_email || submission.profiles?.contact_email || 'unknown-email'
+    const invalidFilenameCharacters = '<>:"/\\|?*'
+    const safeEmail = [...contactEmail]
+      .map((character) => invalidFilenameCharacters.includes(character) ? '_' : character)
+      .join('')
+    const extension = submission.file_name?.match(/\.[^.]+$/)?.[0] ?? ''
+    const downloadName = `${topicNumber}-${presentationType}-${safeEmail}${extension}`
+    const objectUrl = URL.createObjectURL(data)
+    const link = document.createElement('a')
+    link.href = objectUrl
+    link.download = downloadName
+    document.body.appendChild(link)
+    link.click()
+    link.remove()
+    window.setTimeout(() => URL.revokeObjectURL(objectUrl), 0)
   }
 
   return (
