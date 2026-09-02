@@ -91,7 +91,7 @@ function Footer() {
               ))}
             </div>
           </div>
-          <div className="footer-logo-group">
+          <div className="footer-logo-group footer-supported-group">
             <p className="section-kicker">SUPPORTED BY</p>
             <div className="footer-logo-row">
               {conference.supportedBy.map((item) => (
