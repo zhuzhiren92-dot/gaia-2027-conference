@@ -124,7 +124,7 @@ export function SubmissionPage() {
       </section>
 
       <section className="submission-template page-width" data-reveal>
-        <a className="pill-action-link" href={`${import.meta.env.BASE_URL}abstract.docx`} download>
+        <a className="pill-action-link" href={`${import.meta.env.BASE_URL}GAIA_2027_Template.docx`} download="GAIA_2027_Template.docx">
           <span className="pill-link-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 4v12m0 0 5-5m-5 5-5-5M5 20h14" /></svg>
           </span>
