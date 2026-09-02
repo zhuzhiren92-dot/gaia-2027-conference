@@ -12,6 +12,7 @@ type PageFrameProps = {
   pageStatement: string
   children: ReactNode
   showIntroSections?: boolean
+  showSchoolCarousel?: boolean
 }
 
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
@@ -19,6 +20,7 @@ const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
 export function PageFrame({
   children,
   showIntroSections = true,
+  showSchoolCarousel = true,
 }: PageFrameProps) {
   const { identity } = conference
 
@@ -26,7 +28,7 @@ export function PageFrame({
     <>
       <Navigation />
       <main id="main-content">
-        <SchoolCarousel />
+        {showSchoolCarousel ? <SchoolCarousel /> : null}
 
         {showIntroSections ? (
           <section className="conference-identity page-width" data-reveal>

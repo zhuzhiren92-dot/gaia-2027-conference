@@ -1,6 +1,10 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Grainient } from './components/Grainient'
+import { ProtectedRoute } from './auth/ProtectedRoute'
 import { AboutPage } from './pages/AboutPage'
+import { AccountPage } from './pages/AccountPage'
+import { AdminPage } from './pages/AdminPage'
+import { AuthPage } from './pages/AuthPage'
 import { ContactPage } from './pages/ContactPage'
 import { HomePage } from './pages/HomePage'
 import { PreviousGaiaPage } from './pages/PreviousGaiaPage'
@@ -47,6 +51,9 @@ export default function App() {
         <Route path="/program" element={<ProgramPage />} />
         <Route path="/previous-gaia" element={<PreviousGaiaPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/login" element={<AuthPage />} />
+        <Route path="/account" element={<ProtectedRoute><AccountPage /></ProtectedRoute>} />
+        <Route path="/admin" element={<ProtectedRoute><AdminPage /></ProtectedRoute>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>

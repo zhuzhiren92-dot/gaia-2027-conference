@@ -19,6 +19,7 @@ export const conference: ConferenceContent = {
     { label: 'PROGRAM', path: '/program' },
     { label: 'PREVIOUS GAIA', path: '/previous-gaia' },
     { label: 'CONTACT', path: '/contact' },
+    { label: 'ACCOUNT', path: '/account' },
   ],
   schoolSlides: [
     {
