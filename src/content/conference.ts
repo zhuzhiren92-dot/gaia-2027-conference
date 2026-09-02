@@ -14,6 +14,7 @@ export const conference: ConferenceContent = {
     { label: 'HOME', path: '/' },
     { label: 'ABOUT', path: '/about' },
     { label: 'WORKSHOP', path: '/workshop' },
+    { label: 'SUBMISSION', path: '/submission' },
     { label: 'REGISTRATION', path: '/registration' },
     { label: 'PROGRAM', path: '/program' },
     { label: 'PREVIOUS GAIA', path: '/previous-gaia' },
@@ -140,6 +141,26 @@ export const conference: ConferenceContent = {
     'Jidong Zhao (HKUST, Hong Kong, CHINA)',
     'Takashi Matsushima (University of Tsukuba, JAPAN)',
     'Jipeng Wang (Shandong University, CHINA)',
+  ],
+  financialSponsors: [
+    {
+      label: 'Financial Sponsored',
+      name: 'The Hong Kong Institution of Engineers',
+      logo: 'assets/contact/hkie.jpg',
+    },
+    {
+      label: 'Financial Sponsored',
+      name: 'Department of Architecture and Civil Engineering in City University of Hong Kong (ACE, CityU HK)',
+      logo: 'assets/contact/ace-logo.png',
+    },
+  ],
+  submissionTopics: [
+    'Advanced characterization of geomaterials using X-ray microtomography (CT), X-ray diffraction (XRD), 3D laser scanning, particle image velocimetry (PIV) and other non-destructive optical and imaging techniques',
+    'Latest development of numerical modelling methods (e.g., DEM, FEM, FDM, MPM, CFD, LBM, SPH) for multiphase geomaterials, granular instability and granular flow problems',
+    'New development and application of machine learning and deep learning methods in geotechnical engineering',
+    'Physics-informed, data-driven constitutive modelling of geomaterials',
+    'Intelligent characterization, modelling and simulation in geotechnical engineering using data-driven approaches',
+    'Geotechnical infrastructure monitoring using novel remoting sensing techniques',
   ],
   about: {
     whatIsGaia: [
@@ -335,68 +356,24 @@ export const conference: ConferenceContent = {
   },
   program: [
     {
-      date: 'May 20, 2027',
-      label: 'Arrival & connection',
-      items: [
-        {
-          time: 'TBA',
-          title: 'On-site registration',
-          detail: 'Participant check-in and workshop materials.',
-        },
-        {
-          time: 'TBA',
-          title: 'Welcome gathering',
-          detail: 'An informal opening for participants and organizers.',
-        },
-      ],
+      date: '01/12/2026',
+      label: 'Online registration opens',
     },
     {
-      date: 'May 21, 2027',
-      label: 'First official workshop day',
-      items: [
-        {
-          time: 'TBA',
-          title: 'Opening & keynote lectures',
-          detail: 'Plenary talks and moderated discussion.',
-        },
-        {
-          time: 'TBA',
-          title: 'Young researcher sessions',
-          detail: 'Focused presentations with extended discussion.',
-        },
-        {
-          time: 'TBA',
-          title: 'Gala dinner & poster session',
-          detail: 'Academic exchange and evening programme.',
-        },
-      ],
+      date: '28/02/2027',
+      label: 'Early-bird registration closes',
     },
     {
-      date: 'May 22, 2027',
-      label: 'Second official workshop day',
-      items: [
-        {
-          time: 'TBA',
-          title: 'Keynote & invited sessions',
-          detail: 'Cross-disciplinary perspectives in geomechanics.',
-        },
-        {
-          time: 'TBA',
-          title: 'Award ceremony',
-          detail: 'Workshop reflections and recognition.',
-        },
-      ],
+      date: '14/05/2027',
+      label: 'Final registration closes',
     },
     {
-      date: 'May 25, 2027',
-      label: 'Field perspective',
-      items: [
-        {
-          time: 'TBA',
-          title: 'Construction site visit',
-          detail: 'Optional site visit, subject to final arrangements.',
-        },
-      ],
+      date: '14/05/2027',
+      label: 'Workshop on-site registration starts',
+    },
+    {
+      date: '15/05/2027',
+      label: 'GAIA 2027 officially starts',
     },
   ],
   previousEvents: [
@@ -527,18 +504,18 @@ export const conference: ConferenceContent = {
   supportedBy: [
     {
       label: 'Supported by',
-      name: 'SIMSG',
-      logo: 'assets/contact/simsg.png',
+      name: 'SIMSG / ISSMGE',
+      logo: 'assets/contact/fig-3.png',
     },
     {
       label: 'Supported by',
-      name: 'TC105 Geo-Mechanics from Micro to Macro',
-      logo: 'assets/contact/tc105.png',
+      name: 'The Hong Kong Institution of Engineers',
+      logo: 'assets/contact/hkie.jpg',
     },
     {
       label: 'Supported by',
-      name: 'CISMGE-CCES',
-      logo: 'assets/contact/cismge.png',
+      name: 'Department of Architecture and Civil Engineering in City University of Hong Kong',
+      logo: 'assets/contact/ace-logo.png',
     },
   ],
   organizations: [

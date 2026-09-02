@@ -34,7 +34,7 @@ export type Speaker = {
 export type ProgramDay = {
   date: string
   label: string
-  items: Array<{
+  items?: Array<{
     time: string
     title: string
     detail: string
@@ -113,6 +113,8 @@ export type ConferenceContent = {
   homeFeatures: InfoBlock[]
   homeOrganizingCommittee: string[]
   homeInternationalScientificCommittee: string[]
+  financialSponsors: OrganizationLogo[]
+  submissionTopics: string[]
   about: {
     whatIsGaia: string[]
     scientificHighlights: Array<{

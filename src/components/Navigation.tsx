@@ -6,7 +6,7 @@ import { conference } from '../content/conference'
 export function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
-  const brandIcon = `${import.meta.env.BASE_URL}assets/brand/logo2.png`
+  const brandIcon = `${import.meta.env.BASE_URL}assets/brand/logo1.png`
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' })

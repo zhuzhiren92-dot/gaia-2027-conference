@@ -6,6 +6,7 @@ import { HomePage } from './pages/HomePage'
 import { PreviousGaiaPage } from './pages/PreviousGaiaPage'
 import { ProgramPage } from './pages/ProgramPage'
 import { RegistrationPage } from './pages/RegistrationPage'
+import { SubmissionPage } from './pages/SubmissionPage'
 import { WorkshopPage } from './pages/WorkshopPage'
 import { ViewportReveal } from './components/ViewportReveal'
 
@@ -41,6 +42,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/workshop" element={<WorkshopPage />} />
+        <Route path="/submission" element={<SubmissionPage />} />
         <Route path="/registration" element={<RegistrationPage />} />
         <Route path="/program" element={<ProgramPage />} />
         <Route path="/previous-gaia" element={<PreviousGaiaPage />} />
