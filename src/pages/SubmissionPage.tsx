@@ -1,6 +1,10 @@
+import { Link } from 'react-router-dom'
+import { useAuth } from '../auth/auth-context'
 import { PageFrame } from '../components/PageFrame'
 
 export function SubmissionPage() {
+  const { user, loading } = useAuth()
+
   return (
     <PageFrame pageName="SUBMISSION" pageStatement="Submit your poster or oral presentation abstract for GAIA 2027.">
       <section className="submission-intro page-width" data-reveal>
@@ -17,6 +21,21 @@ export function SubmissionPage() {
         </div>
       </section>
 
+      {!loading && !user ? (
+        <div className="page-width">
+          <section className="submission-form-section" data-reveal>
+            <div className="auth-gate">
+              <p className="section-kicker">ACCOUNT REQUIRED</p>
+              <h2>Sign in before submitting.</h2>
+              <p>Your draft and uploaded file will be linked securely to your participant account.</p>
+              <Link className="pill-action-link" to="/login" state={{ from: '/submission' }}>
+                <span className="pill-link-icon" aria-hidden="true">→</span>
+                <strong>Sign in or register</strong>
+              </Link>
+            </div>
+          </section>
+        </div>
+      ) : null}
     </PageFrame>
   )
 }

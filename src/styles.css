@@ -3830,20 +3830,6 @@ p {
   margin-top: 28px;
 }
 
-.home-financial-section {
-  padding-bottom: 150px;
-}
-
-.financial-logo-row {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(220px, 360px));
-  gap: 20px;
-  margin-top: 38px;
-}
-
-.financial-logo-row .contact-logo-frame {
-  min-height: 160px;
-}
 
 .program-day-simple {
   grid-template-columns: 1fr;

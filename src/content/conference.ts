@@ -305,13 +305,13 @@ export const conference: ConferenceContent = {
     fees: [
       {
         category: 'Regular Participants',
-        early: 'HKD 3,500 per person',
-        regular: 'HKD 4,500 per person',
+        early: 'HKD 4,000 per person',
+        regular: 'HKD 5,000 per person',
       },
       {
         category: 'Student Participants',
-        early: 'HKD 2,500 per person',
-        regular: 'HKD 3,500 per person',
+        early: 'HKD 3,000 per person',
+        regular: 'HKD 4,000 per person',
       },
     ],
     policies: [
@@ -505,18 +505,18 @@ export const conference: ConferenceContent = {
   supportedBy: [
     {
       label: 'Supported by',
-      name: 'SIMSG / ISSMGE',
-      logo: 'assets/contact/fig-3.png',
+      name: 'SIMSG',
+      logo: 'assets/contact/simsg.png',
     },
     {
       label: 'Supported by',
-      name: 'The Hong Kong Institution of Engineers',
-      logo: 'assets/contact/hkie.jpg',
+      name: 'TC105 Geo-Mechanics from Micro to Macro',
+      logo: 'assets/contact/tc105.png',
     },
     {
       label: 'Supported by',
-      name: 'Department of Architecture and Civil Engineering in City University of Hong Kong',
-      logo: 'assets/contact/ace-logo.png',
+      name: 'CISMGE-CCES',
+      logo: 'assets/contact/cismge.png',
     },
   ],
   organizations: [

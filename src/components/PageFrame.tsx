@@ -79,11 +79,11 @@ function Footer() {
           </div>
         </div>
 
-        <div className="footer-organizations" aria-label="Organized and supported by">
+        <div className="footer-organizations" aria-label="Sponsored and supported by">
           <div className="footer-logo-group">
-            <p className="section-kicker">ORGANIZED BY</p>
+            <p className="section-kicker">SPONSORED BY</p>
             <div className="footer-logo-row">
-              {conference.organizedBy.map((item) => (
+              {conference.financialSponsors.map((item) => (
                 <img
                   key={item.name}
                   src={assetUrl(item.logo)}

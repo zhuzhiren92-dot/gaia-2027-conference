@@ -3,7 +3,6 @@ import { PageFrame } from '../components/PageFrame'
 import { TimelinePanel } from '../components/TimelinePanel'
 import { conference } from '../content/conference'
 
-const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
 export function HomePage() {
   return (
@@ -70,28 +69,6 @@ export function HomePage() {
             </li>
           ))}
         </ul>
-      </section>
-
-      <section className="about-text-section home-financial-section page-width" data-reveal>
-        <div className="section-heading-row">
-          <div>
-            <h2>Financial Sponsored</h2>
-          </div>
-        </div>
-        <ul className="about-bullet-list financial-sponsor-list">
-          {conference.financialSponsors.map((sponsor) => (
-            <li key={sponsor.name}>
-              <p>{sponsor.name}</p>
-            </li>
-          ))}
-        </ul>
-        <div className="financial-logo-row">
-          {conference.financialSponsors.map((sponsor) => (
-            <div className="contact-logo-frame" key={sponsor.name}>
-              <img src={assetUrl(sponsor.logo)} alt={sponsor.name} loading="lazy" />
-            </div>
-          ))}
-        </div>
       </section>
 
     </PageFrame>
