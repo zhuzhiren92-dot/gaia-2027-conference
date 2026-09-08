@@ -26,8 +26,8 @@ export function ContactPage() {
       <section className="contact-organizations page-width" data-reveal>
         <div className="contact-logo-panel">
           <div className="logo-group logo-group-organized">
-            <p className="section-kicker">ORGANIZED BY</p>
-            {conference.organizedBy.map((organization) => (
+            <p className="section-kicker">SPONSORED BY</p>
+            {conference.financialSponsors.map((organization) => (
               <div className="contact-logo-frame" key={organization.name}>
                 <img
                   src={assetUrl(organization.logo)}
