@@ -9,6 +9,8 @@ type LocationState = { from?: string }
 export function AuthPage() {
   const [mode, setMode] = useState<AuthMode>('login')
   const [email, setEmail] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [message, setMessage] = useState('')
@@ -27,6 +29,10 @@ export function AuthPage() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     if (!supabase) return
+    if (mode === 'register' && (!firstName.trim() || !lastName.trim())) {
+      setMessage('Please enter your first name and last name.')
+      return
+    }
     if (password.length < 8) {
       setMessage('Password must contain at least 8 characters.')
       return
@@ -52,7 +58,7 @@ export function AuthPage() {
         password,
         options: {
           emailRedirectTo: new URL('account', appBaseUrl).toString(),
-          data: { contact_email: email },
+          data: { contact_email: email, first_name: firstName.trim(), last_name: lastName.trim() },
         },
       })
       if (error) throw error
@@ -90,6 +96,12 @@ export function AuthPage() {
             </div>
 
             <form className="utility-form" onSubmit={handleSubmit}>
+              {mode === 'register' ? (
+                <div className="profile-grid">
+                  <label><span>First name</span><input value={firstName} onChange={(event) => setFirstName(event.target.value)} autoComplete="given-name" required /></label>
+                  <label><span>Last name</span><input value={lastName} onChange={(event) => setLastName(event.target.value)} autoComplete="family-name" required /></label>
+                </div>
+              ) : null}
               <label>
                 <span>Email</span>
                 <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} autoComplete="email" required />

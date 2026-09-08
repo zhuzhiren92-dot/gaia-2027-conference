@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../auth/auth-context'
 import { PageFrame } from '../components/PageFrame'
+import { SubmissionEditor } from '../components/SubmissionEditor'
 import { countries } from '../data/countries'
 import { supabase } from '../lib/supabase'
 import type { Profile } from '../types/backend'
@@ -23,6 +24,7 @@ export function AccountPage() {
   const navigate = useNavigate()
   const [profile, setProfile] = useState<Profile | null>(null)
   const [editing, setEditing] = useState(false)
+  const [activePanel, setActivePanel] = useState<'profile' | 'submission'>('profile')
   const [isAdmin, setIsAdmin] = useState(false)
   const [busy, setBusy] = useState(true)
   const [message, setMessage] = useState('')
@@ -41,6 +43,8 @@ export function AccountPage() {
       if (!active) return
 
       const nextProfile = (profileResult.data as Profile | null) ?? emptyProfile(user.id, user.email ?? '')
+      nextProfile.first_name ||= user.user_metadata?.first_name || ''
+      nextProfile.last_name ||= user.user_metadata?.last_name || ''
       setProfile(nextProfile)
       setEditing(!nextProfile.first_name && !nextProfile.last_name)
       setIsAdmin(Boolean(adminResult.data))
@@ -96,31 +100,33 @@ export function AccountPage() {
     return <div className="utility-loading">Loading account...</div>
   }
 
+  const fullName = [profile.first_name.trim(), profile.last_name.trim()].filter(Boolean).join(' ')
+
   return (
     <PageFrame showSchoolCarousel={false} showIntroSections={false} pageName="ACCOUNT" pageStatement="Participant account">
       <section className="utility-page page-width" data-reveal>
         <div className="utility-heading account-heading">
           <div>
             <p className="section-kicker">PERSONAL PROFILE</p>
-            <h1>My account</h1>
+            <h1>Welcome{fullName ? `, ${fullName}` : ''}</h1>
             <p>Signed in as {user.email}</p>
           </div>
           <button className="text-action" type="button" onClick={handleSignOut}>Sign out</button>
         </div>
 
-        <form className="utility-form profile-form" onSubmit={saveProfile}>
-          <div className="profile-actions">
-            <button className="pill-action-link utility-secondary-button" type="button" onClick={() => setEditing(true)} disabled={editing}>
-              <span className="pill-link-icon" aria-hidden="true">✎</span>
-              <strong>Edit profile</strong>
-            </button>
-            <Link className="pill-action-link" to="/submission">
-              <span className="pill-link-icon" aria-hidden="true">↗</span>
-              <strong>Edit my submission</strong>
-            </Link>
-            {isAdmin ? <Link className="pill-action-link" to="/admin"><span className="pill-link-icon" aria-hidden="true">→</span><strong>Admin dashboard</strong></Link> : null}
-          </div>
+        <div className="profile-actions account-panel-actions">
+          <button className="pill-action-link utility-secondary-button" type="button" onClick={() => { setActivePanel('profile'); setEditing(true) }} aria-pressed={activePanel === 'profile'} aria-controls="account-profile">
+            <span className="pill-link-icon" aria-hidden="true">✎</span>
+            <strong>Edit profile</strong>
+          </button>
+          <button className="pill-action-link" type="button" onClick={() => setActivePanel('submission')} aria-pressed={activePanel === 'submission'} aria-controls="account-submission">
+            <span className="pill-link-icon" aria-hidden="true">✎</span>
+            <strong>Edit my submission</strong>
+          </button>
+          {isAdmin ? <Link className="pill-action-link" to="/admin"><span className="pill-link-icon" aria-hidden="true">→</span><strong>Admin dashboard</strong></Link> : null}
+        </div>
 
+        <form id="account-profile" className="utility-form profile-form" onSubmit={saveProfile} hidden={activePanel !== 'profile'}>
           <div className="profile-grid">
             <label>
               <span>Title</span>
@@ -173,6 +179,9 @@ export function AccountPage() {
             </button>
           ) : null}
         </form>
+        <div id="account-submission" hidden={activePanel !== 'submission'}>
+          <SubmissionEditor participantName={fullName} />
+        </div>
       </section>
     </PageFrame>
   )
