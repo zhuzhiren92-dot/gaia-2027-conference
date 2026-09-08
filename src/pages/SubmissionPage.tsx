@@ -1,5 +1,4 @@
 import { PageFrame } from '../components/PageFrame'
-import { SubmissionEditor } from '../components/SubmissionEditor'
 
 export function SubmissionPage() {
   return (
@@ -18,9 +17,6 @@ export function SubmissionPage() {
         </div>
       </section>
 
-      <div className="page-width">
-        <SubmissionEditor />
-      </div>
     </PageFrame>
   )
 }
