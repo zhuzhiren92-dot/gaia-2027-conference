@@ -2671,7 +2671,7 @@ p {
   margin-top: 27.88px;
 }
 
-.contact-us-lines a,
+.contact-us-lines > :is(a, div),
 .footer-contact-line {
   display: flex;
   align-items: center;
@@ -2690,7 +2690,7 @@ p {
   stroke-width: 1.8;
 }
 
-.contact-us-lines a {
+.contact-us-lines > :is(a, div) {
   color: var(--ink);
   font-size: clamp(21.12px, 1.98vw, 29.92px);
   transition: color 180ms ease;
@@ -3656,7 +3656,7 @@ p {
     right: 22px;
   }
 
-  .contact-us-lines a {
+  .contact-us-lines > :is(a, div) {
     align-items: flex-start;
     flex-direction: column;
     gap: 8px;
@@ -4265,7 +4265,7 @@ p {
 #main-content .section-heading-row h2,
 #main-content .section-bullet-title { font-size: clamp(28.16px, 2.82vw, 47.52px); }
 #main-content .fee-row { grid-template-columns: minmax(0, 0.72fr) repeat(2, minmax(0, 1fr)); }
-#main-content .contact-us-lines a { flex-wrap: wrap; }
+#main-content .contact-us-lines > :is(a, div) { flex-wrap: wrap; }
 .submission-file > label { font-family: var(--mono); font-size: clamp(15px, 0.86vw, 16.72px); font-weight: 700; letter-spacing: 0.065em; text-transform: uppercase; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .submission-field .submission-file-picker input { width: 1px; min-height: 0; padding: 0; }

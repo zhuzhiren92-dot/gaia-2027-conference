@@ -13,13 +13,16 @@ export function ContactPage() {
       <section className="contact-us-panel page-width" data-reveal>
         <p className="section-kicker">CONTACT US</p>
         <div className="contact-us-lines">
-          {conference.contactChannels.map((item) => (
-            <a key={item.email} href={`mailto:${item.email}`}>
-              <ContactGlyph kind={item.kind} />
-              <span>{item.label}</span>
-              <strong>{item.email}</strong>
-            </a>
-          ))}
+          <a href="mailto:zhirenzhu2@um.cityu.edu.hk">
+            <ContactGlyph kind="person" />
+            <span>Zhiren Zhu</span>
+            <strong>zhirenzhu2@um.cityu.edu.hk</strong>
+          </a>
+          <div>
+            <ContactGlyph kind="secretary" />
+            <span>Conference Secretary</span>
+            <strong>Zhiren Zhu</strong>
+          </div>
         </div>
       </section>
 
@@ -41,7 +44,7 @@ export function ContactPage() {
           <div className="logo-group logo-group-supported">
             <p className="section-kicker">SUPPORTED BY</p>
             <div className="supported-logo-row">
-              {conference.supportedBy.map((organization) => (
+              {[{ name: 'TC105 Geo-Mechanics from Micro to Macro', logo: 'assets/contact/tc105.png' }, ...conference.financialSponsors].map((organization) => (
                 <div className="contact-logo-frame" key={organization.name}>
                   <img
                     src={assetUrl(organization.logo)}
@@ -58,11 +61,11 @@ export function ContactPage() {
   )
 }
 
-function ContactGlyph({ kind }: { kind: 'person' | 'committee' }) {
-  if (kind === 'committee') {
+function ContactGlyph({ kind }: { kind: 'person' | 'secretary' }) {
+  if (kind === 'secretary') {
     return (
       <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM4.5 19v-1.4c0-2.2 1.9-4 4.2-4h.6c2.3 0 4.2 1.8 4.2 4V19m-1.8-4.2a4.9 4.9 0 0 1 3-1.2h.6c2.3 0 4.2 1.8 4.2 4V19" />
+        <path d="M8 4h8v3H8zM8 5H5v16h14V5h-3M8 12h8M8 16h6" />
       </svg>
     )
   }
