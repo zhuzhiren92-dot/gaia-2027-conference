@@ -17,3 +17,9 @@ select id from auth.users where email = 'YOUR_ADMIN_EMAIL';
 ```
 
 Passwords remain in Supabase Auth and are never readable by the website or administrator. The storage bucket is private, submissions are limited to 20 MB, users can access only their own profile/files, and administrators can read all submissions and create signed download links.
+
+## Submission confirmation email
+
+The function source is `functions/send-submission-confirmation/index.ts`. It sends only to the signed-in user's verified account email and reads the submitted paper title and name from Supabase rather than trusting browser-supplied email content.
+
+The feature remains disabled until a sender domain is owned and verified. Do not enable `VITE_SUBMISSION_CONFIRMATION_EMAIL_ENABLED` or use the placeholder sender before then. Deployment and secret setup are documented in `docs/school-email-handoff.md`.

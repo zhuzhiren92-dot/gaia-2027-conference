@@ -203,10 +203,19 @@ export function SubmissionEditor({ participantName = '' }: { participantName?: s
         setSelectedFile(null)
         if (fileInput.current) fileInput.current.value = ''
       }
+      let emailWarning = ''
+      if (status === 'submitted' && import.meta.env.VITE_SUBMISSION_CONFIRMATION_EMAIL_ENABLED === 'true') {
+        try {
+          const { error: emailError } = await supabase.functions.invoke('send-submission-confirmation')
+          if (emailError) emailWarning = 'Your submission was saved, but the confirmation email could not be sent. Please try Submit again later.'
+        } catch {
+          emailWarning = 'Your submission was saved, but the confirmation email could not be sent. Please try Submit again later.'
+        }
+      }
       setNotice(status === 'submitted'
         ? 'Dear ' + fullName + ', your information has been successfully submitted to the GAIA Committee.'
         : 'Dear ' + fullName + ', your information has been successfully saved and updated. Please click "Submit" to send your submission to the GAIA Committee.')
-      setNoticeWarning(status === 'draft' && !selectedFile ? 'Note: No file uploaded.' : '')
+      setNoticeWarning(status === 'draft' && !selectedFile ? 'Note: No file uploaded.' : emailWarning)
     } catch (error) {
       if (newUploadPath && !committed) await supabase.storage.from('submission-files').remove([newUploadPath]).catch(() => undefined)
       setMessage(error && typeof error === 'object' && 'message' in error ? String(error.message) : 'The submission could not be saved.')
