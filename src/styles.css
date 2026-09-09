@@ -1669,7 +1669,7 @@ p {
 
 .workshop-overview h2 {
   max-width: 660px;
-  font-size: clamp(45.76px, 5.1vw, 80.96px);
+  font-size: clamp(36px, 4vw, 64px);
   font-weight: 350;
   letter-spacing: -0.065em;
   line-height: 0.98;
