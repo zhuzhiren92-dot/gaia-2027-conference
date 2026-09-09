@@ -19,8 +19,8 @@
   --carousel-page: min(2000px, calc(100vw - 24px));
   --mono: 'DM Mono', 'SFMono-Regular', Consolas, monospace;
   --text-micro: 14px;
-  --text-small: 16px;
-  --text-body-small: 17px;
+  --text-small: 15px;
+  --text-body-small: 16px;
 }
 
 * {
@@ -179,7 +179,7 @@ p {
 .quiet-copy {
   max-width: 430px;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.65;
 }
 
@@ -345,7 +345,7 @@ p {
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: clamp(22px, 1.7vw, 28px);
+  font-size: clamp(19.36px, 1.5vw, 24.64px);
   font-weight: 750;
   letter-spacing: -0.02em;
 }
@@ -407,7 +407,7 @@ p {
   color: #4b5861;
   border-radius: 18px 18px 0 0;
   font-family: var(--mono);
-  font-size: clamp(15px, 0.86vw, 18px);
+  font-size: clamp(14px, 0.76vw, 16px);
   font-weight: 700;
   letter-spacing: 0.065em;
   box-shadow:
@@ -458,7 +458,7 @@ p {
 /* School carousel */
 
 .school-showcase {
-  padding: 38px 0 76px;
+  padding: 31.16px 0 62.32px;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background:
@@ -484,7 +484,7 @@ p {
 .carousel-theme-copy p {
   color: var(--ink);
   font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(34px, 3vw, 58px);
+  font-size: clamp(29.92px, 2.64vw, 51.04px);
   font-weight: 650;
   letter-spacing: 0;
   line-height: 1.04;
@@ -495,7 +495,7 @@ p {
   margin-top: 14px;
   color: var(--blue);
   font-family: var(--mono);
-  font-size: clamp(14px, 1vw, 18px);
+  font-size: clamp(14px, 0.88vw, 16px);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -556,7 +556,7 @@ p {
   position: relative;
   z-index: 2;
   min-width: 0;
-  padding: clamp(38px, 5vw, 76px);
+  padding: clamp(31.16px, 4.1vw, 62.32px);
   display: grid;
   grid-template-columns: 1fr;
   align-content: center;
@@ -571,7 +571,7 @@ p {
 }
 
 .slide-eyebrow {
-  margin-bottom: 46px;
+  margin-bottom: 37.72px;
   color: var(--muted);
   font-family: var(--mono);
   font-size: var(--text-micro);
@@ -580,7 +580,7 @@ p {
 
 .slide-copy h2 {
   max-width: 620px;
-  font-size: clamp(42px, 5.5vw, 85px);
+  font-size: clamp(36.96px, 4.84vw, 74.8px);
   font-weight: 300;
   letter-spacing: -0.055em;
   line-height: 0.95;
@@ -589,9 +589,9 @@ p {
 
 .slide-description {
   max-width: 480px;
-  margin-top: 30px;
+  margin-top: 24.6px;
   color: var(--ink-soft);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -599,7 +599,7 @@ p {
   display: flex;
   align-items: center;
   gap: 9px;
-  margin-top: 44px;
+  margin-top: 36.08px;
   color: var(--muted);
   font-family: var(--mono);
   font-size: var(--text-micro);
@@ -616,7 +616,7 @@ p {
 
 .school-art {
   position: relative;
-  min-height: 520px;
+  min-height: 442px;
   overflow: hidden;
   background:
     radial-gradient(circle at 58% 45%, rgba(119, 220, 255, 0.26), transparent 30%),
@@ -836,14 +836,14 @@ p {
 
 .conference-identity {
   position: relative;
-  padding: 110px 0 90px;
+  padding: 90.2px 0 73.8px;
   border-bottom: 1px solid var(--line);
 }
 
 .identity-meta {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 70px;
+  margin-bottom: 57.4px;
 }
 
 .weather-badge {
@@ -853,7 +853,7 @@ p {
   gap: clamp(16px, 1.15vw, 22px);
   color: var(--ink);
   font-family: var(--mono);
-  font-size: clamp(19px, 1.45vw, 27px);
+  font-size: clamp(16.72px, 1.28vw, 23.76px);
   font-weight: 650;
   letter-spacing: 0.075em;
   text-transform: uppercase;
@@ -871,7 +871,7 @@ p {
 }
 
 .conference-title {
-  font-size: clamp(80px, 14.6vw, 218px);
+  font-size: clamp(70.4px, 12.85vw, 191.84px);
   font-weight: 300;
   letter-spacing: -0.085em;
   line-height: 0.72;
@@ -885,9 +885,9 @@ p {
 
 .conference-full-name {
   max-width: none;
-  margin: 65px 0 0 auto;
+  margin: 53.3px 0 0 auto;
   color: var(--ink);
-  font-size: clamp(32px, 3.4vw, 60px);
+  font-size: clamp(28.16px, 2.99vw, 52.8px);
   font-weight: 300;
   letter-spacing: -0.055em;
   line-height: 1.05;
@@ -898,13 +898,13 @@ p {
 .page-intro {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 30px;
-  padding: 100px 0 140px;
+  gap: 24.6px;
+  padding: 82px 0 114.8px;
 }
 
 .page-statement {
   max-width: 1050px;
-  font-size: clamp(45px, 6.5vw, 98px);
+  font-size: clamp(39.6px, 5.72vw, 86.24px);
   font-weight: 300;
   letter-spacing: -0.06em;
   line-height: 1;
@@ -916,20 +916,20 @@ p {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 50px;
+  gap: 32.8px;
+  margin-bottom: 41px;
 }
 
 .section-heading-row h2 {
   margin-top: 14px;
-  font-size: clamp(35px, 4.2vw, 64px);
+  font-size: clamp(30.8px, 3.7vw, 56.32px);
   font-weight: 300;
   letter-spacing: -0.055em;
   line-height: 1.04;
 }
 
 .large-body {
-  font-size: clamp(28px, 3.5vw, 53px);
+  font-size: clamp(24.64px, 3.08vw, 46.64px);
   font-weight: 300;
   letter-spacing: -0.045em;
   line-height: 1.18;
@@ -972,15 +972,15 @@ p {
 .editorial-grid {
   display: grid;
   grid-template-columns: 1.7fr 0.8fr;
-  gap: 12vw;
-  padding: 0 0 160px;
+  gap: 9.84vw;
+  padding: 0 0 131.2px;
 }
 
 .home-about-overview {
   grid-template-columns: 1fr;
-  gap: clamp(38px, 4.8vw, 76px);
-  padding-top: 100px;
-  padding-bottom: 120px;
+  gap: clamp(31.16px, 3.94vw, 62.32px);
+  padding-top: 82px;
+  padding-bottom: 98.4px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -988,10 +988,10 @@ p {
   position: relative;
   display: grid;
   grid-template-columns: minmax(360px, 0.72fr) minmax(0, 1fr);
-  column-gap: clamp(52px, 7vw, 130px);
+  column-gap: clamp(42.64px, 5.74vw, 106.6px);
   align-content: start;
-  min-height: 270px;
-  padding: clamp(34px, 3.4vw, 56px) 0;
+  min-height: 220px;
+  padding: clamp(27.88px, 2.79vw, 45.92px) 0;
   border-top: 1px solid rgba(12, 20, 26, 0.66);
 }
 
@@ -1021,7 +1021,7 @@ p {
   align-items: start;
   grid-row: 1 / span 2;
   max-width: 760px;
-  font-size: clamp(34px, 4.1vw, 68px);
+  font-size: clamp(29.92px, 3.61vw, 59.84px);
   font-weight: 300;
   letter-spacing: -0.062em;
   line-height: 0.98;
@@ -1039,9 +1039,9 @@ p {
 .home-info-block > p {
   grid-column: 2;
   max-width: 840px;
-  margin: 8px 0 34px;
+  margin: 8px 0 27.88px;
   color: var(--ink-soft);
-  font-size: clamp(20px, 1.45vw, 26px);
+  font-size: clamp(17.6px, 1.28vw, 22.88px);
   line-height: 1.72;
 }
 
@@ -1064,7 +1064,7 @@ p {
     rgba(255, 255, 255, 0.72);
   box-shadow: 0 18px 42px rgba(36, 88, 255, 0.09);
   font-family: var(--mono);
-  font-size: clamp(15px, 0.95vw, 18px);
+  font-size: clamp(14px, 0.84vw, 16px);
   font-weight: 800;
   letter-spacing: 0.06em;
   line-height: 1;
@@ -1122,9 +1122,9 @@ p {
 }
 
 .editorial-copy > p {
-  margin-bottom: 42px;
+  margin-bottom: 34.44px;
   color: var(--ink-soft);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.85;
 }
 
@@ -1132,22 +1132,22 @@ p {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
-  padding: 18px 0 92px;
+  padding: 18px 0 75.44px;
   overflow: visible;
 }
 
 .home-feature-card {
-  min-height: 320px;
+  min-height: 272px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(28px, 3vw, 54px);
+  padding: clamp(22.96px, 2.46vw, 44.28px);
 }
 
 .home-feature-card h2 {
   max-width: 780px;
   margin-top: 22px;
-  font-size: clamp(38px, 4.8vw, 78px);
+  font-size: clamp(33.44px, 4.22vw, 68.64px);
   font-weight: 300;
   letter-spacing: -0.06em;
   line-height: 0.95;
@@ -1155,9 +1155,9 @@ p {
 
 .home-feature-card > p:not(.section-kicker) {
   max-width: 760px;
-  margin: 30px 0;
+  margin: 24.6px 0;
   color: var(--muted);
-  font-size: clamp(17px, 1.2vw, 21px);
+  font-size: clamp(16px, 1.06vw, 18.48px);
   line-height: 1.68;
 }
 
@@ -1168,7 +1168,7 @@ p {
 .fees-section,
 .principles,
 .organizations-section {
-  padding: 115px 0;
+  padding: 94.3px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -1184,7 +1184,7 @@ p {
 }
 
 .highlight-grid .spotlight-card {
-  min-height: 270px;
+  min-height: 230px;
   margin-left: -1px;
   padding: 26px;
   display: flex;
@@ -1197,7 +1197,7 @@ p {
 
 .card-value {
   margin: auto 0 22px;
-  font-size: clamp(28px, 3vw, 45px);
+  font-size: clamp(24.64px, 2.64vw, 39.6px);
   font-weight: 300;
   letter-spacing: -0.05em;
 }
@@ -1228,7 +1228,7 @@ p {
   gap: 24px;
   align-items: start;
   margin-inline: -18px;
-  padding: 28px 18px;
+  padding: 22.96px 18px;
   border-bottom: 1px solid var(--line);
   border-radius: 22px;
   background:
@@ -1284,7 +1284,7 @@ p {
 
 .timeline-item h3 {
   margin-bottom: 6px;
-  font-size: 19px;
+  font-size: 16.72px;
   font-weight: 400;
   letter-spacing: -0.025em;
   transition: color 220ms ease;
@@ -1318,15 +1318,15 @@ p {
 }
 
 .home-timeline-section {
-  padding-bottom: 95px;
+  padding-bottom: 77.9px;
 }
 
 .home-committee-section {
-  padding-bottom: 95px;
+  padding-bottom: 77.9px;
 }
 
 .home-international-committee-section {
-  padding-bottom: 150px;
+  padding-bottom: 123px;
 }
 
 .home-timeline-list {
@@ -1335,10 +1335,10 @@ p {
 
 .home-timeline-item {
   grid-template-columns: 28px minmax(150px, 230px) 1fr;
-  gap: clamp(18px, 3vw, 44px);
-  min-height: 104px;
+  gap: clamp(18px, 2.46vw, 36.08px);
+  min-height: 88px;
   margin-inline: -16px;
-  padding: 31px 22px;
+  padding: 25.42px 22px;
 }
 
 .timeline-bullet {
@@ -1357,13 +1357,13 @@ p {
 
 .home-timeline-item .timeline-date {
   color: var(--ink-soft);
-  font-size: clamp(16px, 1.1vw, 21px);
+  font-size: clamp(15px, 0.97vw, 18.48px);
   font-weight: 700;
   letter-spacing: 0.045em;
 }
 
 .home-timeline-item h3 {
-  font-size: clamp(22px, 1.85vw, 32px);
+  font-size: clamp(19.36px, 1.63vw, 28.16px);
   font-weight: 400;
   letter-spacing: -0.035em;
 }
@@ -1377,7 +1377,7 @@ p {
 
 .home-timeline-item div p {
   margin-top: 9px;
-  font-size: clamp(15px, 0.95vw, 17px);
+  font-size: clamp(14px, 0.84vw, 16px);
   font-weight: 400;
   line-height: 1.65;
 }
@@ -1437,9 +1437,9 @@ p {
 }
 
 .closing-cta {
-  margin-top: 80px;
-  margin-bottom: 150px;
-  padding: 75px;
+  margin-top: 65.6px;
+  margin-bottom: 123px;
+  padding: 61.5px;
   color: var(--ink);
 }
 
@@ -1449,8 +1449,8 @@ p {
 
 .closing-cta h2 {
   max-width: 950px;
-  margin: 24px 0 65px;
-  font-size: clamp(46px, 6vw, 88px);
+  margin: 24px 0 53.3px;
+  font-size: clamp(40.48px, 5.28vw, 77.44px);
   font-weight: 300;
   letter-spacing: -0.06em;
   line-height: 1.02;
@@ -1472,7 +1472,7 @@ p {
 /* About */
 
 .about-text-section {
-  padding: 110px 0;
+  padding: 90.2px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -1482,12 +1482,12 @@ p {
 }
 
 .about-text-section .section-heading-row {
-  margin-bottom: clamp(32px, 4vw, 62px);
+  margin-bottom: clamp(26.24px, 3.28vw, 50.84px);
 }
 
 .about-text-section h2 {
   max-width: 1180px;
-  font-size: clamp(42px, 5vw, 76px);
+  font-size: clamp(36.96px, 4.4vw, 66.88px);
   font-weight: 300;
   letter-spacing: -0.06em;
   line-height: 1.02;
@@ -1495,10 +1495,10 @@ p {
 
 .about-prose {
   display: grid;
-  gap: 28px;
+  gap: 22.96px;
   max-width: 1320px;
   color: var(--ink-soft);
-  font-size: clamp(21px, 1.45vw, 28px);
+  font-size: clamp(18.48px, 1.28vw, 24.64px);
   line-height: 1.68;
 }
 
@@ -1509,7 +1509,7 @@ p {
   margin: 0;
   padding: 0;
   color: var(--ink-soft);
-  font-size: clamp(21px, 1.45vw, 28px);
+  font-size: clamp(18.48px, 1.28vw, 24.64px);
   line-height: 1.68;
   list-style: none;
 }
@@ -1542,7 +1542,7 @@ p {
 
 .principles-grid h3 {
   margin-top: auto;
-  font-size: 32px;
+  font-size: 28.16px;
   font-weight: 300;
   letter-spacing: -0.04em;
 }
@@ -1556,17 +1556,17 @@ p {
 }
 
 .network-section {
-  min-height: 690px;
+  min-height: 587px;
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   align-items: center;
-  gap: 9vw;
-  padding: 120px 0 160px;
+  gap: 7.38vw;
+  padding: 98.4px 0 131.2px;
 }
 
 .network-copy h2 {
-  margin: 22px 0 35px;
-  font-size: clamp(42px, 5vw, 76px);
+  margin: 22px 0 28.7px;
+  font-size: clamp(36.96px, 4.4vw, 66.88px);
   font-weight: 300;
   letter-spacing: -0.06em;
   line-height: 1.02;
@@ -1575,7 +1575,7 @@ p {
 .network-copy > p:last-child {
   max-width: 480px;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -1662,14 +1662,14 @@ p {
 .workshop-overview {
   display: grid;
   grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
-  gap: clamp(46px, 8vw, 150px);
-  padding: 35px 0 145px;
+  gap: clamp(37.72px, 6.56vw, 123px);
+  padding: 28.7px 0 118.9px;
   border-top: 1px solid var(--line);
 }
 
 .workshop-overview h2 {
   max-width: 660px;
-  font-size: clamp(52px, 5.8vw, 92px);
+  font-size: clamp(45.76px, 5.1vw, 80.96px);
   font-weight: 350;
   letter-spacing: -0.065em;
   line-height: 0.98;
@@ -1677,10 +1677,10 @@ p {
 
 .workshop-overview-copy {
   display: grid;
-  gap: 28px;
+  gap: 22.96px;
   align-self: end;
   color: var(--ink-soft);
-  font-size: clamp(20px, 1.35vw, 26px);
+  font-size: clamp(17.6px, 1.19vw, 22.88px);
   line-height: 1.72;
 }
 
@@ -1769,7 +1769,7 @@ p {
 }
 
 .topic-list p {
-  font-size: clamp(20px, 2.2vw, 31px);
+  font-size: clamp(17.6px, 1.94vw, 27.28px);
   font-weight: 300;
   letter-spacing: -0.035em;
   transition: color 220ms ease;
@@ -1844,7 +1844,7 @@ p {
 
 .speaker-grid h3 {
   margin: 12px 0 8px;
-  font-size: 27px;
+  font-size: 23.76px;
   font-weight: 300;
   letter-spacing: -0.04em;
 }
@@ -1855,7 +1855,7 @@ p {
 }
 
 .speaker-topic {
-  margin-top: 28px;
+  margin-top: 22.96px;
   padding-top: 15px;
   border-top: 1px solid var(--line);
   font-size: var(--text-body-small);
@@ -1873,7 +1873,7 @@ p {
 .workshop-dates,
 .poster-section,
 .tentative-timetable {
-  padding: 115px 0;
+  padding: 94.3px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -1884,14 +1884,14 @@ p {
 }
 
 .date-card {
-  min-height: 260px;
+  min-height: 221px;
   margin-left: -1px;
-  padding: 28px;
+  padding: 22.96px;
 }
 
 .date-card h3 {
-  margin: 62px 0 18px;
-  font-size: clamp(24px, 2.2vw, 38px);
+  margin: 50.84px 0 18px;
+  font-size: clamp(21.12px, 1.94vw, 33.44px);
   font-weight: 300;
   letter-spacing: -0.045em;
   line-height: 1.08;
@@ -1906,12 +1906,12 @@ p {
 .poster-copy {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(34px, 4vw, 68px);
+  gap: clamp(27.88px, 3.28vw, 55.76px);
 }
 
 .poster-copy h2,
 .tentative-timetable h2 {
-  font-size: clamp(42px, 5vw, 76px);
+  font-size: clamp(36.96px, 4.4vw, 66.88px);
   font-weight: 300;
   letter-spacing: -0.06em;
   line-height: 1.02;
@@ -1920,24 +1920,24 @@ p {
 .poster-copy div {
   display: grid;
   max-width: 1320px;
-  gap: 28px;
+  gap: 22.96px;
   color: var(--ink-soft);
-  font-size: clamp(21px, 1.45vw, 28px);
+  font-size: clamp(18.48px, 1.28vw, 24.64px);
   line-height: 1.68;
 }
 
 .workshop-registration-cta {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: clamp(32px, 6vw, 110px);
+  gap: clamp(26.24px, 4.92vw, 90.2px);
   align-items: center;
-  padding: 115px 0;
+  padding: 94.3px 0;
   border-top: 1px solid var(--line);
 }
 
 .workshop-registration-cta h2 {
   max-width: 980px;
-  font-size: clamp(36px, 4.6vw, 72px);
+  font-size: clamp(31.68px, 4.05vw, 63.36px);
   font-weight: 300;
   letter-spacing: -0.06em;
   line-height: 1.03;
@@ -1948,14 +1948,14 @@ p {
 }
 
 .venue-section {
-  padding: 115px 0 150px;
+  padding: 94.3px 0 123px;
   border-top: 1px solid var(--line);
 }
 
 .framework-list {
   max-width: 1320px;
   display: grid;
-  gap: clamp(18px, 2vw, 30px);
+  gap: clamp(18px, 2vw, 24.6px);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1967,7 +1967,7 @@ p {
   gap: clamp(16px, 1.5vw, 24px);
   align-items: start;
   color: var(--ink-soft);
-  font-size: clamp(21px, 1.45vw, 28px);
+  font-size: clamp(18.48px, 1.28vw, 24.64px);
   line-height: 1.68;
 }
 
@@ -1993,13 +1993,13 @@ p {
 /* Registration */
 
 .registration-open {
-  padding: 0 0 125px;
+  padding: 0 0 102.5px;
 }
 
 .registration-open h2,
 .fees-section h2 {
   max-width: 1180px;
-  font-size: clamp(42px, 5vw, 76px);
+  font-size: clamp(36.96px, 4.4vw, 66.88px);
   font-weight: 300;
   letter-spacing: -0.06em;
   line-height: 1.02;
@@ -2008,7 +2008,7 @@ p {
 .registration-open-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: clamp(36px, 6vw, 110px);
+  gap: clamp(29.52px, 4.92vw, 90.2px);
   align-items: start;
 }
 
@@ -2017,7 +2017,7 @@ p {
   gap: 26px;
   max-width: 1320px;
   color: var(--ink-soft);
-  font-size: clamp(21px, 1.45vw, 28px);
+  font-size: clamp(18.48px, 1.28vw, 24.64px);
   line-height: 1.68;
 }
 
@@ -2058,7 +2058,7 @@ p {
 }
 
 .registration-timeline {
-  padding: 0 0 125px;
+  padding: 0 0 102.5px;
 }
 
 .fees-table {
@@ -2084,7 +2084,7 @@ p {
   min-height: 78px;
   padding: 22px 26px;
   border-right: 1px solid var(--line);
-  font-size: clamp(17px, 1.05vw, 21px);
+  font-size: clamp(16px, 0.92vw, 18.48px);
   text-align: center;
   white-space: nowrap;
 }
@@ -2106,7 +2106,7 @@ p {
 }
 
 .fee-row:not(.fee-head) p {
-  font-size: clamp(18px, 1.12vw, 22px);
+  font-size: clamp(16px, 0.99vw, 19.36px);
   text-align: center;
 }
 
@@ -2116,24 +2116,24 @@ p {
 
 .fee-note {
   max-width: 1320px;
-  padding: 28px 0 0;
+  padding: 22.96px 0 0;
   color: var(--ink-soft);
-  font-size: clamp(19px, 1.22vw, 24px);
+  font-size: clamp(16.72px, 1.07vw, 21.12px);
   line-height: 1.72;
 }
 
 .fee-head p {
   color: var(--muted);
   font-family: var(--mono);
-  font-size: clamp(14px, 0.84vw, 17px);
+  font-size: clamp(14px, 0.74vw, 16px);
   letter-spacing: 0.04em;
 }
 
 .policy-section {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 30px;
-  padding: 120px 0 160px;
+  gap: 24.6px;
+  padding: 98.4px 0 131.2px;
 }
 
 .policy-section > div,
@@ -2179,15 +2179,15 @@ p {
 /* Program */
 
 .program-days {
-  padding: 100px 0 140px;
+  padding: 82px 0 114.8px;
 }
 
 .program-day {
   display: grid;
   grid-template-columns: 0.8fr 2fr;
-  gap: 60px;
-  padding: 0 0 70px;
-  margin-bottom: 70px;
+  gap: 49.2px;
+  padding: 0 0 57.4px;
+  margin-bottom: 57.4px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -2206,8 +2206,8 @@ p {
 }
 
 .program-day header h2 {
-  margin: 16px 0 45px;
-  font-size: clamp(37px, 4vw, 60px);
+  margin: 16px 0 36.9px;
+  font-size: clamp(32.56px, 3.52vw, 52.8px);
   font-weight: 300;
   letter-spacing: -0.055em;
 }
@@ -2252,7 +2252,7 @@ p {
 
 .program-item h3 {
   margin-bottom: 8px;
-  font-size: 20px;
+  font-size: 17.6px;
   font-weight: 400;
   transition: color 220ms ease;
 }
@@ -2271,25 +2271,25 @@ p {
 
 .previous-photo-archive {
   display: grid;
-  gap: 28px;
-  padding: 90px 0 95px;
+  gap: 22.96px;
+  padding: 73.8px 0 77.9px;
 }
 
 .previous-event-panel {
-  padding: clamp(26px, 3vw, 48px);
+  padding: clamp(26px, 2.46vw, 39.36px);
 }
 
 .previous-event-heading {
   display: flex;
   justify-content: space-between;
-  gap: 28px;
+  gap: 22.96px;
   align-items: end;
-  margin-bottom: 30px;
+  margin-bottom: 24.6px;
 }
 
 .previous-event-heading h2 {
   max-width: 980px;
-  font-size: clamp(34px, 4vw, 68px);
+  font-size: clamp(29.92px, 3.52vw, 59.84px);
   font-weight: 300;
   letter-spacing: -0.065em;
   line-height: 1.02;
@@ -2304,7 +2304,7 @@ p {
 
 .previous-photo-card {
   position: relative;
-  min-height: 310px;
+  min-height: 264px;
   overflow: hidden;
   border: 1px solid rgba(36, 88, 255, 0.18);
   border-radius: 26px;
@@ -2362,7 +2362,7 @@ p {
 .archive-card {
   display: grid;
   grid-template-columns: 1.35fr 0.65fr;
-  min-height: 540px;
+  min-height: 459px;
   background: #fff;
 }
 
@@ -2463,7 +2463,7 @@ p {
   right: 30px;
   bottom: -0.12em;
   color: rgba(255, 255, 255, 0.2);
-  font-size: clamp(100px, 16vw, 230px);
+  font-size: clamp(88px, 14.08vw, 202.4px);
   font-weight: 300;
   letter-spacing: -0.09em;
 }
@@ -2487,7 +2487,7 @@ p {
 }
 
 .archive-copy {
-  padding: clamp(35px, 5vw, 70px);
+  padding: clamp(28.7px, 4.1vw, 57.4px);
   display: flex;
   flex-direction: column;
   border-left: 1px solid var(--line);
@@ -2495,13 +2495,13 @@ p {
 
 .archive-copy h2 {
   margin: 25px 0 12px;
-  font-size: clamp(42px, 5vw, 72px);
+  font-size: clamp(36.96px, 4.4vw, 63.36px);
   font-weight: 300;
   letter-spacing: -0.06em;
 }
 
 .archive-location {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .archive-copy > p:nth-of-type(4) {
@@ -2511,7 +2511,7 @@ p {
 }
 
 .archive-theme {
-  margin-top: 35px;
+  margin-top: 28.7px;
   padding-top: 18px;
   border-top: 1px solid var(--line);
   color: var(--ink-soft);
@@ -2527,11 +2527,11 @@ p {
 /* Contact */
 
 .committee-section {
-  padding: 110px 0 70px;
+  padding: 90.2px 0 57.4px;
 }
 
 .contact-heading-row {
-  margin-bottom: 36px;
+  margin-bottom: 29.52px;
 }
 
 .committee-list {
@@ -2546,18 +2546,18 @@ p {
 }
 
 .committee-card-link {
-  min-height: 270px;
+  min-height: 230px;
   display: grid;
   grid-template-columns: minmax(190px, 260px) 1fr auto;
   align-items: center;
-  gap: clamp(28px, 4vw, 58px);
-  padding: clamp(24px, 3.5vw, 42px);
+  gap: clamp(22.96px, 3.28vw, 47.56px);
+  padding: clamp(24px, 2.87vw, 34.44px);
 }
 
 .committee-photo-stage {
   position: relative;
   align-self: stretch;
-  min-height: 230px;
+  min-height: 196px;
   overflow: visible;
   background:
     radial-gradient(circle at 48% 35%, rgba(119, 220, 255, 0.34), transparent 34%),
@@ -2612,14 +2612,14 @@ p {
 
 .committee-copy {
   display: flex;
-  min-height: 210px;
+  min-height: 179px;
   flex-direction: column;
   justify-content: center;
 }
 
 .committee-copy h2 {
   margin: 14px 0 16px;
-  font-size: clamp(36px, 4vw, 64px);
+  font-size: clamp(31.68px, 3.52vw, 56.32px);
   font-weight: 350;
   letter-spacing: -0.06em;
   line-height: 1;
@@ -2640,7 +2640,7 @@ p {
 
 .committee-copy .text-link {
   width: fit-content;
-  margin-top: 28px;
+  margin-top: 22.96px;
 }
 
 .committee-number {
@@ -2653,14 +2653,14 @@ p {
 }
 
 .contact-us-panel {
-  margin-top: clamp(78px, 8vw, 130px);
-  padding: clamp(30px, 4vw, 56px) 0 0;
+  margin-top: clamp(63.96px, 6.56vw, 106.6px);
+  padding: clamp(24.6px, 3.28vw, 45.92px) 0 0;
 }
 
 .contact-us-panel .section-kicker,
 .contact-logo-panel .section-kicker {
   color: var(--ink);
-  font-size: clamp(30px, 2.6vw, 44px);
+  font-size: clamp(26.4px, 2.29vw, 38.72px);
   font-weight: 700;
   letter-spacing: 0.07em;
 }
@@ -2668,7 +2668,7 @@ p {
 .contact-us-lines {
   display: grid;
   gap: 22px;
-  margin-top: 34px;
+  margin-top: 27.88px;
 }
 
 .contact-us-lines a,
@@ -2692,7 +2692,7 @@ p {
 
 .contact-us-lines a {
   color: var(--ink);
-  font-size: clamp(24px, 2.25vw, 34px);
+  font-size: clamp(21.12px, 1.98vw, 29.92px);
   transition: color 180ms ease;
 }
 
@@ -2712,13 +2712,13 @@ p {
 }
 
 .contact-organizations {
-  padding: clamp(105px, 9vw, 150px) 0 150px;
+  padding: clamp(86.1px, 7.38vw, 123px) 0 123px;
 }
 
 .contact-logo-panel {
   display: grid;
   grid-template-columns: 0.9fr 1.3fr;
-  gap: clamp(40px, 8vw, 130px);
+  gap: clamp(32.8px, 6.56vw, 106.6px);
   padding: 0;
 }
 
@@ -2735,7 +2735,7 @@ p {
 }
 
 .contact-logo-frame {
-  min-height: 140px;
+  min-height: 119px;
   display: grid;
   place-items: center;
   padding: 18px;
@@ -2767,11 +2767,11 @@ p {
 }
 
 .contact-directory {
-  padding-bottom: 130px;
+  padding-bottom: 106.6px;
 }
 
 .contact-list {
-  margin-top: 28px;
+  margin-top: 22.96px;
   border-top: 1px solid var(--ink);
   overflow: visible;
 }
@@ -2782,7 +2782,7 @@ p {
   align-items: center;
   gap: 25px;
   margin-inline: -14px;
-  padding: 35px 14px;
+  padding: 28.7px 14px;
   border-bottom: 1px solid var(--line);
   border-radius: 18px;
   background: rgba(255, 255, 255, calc(var(--dock-energy) * 0.44));
@@ -2808,7 +2808,7 @@ p {
 
 .contact-list h2 {
   margin-top: 8px;
-  font-size: clamp(24px, 3vw, 42px);
+  font-size: clamp(21.12px, 2.64vw, 36.96px);
   font-weight: 300;
   letter-spacing: -0.04em;
   transition: color 220ms ease;
@@ -2832,7 +2832,7 @@ p {
 }
 
 .organization-grid article {
-  min-height: 340px;
+  min-height: 289px;
   padding: 25px;
   border: 1px solid var(--line);
   margin-left: -1px;
@@ -2846,7 +2846,7 @@ p {
 
 .organization-placeholder {
   height: 125px;
-  margin: 35px 0 30px;
+  margin: 28.7px 0 24.6px;
   display: grid;
   place-items: center;
   background:
@@ -2863,20 +2863,20 @@ p {
 
 .organization-grid h3 {
   margin-top: 10px;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 300;
 }
 
 .contact-note {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 30px;
-  padding: 100px 0 150px;
+  gap: 24.6px;
+  padding: 82px 0 123px;
 }
 
 .contact-note > p:last-child {
   max-width: 740px;
-  font-size: 23px;
+  font-size: 20.24px;
   font-weight: 300;
   line-height: 1.55;
 }
@@ -2894,14 +2894,14 @@ p {
     minmax(480px, 1.05fr)
     minmax(500px, 0.95fr)
     minmax(260px, 0.54fr);
-  gap: clamp(42px, 5vw, 110px);
-  padding: 90px 0 80px;
+  gap: clamp(34.44px, 4.1vw, 90.2px);
+  padding: 73.8px 0 65.6px;
 }
 
 .footer-left {
   display: grid;
   align-content: start;
-  gap: 58px;
+  gap: 47.56px;
 }
 
 .footer-brand {
@@ -2913,7 +2913,7 @@ p {
 }
 
 .footer-wordmark {
-  font-size: clamp(72px, 9vw, 130px);
+  font-size: clamp(63.36px, 7.92vw, 114.4px);
   font-weight: 300;
   letter-spacing: -0.08em;
   line-height: 0.8;
@@ -2923,7 +2923,7 @@ p {
   margin: 0 0 0.14em;
   color: var(--cyan);
   font-family: var(--mono);
-  font-size: clamp(19px, 1.45vw, 27px);
+  font-size: clamp(16.72px, 1.28vw, 23.76px);
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
@@ -2950,7 +2950,7 @@ p {
 .footer-contact-card .section-kicker,
 .footer-logo-group .section-kicker {
   color: var(--cyan);
-  font-size: clamp(16px, 1.3vw, 21px);
+  font-size: clamp(15px, 1.14vw, 18.48px);
   font-weight: 700;
   letter-spacing: 0.1em;
 }
@@ -2962,7 +2962,7 @@ p {
   column-gap: clamp(12px, 0.85vw, 16px);
   margin-top: 18px;
   color: #aab5bc;
-  font-size: clamp(18px, 1.08vw, 21px);
+  font-size: clamp(16px, 0.95vw, 18.48px);
   line-height: 1.5;
   transition: color 180ms ease;
 }
@@ -2990,7 +2990,7 @@ p {
 .footer-organizations {
   align-self: stretch;
   display: grid;
-  gap: 30px;
+  gap: 24.6px;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -3005,7 +3005,7 @@ p {
 .footer-logo-row {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(20px, 1.6vw, 28px);
+  gap: clamp(20px, 1.6vw, 22.96px);
   align-items: center;
 }
 
@@ -3049,7 +3049,7 @@ p {
   border-bottom: 1px solid #303b42;
   border-radius: 12px;
   font-family: var(--mono);
-  font-size: clamp(13.5px, 0.9vw, 16px);
+  font-size: clamp(13.5px, 0.79vw, 15px);
   letter-spacing: 0.08em;
   box-shadow:
     0 calc(8px + var(--dock-energy) * 12px)
@@ -3099,7 +3099,7 @@ p {
 .fees-table .fee-head p {
   color: #fff;
   font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(14px, 1vw, 18px);
+  font-size: clamp(14px, 0.88vw, 16px);
   font-weight: 700;
   letter-spacing: -0.01em;
 }
@@ -3182,7 +3182,7 @@ p {
   }
 
   .slide-copy {
-    padding: 45px 35px;
+    padding: 36.9px 28.7px;
     grid-template-columns: 1fr;
   }
 
@@ -3195,7 +3195,7 @@ p {
   }
 
   .conference-title {
-    font-size: 14.2vw;
+    font-size: 12.5vw;
   }
 
   .highlight-grid {
@@ -3214,7 +3214,7 @@ p {
 
   .workshop-overview {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32.8px;
   }
 
   .footer-main {
@@ -3233,7 +3233,7 @@ p {
   }
 
   .school-showcase {
-    padding: 28px 0 40px;
+    padding: 22.96px 0 32.8px;
     background: rgba(255, 255, 255, 0.8);
   }
 
@@ -3247,7 +3247,7 @@ p {
   }
 
   .slide-copy {
-    padding: 34px 22px 30px;
+    padding: 27.88px 22px 24.6px;
     grid-template-columns: 1fr;
     border-right: 0;
   }
@@ -3257,28 +3257,28 @@ p {
   }
 
   .carousel-theme-copy p {
-    font-size: 31px;
+    font-size: 27.28px;
   }
 
   .slide-eyebrow {
-    margin-bottom: 32px;
+    margin-bottom: 26.24px;
   }
 
   .slide-copy h2 {
-    font-size: 47px;
+    font-size: 41.36px;
   }
 
   .slide-description {
     margin-top: 22px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .slide-note {
-    margin-top: 28px;
+    margin-top: 22.96px;
   }
 
   .school-art {
-    min-height: 250px;
+    min-height: 213px;
     border-top: 1px solid var(--line);
   }
 
@@ -3315,11 +3315,11 @@ p {
   }
 
   .conference-identity {
-    padding: 75px 0 65px;
+    padding: 61.5px 0 53.3px;
   }
 
   .identity-meta {
-    margin-bottom: 45px;
+    margin-bottom: 36.9px;
     align-items: flex-start;
   }
 
@@ -3327,38 +3327,38 @@ p {
     flex-wrap: wrap;
     max-width: 340px;
     gap: 10px 14px;
-    font-size: 16px;
+    font-size: 15px;
     text-align: right;
     line-height: 1.5;
   }
 
   .conference-title {
-    font-size: 21vw;
+    font-size: 18.48vw;
     white-space: normal;
     line-height: 0.84;
   }
 
   .conference-full-name {
     max-width: 360px;
-    margin-top: 42px;
-    font-size: 24px;
+    margin-top: 34.44px;
+    font-size: 21.12px;
     text-align: left;
     white-space: normal;
   }
 
   .page-intro {
     grid-template-columns: 1fr;
-    padding: 70px 0 90px;
+    padding: 57.4px 0 73.8px;
   }
 
   .page-statement {
-    font-size: 48px;
+    font-size: 42.24px;
   }
 
   .section-heading-row {
     align-items: flex-start;
     flex-direction: column;
-    margin-bottom: 35px;
+    margin-bottom: 28.7px;
   }
 
   .editorial-grid,
@@ -3369,43 +3369,43 @@ p {
   .policy-section,
   .contact-note {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 28.7px;
   }
 
   .editorial-grid {
-    padding-bottom: 105px;
+    padding-bottom: 86.1px;
   }
 
   .home-about-overview {
-    padding-top: 70px;
+    padding-top: 57.4px;
   }
 
   .home-info-block {
     grid-template-columns: 1fr;
     min-height: 0;
-    padding: 28px 0 36px;
+    padding: 22.96px 0 29.52px;
   }
 
   .section-bullet-title {
     grid-template-columns: 14px 1fr;
     gap: 14px;
-    font-size: 38px;
+    font-size: 33.44px;
     grid-row: auto;
   }
 
   .home-info-block > p {
     grid-column: 1;
-    margin: 26px 0 30px 28px;
-    font-size: 19px;
+    margin: 26px 0 24.6px 22.96px;
+    font-size: 16.72px;
   }
 
   .home-info-block .pill-action-link {
     grid-column: 1;
-    margin-left: 28px;
+    margin-left: 22.96px;
   }
 
   .large-body {
-    font-size: 31px;
+    font-size: 27.28px;
   }
 
   .highlights-section,
@@ -3415,7 +3415,7 @@ p {
   .fees-section,
   .principles,
   .organizations-section {
-    padding: 85px 0;
+    padding: 69.7px 0;
   }
 
   .highlight-grid,
@@ -3463,28 +3463,28 @@ p {
   }
 
   .closing-cta {
-    margin-bottom: 100px;
-    padding: 35px 24px;
+    margin-bottom: 82px;
+    padding: 28.7px 24px;
   }
 
   .closing-cta h2 {
-    font-size: 46px;
+    font-size: 40.48px;
   }
 
   .manifesto {
-    padding-bottom: 100px;
+    padding-bottom: 82px;
   }
 
   .manifesto-primary {
-    font-size: 38px;
+    font-size: 33.44px;
   }
 
   .principles-grid .spotlight-card {
-    min-height: 300px;
+    min-height: 255px;
   }
 
   .network-section {
-    padding: 90px 0 110px;
+    padding: 73.8px 0 90.2px;
   }
 
   .poster-copy,
@@ -3493,7 +3493,7 @@ p {
   }
 
   .workshop-registration-cta {
-    padding: 90px 0;
+    padding: 73.8px 0;
   }
 
   .workshop-registration-cta h2 {
@@ -3506,7 +3506,7 @@ p {
 
   .date-card,
   .previous-photo-card {
-    min-height: 230px;
+    min-height: 196px;
   }
 
   .network-visual {
@@ -3514,7 +3514,7 @@ p {
   }
 
   .workshop-overview {
-    padding-bottom: 100px;
+    padding-bottom: 82px;
   }
 
   .speaker-grid .spotlight-card,
@@ -3546,7 +3546,7 @@ p {
   }
 
   .registration-steps {
-    padding: 90px 0;
+    padding: 73.8px 0;
   }
 
   .fee-row {
@@ -3571,18 +3571,18 @@ p {
   }
 
   .policy-section {
-    padding: 85px 0 110px;
+    padding: 69.7px 0 90.2px;
   }
 
   .program-days {
-    padding: 80px 0 100px;
+    padding: 65.6px 0 82px;
   }
 
   .program-day {
     grid-template-columns: 1fr;
-    gap: 32px;
-    margin-bottom: 50px;
-    padding-bottom: 50px;
+    gap: 26.24px;
+    margin-bottom: 41px;
+    padding-bottom: 41px;
   }
 
   .program-day header {
@@ -3605,7 +3605,7 @@ p {
   }
 
   .archive-copy {
-    min-height: 420px;
+    min-height: 357px;
     border-left: 0;
     border-top: 1px solid var(--line);
   }
@@ -3629,7 +3629,7 @@ p {
   }
 
   .committee-section {
-    padding: 80px 0 55px;
+    padding: 65.6px 0 45.1px;
   }
 
   .committee-card-link {
@@ -3639,7 +3639,7 @@ p {
   }
 
   .committee-photo-stage {
-    min-height: 260px;
+    min-height: 221px;
   }
 
   .committee-copy {
@@ -3647,7 +3647,7 @@ p {
   }
 
   .committee-copy h2 {
-    font-size: 38px;
+    font-size: 33.44px;
   }
 
   .committee-number {
@@ -3660,7 +3660,7 @@ p {
     align-items: flex-start;
     flex-direction: column;
     gap: 8px;
-    font-size: 22px;
+    font-size: 19.36px;
   }
 
   .supported-logo-row {
@@ -3668,12 +3668,12 @@ p {
   }
 
   .contact-organizations {
-    padding: 55px 0 105px;
+    padding: 45.1px 0 86.1px;
   }
 
   .footer-main {
     grid-template-columns: 1fr;
-    gap: 55px;
+    gap: 45.1px;
   }
 
   .footer-description {
@@ -3732,18 +3732,18 @@ p {
 /* Submission */
 
 .submission-intro {
-  padding: 0 0 95px;
+  padding: 0 0 77.9px;
 }
 
 .submission-form-section {
-  padding: 0 0 95px;
+  padding: 0 0 77.9px;
 }
 
 .submission-form {
   display: grid;
-  gap: 28px;
+  gap: 22.96px;
   max-width: 1320px;
-  padding-top: 42px;
+  padding-top: 34.44px;
   border-top: 1px solid var(--ink);
 }
 
@@ -3765,14 +3765,14 @@ p {
   gap: 10px;
   color: var(--ink-soft);
   font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(18px, 1.08vw, 21px);
+  font-size: clamp(16px, 0.95vw, 18.48px);
   line-height: 1.4;
 }
 
 .submission-field span {
   color: var(--ink);
   font-family: var(--mono);
-  font-size: clamp(16px, 0.98vw, 19px);
+  font-size: clamp(15px, 0.86vw, 16.72px);
   font-weight: 700;
   letter-spacing: 0.065em;
   text-transform: uppercase;
@@ -3781,14 +3781,14 @@ p {
 .submission-field input,
 .submission-field select {
   width: 100%;
-  min-height: 62px;
+  min-height: 54px;
   padding: 16px 18px;
   color: var(--ink);
   background: rgba(255, 255, 255, 0.74);
   border: 1px solid rgba(36, 88, 255, 0.2);
   border-radius: 18px;
   font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(18px, 1.08vw, 21px);
+  font-size: clamp(16px, 0.95vw, 18.48px);
   font-weight: 400;
   line-height: 1.35;
 }
@@ -3804,7 +3804,7 @@ p {
 .submission-template p {
   color: var(--muted);
   font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(16px, 0.94vw, 18px);
+  font-size: clamp(15px, 0.83vw, 16px);
   line-height: 1.5;
 }
 
@@ -3827,7 +3827,7 @@ p {
   display: grid;
   justify-items: start;
   gap: 14px;
-  margin-top: 28px;
+  margin-top: 22.96px;
 }
 
 
@@ -3839,24 +3839,24 @@ p {
   position: static;
   display: grid;
   grid-template-columns: minmax(180px, 260px) minmax(0, 1fr) auto;
-  gap: clamp(24px, 4vw, 70px);
+  gap: clamp(24px, 3.28vw, 57.4px);
   align-items: center;
 }
 
 .program-day-simple header h2 {
   margin: 0;
-  font-size: clamp(46px, 5.4vw, 86px);
+  font-size: clamp(40.48px, 4.75vw, 75.68px);
 }
 
 .program-day-simple header > p,
 .program-day-simple header > span {
-  font-size: clamp(18px, 1.3vw, 24px);
+  font-size: clamp(16px, 1.14vw, 21.12px);
 }
 /* Participant account and administration */
 
 .utility-page {
   min-height: calc(100vh - 82px);
-  padding: clamp(80px, 9vw, 145px) 0 150px;
+  padding: clamp(65.6px, 7.38vw, 118.9px) 0 123px;
 }
 
 .utility-heading {
@@ -3865,7 +3865,7 @@ p {
 
 .utility-heading h1 {
   margin-top: 14px;
-  font-size: clamp(58px, 7vw, 112px);
+  font-size: clamp(51.04px, 6.16vw, 98.56px);
   font-weight: 300;
   letter-spacing: -0.065em;
   line-height: 0.95;
@@ -3876,52 +3876,52 @@ p {
   max-width: 760px;
   margin-top: 24px;
   color: var(--ink-soft);
-  font-size: clamp(18px, 1.35vw, 24px);
+  font-size: clamp(16px, 1.19vw, 21.12px);
   line-height: 1.55;
 }
 
 .utility-notice,
 .auth-gate {
   max-width: 860px;
-  margin-top: 48px;
-  padding: clamp(26px, 3vw, 42px);
+  margin-top: 39.36px;
+  padding: clamp(26px, 2.46vw, 34.44px);
   background: rgba(255, 255, 255, 0.68);
   border: 1px solid rgba(36, 88, 255, 0.2);
   border-radius: 24px;
 }
 
 .utility-notice strong {
-  font-size: clamp(20px, 1.5vw, 27px);
+  font-size: clamp(17.6px, 1.32vw, 23.76px);
 }
 
 .utility-notice p,
 .auth-gate > p:not(.section-kicker) {
   margin-top: 12px;
   color: var(--ink-soft);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.55;
 }
 
 .auth-gate h2 {
   margin-top: 18px;
-  font-size: clamp(38px, 4.4vw, 72px);
+  font-size: clamp(33.44px, 3.87vw, 63.36px);
   font-weight: 300;
   letter-spacing: -0.05em;
 }
 
 .auth-gate .pill-action-link {
-  margin-top: 28px;
+  margin-top: 22.96px;
 }
 
 .auth-panel {
   max-width: 760px;
-  margin-top: 50px;
+  margin-top: 41px;
 }
 
 .auth-tabs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 28px;
+  margin-bottom: 22.96px;
   border-bottom: 1px solid var(--line-strong);
 }
 
@@ -3932,7 +3932,7 @@ p {
   border: 0;
   border-bottom: 2px solid transparent;
   font-family: var(--mono);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -3957,7 +3957,7 @@ p {
 .utility-form label > span {
   color: var(--ink);
   font-family: var(--mono);
-  font-size: clamp(15px, 0.98vw, 18px);
+  font-size: clamp(14px, 0.86vw, 16px);
   font-weight: 700;
   letter-spacing: 0.065em;
   text-transform: uppercase;
@@ -3966,14 +3966,14 @@ p {
 .utility-form input,
 .utility-form select {
   width: 100%;
-  min-height: 62px;
+  min-height: 54px;
   padding: 16px 18px;
   color: var(--ink);
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(36, 88, 255, 0.2);
   border-radius: 18px;
   font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(17px, 1.08vw, 21px);
+  font-size: clamp(16px, 0.95vw, 18.48px);
 }
 
 .utility-form input:focus,
@@ -3991,7 +3991,7 @@ p {
 
 .form-message {
   color: var(--ink-soft);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -4014,7 +4014,7 @@ p {
   place-items: center;
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -4023,7 +4023,7 @@ p {
   max-width: none;
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 32.8px;
   align-items: flex-start;
 }
 
@@ -4034,15 +4034,15 @@ p {
   border: 0;
   border-bottom: 1px solid var(--ink-soft);
   font-family: var(--mono);
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
 }
 
 .profile-form {
-  margin-top: 62px;
-  padding-top: 42px;
+  margin-top: 50.84px;
+  padding-top: 34.44px;
   border-top: 1px solid var(--ink);
 }
 
@@ -4099,27 +4099,27 @@ p {
 }
 
 .admin-page {
-  padding-bottom: 170px;
+  padding-bottom: 139.4px;
 }
 
 .admin-summary {
   display: flex;
   gap: 18px;
   align-items: baseline;
-  margin: 55px 0 28px;
+  margin: 45.1px 0 22.96px;
   padding-bottom: 22px;
   border-bottom: 1px solid var(--ink);
 }
 
 .admin-summary strong {
   color: var(--blue);
-  font-size: 42px;
+  font-size: 36.96px;
   font-weight: 300;
 }
 
 .admin-summary span {
   color: var(--ink-soft);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .admin-list {
@@ -4128,7 +4128,7 @@ p {
 }
 
 .admin-submission-card {
-  padding: clamp(24px, 3vw, 40px);
+  padding: clamp(24px, 2.46vw, 32.8px);
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(36, 88, 255, 0.18);
   border-radius: 24px;
@@ -4137,13 +4137,13 @@ p {
 .admin-card-heading {
   display: flex;
   justify-content: space-between;
-  gap: 32px;
+  gap: 26.24px;
   align-items: flex-start;
 }
 
 .admin-card-heading h2 {
   margin-top: 14px;
-  font-size: clamp(27px, 2.6vw, 44px);
+  font-size: clamp(23.76px, 2.29vw, 38.72px);
   font-weight: 350;
   letter-spacing: -0.035em;
 }
@@ -4158,8 +4158,8 @@ p {
 .admin-submission-card dl {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px 28px;
-  margin: 30px 0;
+  gap: 18px 22.96px;
+  margin: 24.6px 0;
 }
 
 .admin-submission-card dl > div {
@@ -4177,13 +4177,13 @@ p {
 .admin-submission-card dd {
   margin-top: 6px;
   overflow-wrap: anywhere;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.45;
 }
 
 @media (max-width: 760px) {
   .utility-page {
-    padding: 70px 0 110px;
+    padding: 57.4px 0 90.2px;
   }
 
   .account-heading,
@@ -4203,13 +4203,13 @@ p {
 }
 
 /* Account submission editing and save confirmation */
-.account-panel-actions { margin: 42px 0 32px; }
+.account-panel-actions { margin: 34.44px 0 26.24px; }
 .account-panel-actions [aria-pressed="true"] {
   border-color: var(--blue);
   background: rgba(36, 88, 255, 0.08);
 }
 .account-heading h1 {
-  font-size: clamp(40px, 5.5vw, 88px);
+  font-size: clamp(35.2px, 4.84vw, 77.44px);
   line-height: 1.12;
   letter-spacing: -0.045em;
   overflow-wrap: anywhere;
@@ -4217,21 +4217,21 @@ p {
 .profile-form[hidden], #account-submission[hidden] { display: none; }
 .submission-fields {
   display: grid;
-  gap: 28px;
+  gap: 22.96px;
   min-width: 0;
   margin: 0;
   padding: 0;
   border: 0;
 }
 .submission-existing-file p {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.65;
   overflow-wrap: anywhere;
 }
 .submission-existing-file { display: grid; justify-items: start; gap: 16px; }
 .submission-feedback, .submission-notice-warning {
   color: #b42318;
-  font-size: clamp(20px, 1.6vw, 25px);
+  font-size: clamp(17.6px, 1.41vw, 22px);
   font-weight: 650;
   line-height: 1.65;
 }
@@ -4239,7 +4239,7 @@ p {
   width: min(680px, calc(100vw - 32px));
   max-height: calc(100dvh - 48px);
   margin: auto;
-  padding: clamp(24px, 4vw, 44px);
+  padding: clamp(24px, 3.28vw, 36.08px);
   color: var(--ink);
   background: #fff;
   border: 1px solid rgba(36, 88, 255, 0.24);
@@ -4250,35 +4250,35 @@ p {
   background: rgba(17, 33, 66, 0.32);
   backdrop-filter: blur(4px);
 }
-.submission-notice h2 { margin: 0 0 20px; font-size: 30px; letter-spacing: -0.03em; }
-.submission-notice form { margin-top: 28px; }
+.submission-notice h2 { margin: 0 0 20px; font-size: 26.4px; letter-spacing: -0.03em; }
+.submission-notice form { margin-top: 22.96px; }
 
 /* Center the page content while retaining header and footer dimensions. */
 #main-content {
-  --page: min(1200px, 82vw);
+  --page: min(1120px, 80vw);
   --carousel-page: var(--page);
 }
 #main-content .school-slide { height: auto; aspect-ratio: 2.25; }
-#main-content .carousel-theme-copy p { font-size: clamp(27px, 2.5vw, 44px); line-height: 1.2; }
-#main-content .conference-title { font-size: clamp(64px, 9vw, 144px); line-height: 0.9; }
-#main-content .conference-full-name { font-size: clamp(25px, 2.5vw, 42px); white-space: normal; }
+#main-content .carousel-theme-copy p { font-size: clamp(23.76px, 2.2vw, 38.72px); line-height: 1.2; }
+#main-content .conference-title { font-size: clamp(56.32px, 7.92vw, 126.72px); line-height: 0.9; }
+#main-content .conference-full-name { font-size: clamp(22px, 2.2vw, 36.96px); white-space: normal; }
 #main-content .section-heading-row h2,
-#main-content .section-bullet-title { font-size: clamp(32px, 3.2vw, 54px); }
+#main-content .section-bullet-title { font-size: clamp(28.16px, 2.82vw, 47.52px); }
 #main-content .fee-row { grid-template-columns: minmax(0, 0.72fr) repeat(2, minmax(0, 1fr)); }
 #main-content .contact-us-lines a { flex-wrap: wrap; }
-.submission-file > label { font-family: var(--mono); font-size: clamp(16px, 0.98vw, 19px); font-weight: 700; letter-spacing: 0.065em; text-transform: uppercase; }
+.submission-file > label { font-family: var(--mono); font-size: clamp(15px, 0.86vw, 16.72px); font-weight: 700; letter-spacing: 0.065em; text-transform: uppercase; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .submission-field .submission-file-picker input { width: 1px; min-height: 0; padding: 0; }
 .submission-file-picker { display: flex; align-items: center; gap: 16px; padding: 14px 18px; border: 1px solid rgba(36,88,255,.2); border-radius: 18px; background: rgba(255,255,255,.74); }
-.file-select-button { flex-shrink: 0; padding: 10px 14px; border: 1px solid var(--line-dark); border-radius: 10px; background: #fff; cursor: pointer; font-size: 17px; }
+.file-select-button { flex-shrink: 0; padding: 10px 14px; border: 1px solid var(--line-dark); border-radius: 10px; background: #fff; cursor: pointer; font-size: 16px; }
 .submission-file-picker:focus-within { outline: 2px solid var(--blue); outline-offset: 3px; }
-.submission-file-picker p { min-width: 0; margin: 0; overflow-wrap: anywhere; font-size: 17px; }
-.submission-file small.submission-file-warning { color: #b42318; font-weight: 650; font-size: 18px; line-height: 1.7; }
-.submission-notice #submission-notice-message { color: #10171c; font-size: 21px; line-height: 1.65; }
+.submission-file-picker p { min-width: 0; margin: 0; overflow-wrap: anywhere; font-size: 16px; }
+.submission-file small.submission-file-warning { color: #b42318; font-weight: 650; font-size: 16px; line-height: 1.7; }
+.submission-notice #submission-notice-message { color: #10171c; font-size: 18.48px; line-height: 1.65; }
 .submission-notice .submission-notice-warning { color: #b42318; }
 @media (max-width: 760px) {
   #main-content { --page: calc(100% - 44px); }
-  #main-content .conference-title { font-size: clamp(56px, 16vw, 100px); }
+  #main-content .conference-title { font-size: clamp(49.28px, 14.08vw, 88px); }
   #main-content .fee-row { grid-template-columns: minmax(105px, .72fr) repeat(2, minmax(0, 1fr)); }
   .submission-file-picker { flex-wrap: wrap; }
 }
