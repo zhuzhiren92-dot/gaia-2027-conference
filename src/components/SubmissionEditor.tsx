@@ -42,6 +42,7 @@ export function SubmissionEditor({ participantName = '' }: { participantName?: s
   const [savingAs, setSavingAs] = useState<SubmissionStatus | null>(null)
   const [message, setMessage] = useState('')
   const [notice, setNotice] = useState('')
+  const [noticeWarning, setNoticeWarning] = useState('')
   const [loadedName, setLoadedName] = useState('')
   const [loadFailed, setLoadFailed] = useState(false)
   const [downloading, setDownloading] = useState(false)
@@ -153,9 +154,10 @@ export function SubmissionEditor({ participantName = '' }: { participantName?: s
     let uploadedPath = existingFilePath
     let uploadedName = existingFileName
     let newUploadPath: string | null = null
+    let committed = false
 
     try {
-      if (status === 'submitted' && selectedFile) {
+      if (selectedFile) {
         const safeName = selectedFile.name.replace(/[^a-zA-Z0-9._-]+/g, '-')
         newUploadPath = `${user.id}/${crypto.randomUUID()}-${safeName}`
         const { error: uploadError } = await supabase.storage
@@ -188,23 +190,25 @@ export function SubmissionEditor({ participantName = '' }: { participantName?: s
         .single()
       if (error) throw error
 
+      committed = true
       if (newUploadPath && existingFilePath && existingFilePath !== newUploadPath) {
-        await supabase.storage.from('submission-files').remove([existingFilePath])
+        await supabase.storage.from('submission-files').remove([existingFilePath]).catch(() => undefined)
       }
 
       const saved = data as Submission
       setExistingFilePath(saved.file_path)
       setExistingFileName(saved.file_name)
       setSubmissionStatus(saved.status)
-      if (status === 'submitted') {
+      if (selectedFile) {
         setSelectedFile(null)
         if (fileInput.current) fileInput.current.value = ''
       }
       setNotice(status === 'submitted'
-        ? 'Dear ' + fullName + ', your file and information have been saved and submitted successfully to the GAIA 2027 organizing committee.'
-        : 'Dear ' + fullName + ', your information has been saved as a draft and is awaiting submission. No new file has been uploaded. Please click SUBMIT when you are ready.')
+        ? 'Dear ' + fullName + ', your information has been successfully submitted to the GAIA Committee.'
+        : 'Dear ' + fullName + ', your information has been successfully saved and updated. Please click "Submit" to send your submission to the GAIA Committee.')
+      setNoticeWarning(status === 'draft' && !selectedFile ? 'Note: No file uploaded.' : '')
     } catch (error) {
-      if (newUploadPath) await supabase.storage.from('submission-files').remove([newUploadPath])
+      if (newUploadPath && !committed) await supabase.storage.from('submission-files').remove([newUploadPath]).catch(() => undefined)
       setMessage(error && typeof error === 'object' && 'message' in error ? String(error.message) : 'The submission could not be saved.')
     } finally {
       setSavingAs(null)
@@ -241,7 +245,7 @@ export function SubmissionEditor({ participantName = '' }: { participantName?: s
         <div className="utility-loading">Loading your submission...</div>
       ) : !user ? (
         <section className="submission-form-section" data-reveal>
-          <div className="auth-gate"><p className="section-kicker">ACCOUNT REQUIRED</p><h2>Sign in before submitting.</h2><p>Your draft and uploaded file will be linked securely to your participant account.</p><Link className="pill-action-link" to="/login" state={{ from: '/submission' }}><span className="pill-link-icon" aria-hidden="true">→</span><strong>Sign in or register</strong></Link></div>
+          <div className="auth-gate"><p className="section-kicker">ACCOUNT REQUIRED</p><h2>Sign in before submitting.</h2><p>Your draft and uploaded file will be linked securely to your participant account.</p><Link className="pill-action-link" to="/login" state={{ from: '/account' }}><span className="pill-link-icon" aria-hidden="true">→</span><strong>Sign in or register</strong></Link></div>
         </section>
       ) : (
         <section className="submission-form-section" data-reveal>
@@ -262,9 +266,16 @@ export function SubmissionEditor({ participantName = '' }: { participantName?: s
               <label className="submission-field"><span>Institution Name</span><input type="text" name="institutionName" value={form.institutionName} onChange={updateField} placeholder="Enter institution information" /></label>
               <label className="submission-field"><span>Country/Region</span><select name="countryRegion" value={form.countryRegion} onChange={updateField}><option value="">Select country or region</option>{countries.map((country) => <option value={country} key={country}>{country}</option>)}</select></label>
               <label className="submission-field"><span>Contact Email</span><input type="email" name="contactEmail" value={form.contactEmail} onChange={updateField} placeholder="name@example.com" /></label>
-              <label className="submission-field submission-file"><span>Upload File</span><input ref={fileInput} type="file" name="submissionFile" onChange={chooseFile} accept=".doc,.docx,.pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf" /><small>Accepted formats: Word or PDF. Maximum file size: 20 MB.</small></label>
+              <div className="submission-field submission-file">
+                <label htmlFor="submission-file">Upload File</label>
+                <div className="submission-file-picker">
+                  <input id="submission-file" className="visually-hidden" ref={fileInput} type="file" name="submissionFile" onChange={chooseFile} accept=".doc,.docx,.pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf" />
+                  <label className="file-select-button" htmlFor="submission-file">Select Files</label>
+                  <p aria-live="polite">{selectedFile?.name || 'No file selected'}</p>
+                </div>
+                <small className="submission-file-warning">Note: The newly uploaded file will overwrite the existing file.<br />Accepted formats: Word or PDF. Maximum file size: 20 MB.</small>
+              </div>
 
-              <p className="submission-save-help">SAVE keeps your text as a draft. Files are uploaded only when you click SUBMIT. If you leave before submitting, please select your file again.</p>
               {existingFilePath ? (
                 <div className="submission-existing-file">
                   <p>Uploaded file: <strong>{existingFileName}</strong></p>
@@ -282,7 +293,7 @@ export function SubmissionEditor({ participantName = '' }: { participantName?: s
           </form>
         </section>
       )}
-      <SubmissionNotice message={notice} onClose={() => setNotice('')} />
+      <SubmissionNotice message={notice} warning={noticeWarning} onClose={() => { setNotice(''); setNoticeWarning('') }} />
     </>
   )
 }

@@ -6,4 +6,4 @@ Start the application on port 5180 with npm run dev -- --host 127.0.0.1 --port 5
 
 Requires Playwright and local Chrome. Set PLAYWRIGHT_MODULE_PATH to an existing Playwright index.mjs if it is not installed in this checkout. The local app must have Supabase configured so the forms render; all backend traffic is mocked by the test.
 
-Checks registration name metadata, personalized welcome, profile prefilling, inline editing, draft reload, no file upload on SAVE, required fields on SUBMIT, uploaded-file download, error handling, visible mobile forms and JavaScript errors. Screenshot outputs named *.local.png are local review artifacts and should not be committed.
+Checks registration name metadata, personalized welcome, profile prefilling, inline editing, draft reload, file upload on SAVE, preservation on text-only updates, missing-file warning and login redirect to Account, required fields on SUBMIT, uploaded-file download, error handling, visible mobile forms and JavaScript errors. Screenshot outputs named *.local.png are local review artifacts and should not be committed.

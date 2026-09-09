@@ -7,7 +7,6 @@ import { AdminPage } from './pages/AdminPage'
 import { AuthPage } from './pages/AuthPage'
 import { ContactPage } from './pages/ContactPage'
 import { HomePage } from './pages/HomePage'
-import { PreviousGaiaPage } from './pages/PreviousGaiaPage'
 import { ProgramPage } from './pages/ProgramPage'
 import { RegistrationPage } from './pages/RegistrationPage'
 import { SubmissionPage } from './pages/SubmissionPage'
@@ -49,7 +48,6 @@ export default function App() {
         <Route path="/submission" element={<SubmissionPage />} />
         <Route path="/registration" element={<RegistrationPage />} />
         <Route path="/program" element={<ProgramPage />} />
-        <Route path="/previous-gaia" element={<PreviousGaiaPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/login" element={<AuthPage />} />
         <Route path="/account" element={<ProtectedRoute><AccountPage /></ProtectedRoute>} />

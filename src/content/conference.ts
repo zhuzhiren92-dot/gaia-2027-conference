@@ -17,7 +17,6 @@ export const conference: ConferenceContent = {
     { label: 'SUBMISSION', path: '/submission' },
     { label: 'REGISTRATION', path: '/registration' },
     { label: 'PROGRAM', path: '/program' },
-    { label: 'PREVIOUS GAIA', path: '/previous-gaia' },
     { label: 'CONTACT', path: '/contact' },
     { label: 'ACCOUNT', path: '/account' },
   ],

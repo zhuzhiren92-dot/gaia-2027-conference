@@ -4223,13 +4223,13 @@ p {
   padding: 0;
   border: 0;
 }
-.submission-save-help, .submission-existing-file p {
+.submission-existing-file p {
   font-size: 17px;
   line-height: 1.65;
   overflow-wrap: anywhere;
 }
 .submission-existing-file { display: grid; justify-items: start; gap: 16px; }
-.submission-feedback, .submission-notice p {
+.submission-feedback, .submission-notice-warning {
   color: #b42318;
   font-size: clamp(20px, 1.6vw, 25px);
   font-weight: 650;
@@ -4252,3 +4252,33 @@ p {
 }
 .submission-notice h2 { margin: 0 0 20px; font-size: 30px; letter-spacing: -0.03em; }
 .submission-notice form { margin-top: 28px; }
+
+/* Center the page content while retaining header and footer dimensions. */
+#main-content {
+  --page: min(1200px, 82vw);
+  --carousel-page: var(--page);
+}
+#main-content .school-slide { height: auto; aspect-ratio: 2.25; }
+#main-content .carousel-theme-copy p { font-size: clamp(27px, 2.5vw, 44px); line-height: 1.2; }
+#main-content .conference-title { font-size: clamp(64px, 9vw, 144px); line-height: 0.9; }
+#main-content .conference-full-name { font-size: clamp(25px, 2.5vw, 42px); white-space: normal; }
+#main-content .section-heading-row h2,
+#main-content .section-bullet-title { font-size: clamp(32px, 3.2vw, 54px); }
+#main-content .fee-row { grid-template-columns: minmax(0, 0.72fr) repeat(2, minmax(0, 1fr)); }
+#main-content .contact-us-lines a { flex-wrap: wrap; }
+.submission-file > label { font-family: var(--mono); font-size: clamp(16px, 0.98vw, 19px); font-weight: 700; letter-spacing: 0.065em; text-transform: uppercase; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.submission-field .submission-file-picker input { width: 1px; min-height: 0; padding: 0; }
+.submission-file-picker { display: flex; align-items: center; gap: 16px; padding: 14px 18px; border: 1px solid rgba(36,88,255,.2); border-radius: 18px; background: rgba(255,255,255,.74); }
+.file-select-button { flex-shrink: 0; padding: 10px 14px; border: 1px solid var(--line-dark); border-radius: 10px; background: #fff; cursor: pointer; font-size: 17px; }
+.submission-file-picker:focus-within { outline: 2px solid var(--blue); outline-offset: 3px; }
+.submission-file-picker p { min-width: 0; margin: 0; overflow-wrap: anywhere; font-size: 17px; }
+.submission-file small.submission-file-warning { color: #b42318; font-weight: 650; font-size: 18px; line-height: 1.7; }
+.submission-notice #submission-notice-message { color: #10171c; font-size: 21px; line-height: 1.65; }
+.submission-notice .submission-notice-warning { color: #b42318; }
+@media (max-width: 760px) {
+  #main-content { --page: calc(100% - 44px); }
+  #main-content .conference-title { font-size: clamp(56px, 16vw, 100px); }
+  #main-content .fee-row { grid-template-columns: minmax(105px, .72fr) repeat(2, minmax(0, 1fr)); }
+  .submission-file-picker { flex-wrap: wrap; }
+}

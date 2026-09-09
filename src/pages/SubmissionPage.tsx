@@ -28,7 +28,7 @@ export function SubmissionPage() {
               <p className="section-kicker">ACCOUNT REQUIRED</p>
               <h2>Sign in before submitting.</h2>
               <p>Your draft and uploaded file will be linked securely to your participant account.</p>
-              <Link className="pill-action-link" to="/login" state={{ from: '/submission' }}>
+              <Link className="pill-action-link" to="/login" state={{ from: '/account' }}>
                 <span className="pill-link-icon" aria-hidden="true">→</span>
                 <strong>Sign in or register</strong>
               </Link>

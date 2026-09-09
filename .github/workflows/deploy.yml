@@ -41,7 +41,7 @@ jobs:
       - name: Add route entry files
         run: |
           cp dist/index.html dist/404.html
-          for route in about workshop submission registration program previous-gaia contact login account admin; do
+          for route in about workshop submission registration program contact login account admin; do
             mkdir -p "dist/$route"
             cp dist/index.html "dist/$route/index.html"
           done
