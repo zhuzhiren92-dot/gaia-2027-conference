@@ -290,15 +290,11 @@ export const conference: ConferenceContent = {
       'Some questionnaires on GAIA.',
     ],
     note:
-      'Note: If you need to modify the input information after submitting your registration details, please click the jump button on the right (View/Edit/Cancel). After entering your personal registration ID, you can perform the relevant modification operations. The personal registration ID is generated upon successful initial registration and will be saved in your local registration records.',
+      'Note: After signing in, participants can update their personal information and submission from the Account page.',
     actions: [
       {
         label: 'Online Registration',
-        href: '#',
-      },
-      {
-        label: 'View/Edit/Cancel',
-        href: '#',
+        href: '/login?mode=register',
       },
     ],
     fees: [

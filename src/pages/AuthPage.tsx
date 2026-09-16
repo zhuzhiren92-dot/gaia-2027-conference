@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { PageFrame } from '../components/PageFrame'
 import { isSupabaseConfigured, supabase } from '../lib/supabase'
 
@@ -7,7 +7,8 @@ type AuthMode = 'login' | 'register'
 type LocationState = { from?: string }
 
 export function AuthPage() {
-  const [mode, setMode] = useState<AuthMode>('login')
+  const [searchParams] = useSearchParams()
+  const [mode, setMode] = useState<AuthMode>(searchParams.get('mode') === 'register' ? 'register' : 'login')
   const [email, setEmail] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
