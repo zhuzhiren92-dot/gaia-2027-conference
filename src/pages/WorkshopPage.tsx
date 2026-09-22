@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
-import { DockSurface } from '../components/DockSurface'
+import { KeynoteCarousel } from '../components/KeynoteCarousel'
 import { PageFrame } from '../components/PageFrame'
-import { SpotlightCard } from '../components/SpotlightCard'
 import { TimelinePanel } from '../components/TimelinePanel'
 import { conference } from '../content/conference'
 
@@ -26,17 +25,7 @@ export function WorkshopPage() {
             <h2>Keynote Speakers</h2>
           </div>
         </div>
-        <DockSurface className="speaker-grid speaker-grid-six">
-          {conference.workshop.speakers.map((speaker) => (
-            <SpotlightCard key={speaker.name} data-dock-item>
-              <div className="speaker-portrait speaker-placeholder" aria-hidden="true" />
-              <p className="card-label">KEYNOTE / TBA</p>
-              <h3>{speaker.name}</h3>
-              <p>{speaker.affiliation}</p>
-              <p className="speaker-topic">{speaker.topic}</p>
-            </SpotlightCard>
-          ))}
-        </DockSurface>
+        <KeynoteCarousel speakers={conference.workshop.speakers} />
       </section>
 
       <TimelinePanel

@@ -18,6 +18,7 @@ type PageFrameProps = {
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
 export function PageFrame({
+  pageName,
   children,
   showIntroSections = true,
   showSchoolCarousel = true,
@@ -28,7 +29,7 @@ export function PageFrame({
     <>
       <Navigation />
       <main id="main-content">
-        {showSchoolCarousel ? <SchoolCarousel /> : null}
+        {showSchoolCarousel ? <SchoolCarousel wide={pageName === 'HOME'} /> : null}
 
         {showIntroSections ? (
           <section className="conference-identity page-width" data-reveal>

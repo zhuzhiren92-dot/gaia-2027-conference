@@ -17,6 +17,19 @@ export function AboutPage() {
           {conference.about.whatIsGaia.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+          <p>
+            The first GAIA workshop was held in Atami, Japan on February 22–24,
+            2025 ({' '}
+            <a href="https://www.kz.tsukuba.ac.jp/~tmatsu/GAIA_homepage/program.html" target="_blank" rel="noreferrer">
+              https://www.kz.tsukuba.ac.jp/~tmatsu/GAIA_homepage/program.html
+            </a>
+            ) and the Second GAIA Workshop was held in Jinan, China on March
+            27–30, 2026 ({' '}
+            <a href="https://gaia2026.hi97.cn/workshop/" target="_blank" rel="noreferrer">
+              https://gaia2026.hi97.cn/workshop/
+            </a>
+            ).
+          </p>
         </div>
       </section>
 

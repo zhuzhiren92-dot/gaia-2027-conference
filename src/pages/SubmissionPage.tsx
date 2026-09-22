@@ -12,11 +12,20 @@ export function SubmissionPage() {
         <div className="about-prose">
           <p>This page is prepared for poster and oral presentation submissions. At the current stage, participants are invited to submit an abstract for their poster or presentation.</p>
           <div className="submission-template">
-            <a className="pill-action-link" href={`${import.meta.env.BASE_URL}GAIA_2027_Template.docx`} download="GAIA_2027_Template.docx">
-              <span className="pill-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v12m0 0 5-5m-5 5-5-5M5 20h14" /></svg></span>
-              <strong>Template</strong>
-            </a>
-            <p>Download the abstract or full paper template.</p>
+            <div className="submission-template-item">
+              <a className="pill-action-link" href={`${import.meta.env.BASE_URL}GAIA_2027_Template.docx`} download="GAIA_2027_Template.docx">
+                <span className="pill-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v12m0 0 5-5m-5 5-5-5M5 20h14" /></svg></span>
+                <strong>Abstract Template</strong>
+              </a>
+              <p>Download the abstract or full paper template.</p>
+            </div>
+            <div className="submission-template-item">
+              <a className="pill-action-link" href={`${import.meta.env.BASE_URL}GAIA_2027_Template.docx`} download="GAIA_2027_Template.docx">
+                <span className="pill-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v12m0 0 5-5m-5 5-5-5M5 20h14" /></svg></span>
+                <strong>Poster Template</strong>
+              </a>
+              <p>Download the poster template.</p>
+            </div>
           </div>
         </div>
       </section>
