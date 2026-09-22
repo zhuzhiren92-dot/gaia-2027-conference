@@ -45,7 +45,7 @@ export function SchoolCarousel({ wide = false }: { wide?: boolean }) {
     if (paused || reducedMotion) return
     const timer = window.setInterval(
       () => setIndex((current) => (current + 1) % slides.length),
-      4800,
+      2800,
     )
     return () => window.clearInterval(timer)
   }, [paused, reducedMotion, slides.length])

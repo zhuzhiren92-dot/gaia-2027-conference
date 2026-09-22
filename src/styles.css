@@ -1502,6 +1502,17 @@ p {
   line-height: 1.68;
 }
 
+.about-history-link {
+  color: var(--blue);
+  overflow-wrap: anywhere;
+}
+
+.about-history-link::after {
+  content: '↗';
+  margin-left: 0.35em;
+  font-family: var(--mono);
+}
+
 .about-bullet-list {
   display: grid;
   gap: 22px;

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Speaker } from '../types/conference'
 import { DockSurface } from './DockSurface'
 import { SpotlightCard } from './SpotlightCard'
@@ -7,6 +7,14 @@ const keynoteNumbers = Array.from({ length: 6 }, (_, index) => index + 1)
 
 export function KeynoteCarousel({ speakers }: { speakers: Speaker[] }) {
   const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const timer = window.setInterval(
+      () => setIndex((current) => (current + 1) % keynoteNumbers.length),
+      2800,
+    )
+    return () => window.clearInterval(timer)
+  }, [])
 
   return (
     <div className="keynote-carousel" aria-label="Keynote speaker groups">
