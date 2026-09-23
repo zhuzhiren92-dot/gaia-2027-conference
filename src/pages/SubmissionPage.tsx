@@ -20,11 +20,11 @@ export function SubmissionPage() {
               <p>Download the abstract or full paper template.</p>
             </div>
             <div className="submission-template-item">
-              <a className="pill-action-link" href={`${import.meta.env.BASE_URL}GAIA_2027_Template.docx`} download="GAIA_2027_Template.docx">
+              <a className="pill-action-link" href={`${import.meta.env.BASE_URL}GAIA_2027_Poster_Instructions.doc`} download="GAIA_2027_Poster_Instructions.doc">
                 <span className="pill-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v12m0 0 5-5m-5 5-5-5M5 20h14" /></svg></span>
-                <strong>Poster Template</strong>
+                <strong>Poster Instructions</strong>
               </a>
-              <p>Download the poster template.</p>
+              <p>Download the poster instructions.</p>
             </div>
           </div>
         </div>
